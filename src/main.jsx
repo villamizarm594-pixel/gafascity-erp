@@ -142,12 +142,381 @@ function Customers({customers, setList}) {
 }
 
 function Orders({orders, setList}) {
-  const blank = { number:`GC-${String(orders.length+1).padStart(4,'0')}`, date:today(), customer:'', phone:'', lens:'', treatment:'', prescription:'', total:'', deposit:'', balance:0, deliveryDate:today(), status:'Registrado' };
-  const [form, setForm] = useState(blank);
-  useEffect(()=>setForm(f=>({...f, balance: Number(f.total||0)-Number(f.deposit||0)})), [form.total, form.deposit]);
-  const add = () => { if(!form.customer) return alert('Cliente obligatorio'); setList('orders', list => [...list, {...form, id: uid(), total:+form.total, deposit:+form.deposit, balance:+form.balance}]); setForm({...blank, number:`GC-${String(orders.length+2).padStart(4,'0')}`}); };
-  const updateStatus = (id, status) => setList('orders', list => list.map(o => o.id === id ? {...o, status} : o));
-  return <div className="stack"><Card title="Nueva orden de laboratorio"><div className="formGrid"><Input v={form.customer} p="Cliente" on={v=>setForm({...form,customer:v})}/><Input v={form.phone} p="Telefono" on={v=>setForm({...form,phone:v})}/><Input v={form.lens} p="Cristal" on={v=>setForm({...form,lens:v})}/><Input v={form.treatment} p="Tratamiento" on={v=>setForm({...form,treatment:v})}/><Input v={form.prescription} p="Formula" on={v=>setForm({...form,prescription:v})}/><Input v={form.total} p="Total" type="number" on={v=>setForm({...form,total:v})}/><Input v={form.deposit} p="Abono" type="number" on={v=>setForm({...form,deposit:v})}/><div className="totalBox">Saldo: <b>{money(form.balance)}</b></div><button onClick={add}>Guardar orden</button></div></Card><Card title="Ordenes"><div className="orderList">{orders.map(o=><div className="order" key={o.id}><div><b>{o.number}</b><span>{o.customer} | Saldo {money(o.balance)}</span></div><select value={o.status} onChange={e=>updateStatus(o.id,e.target.value)}>{['Registrado','Enviado','En proceso','Listo','Entregado','Garantia'].map(s=><option key={s}>{s}</option>)}</select></div>)}</div></Card></div>;
+const blank = {
+3
+number: `GC-${String(orders.length + 1).padStart(4, '0')}`,
+4
+date: today(),
+5
+responsible: '',
+6
+customer: '',
+7
+phone: '',
+8
+lens: '',
+9
+treatment: '',
+10
+prescription: '',
+11
+total: '',
+12
+paymentMethod: 'Efectivo',
+13
+deposit: '',
+14
+balance: 0,
+15
+reference: '',
+16
+opticalDestination: '',
+17
+status: 'Registrado',
+18
+labPayment: 'Pendiente',
+19
+opticalAmount: '',
+20
+deliveryDate: today(),
+21
+warranty: 'No',
+22
+notes: ''
+23
+};
+24
+ 
+25
+const [form, setForm] = useState(blank);
+26
+ 
+27
+useEffect(() => {
+28
+setForm((f) => ({
+29
+...f,
+30
+balance: Number(f.total || 0) - Number(f.deposit || 0)
+31
+}));
+32
+}, [form.total, form.deposit]);
+33
+ 
+34
+const add = () => {
+35
+if (!form.customer) return alert('Cliente obligatorio');
+36
+if (!form.phone) return alert('Telefono obligatorio');
+37
+ 
+38
+setList('orders', (list) => [
+39
+...list,
+40
+{
+41
+...form,
+42
+id: uid(),
+43
+total: Number(form.total || 0),
+44
+deposit: Number(form.deposit || 0),
+45
+balance: Number(form.balance || 0),
+46
+opticalAmount: Number(form.opticalAmount || 0)
+47
+}
+48
+]);
+49
+ 
+50
+setForm({
+51
+...blank,
+52
+number: `GC-${String(orders.length + 2).padStart(4, '0')}`
+53
+});
+54
+};
+55
+ 
+56
+const updateStatus = (id, status) => {
+57
+setList('orders', (list) =>
+58
+list.map((o) => (o.id === id ? { ...o, status } : o))
+59
+);
+60
+};
+61
+ 
+62
+return (
+63
+<div className="stack">
+64
+<Card title="Nueva orden / trabajo optico">
+65
+<div className="formGrid">
+66
+<Input
+67
+v={form.number}
+68
+p="Codigo de orden"
+69
+on={(v) => setForm({ ...form, number: v })}
+70
+/>
+71
+ 
+72
+<Input
+73
+v={form.date}
+74
+p="Fecha inicio"
+75
+type="date"
+76
+on={(v) => setForm({ ...form, date: v })}
+77
+/>
+78
+ 
+79
+<Input
+80
+v={form.responsible}
+81
+p="Responsable"
+82
+on={(v) => setForm({ ...form, responsible: v })}
+83
+/>
+84
+ 
+85
+<Input
+86
+v={form.customer}
+87
+p="Nombre del cliente"
+88
+on={(v) => setForm({ ...form, customer: v })}
+89
+/>
+90
+ 
+91
+<Input
+92
+v={form.phone}
+93
+p="Telefono"
+94
+on={(v) => setForm({ ...form, phone: v })}
+95
+/>
+96
+ 
+97
+<Input
+98
+v={form.lens}
+99
+p="Cristal"
+100
+on={(v) => setForm({ ...form, lens: v })}
+101
+/>
+102
+ 
+103
+<Input
+104
+v={form.treatment}
+105
+p="Tratamiento"
+106
+on={(v) => setForm({ ...form, treatment: v })}
+107
+/>
+108
+ 
+109
+<Input
+110
+v={form.prescription}
+111
+p="Formula"
+112
+on={(v) => setForm({ ...form, prescription: v })}
+113
+/>
+114
+ 
+115
+<Input
+116
+v={form.total}
+117
+p="Total a pagar"
+118
+type="number"
+119
+on={(v) => setForm({ ...form, total: v })}
+120
+/>
+121
+ 
+122
+<Select
+123
+v={form.paymentMethod}
+124
+on={(v) => setForm({ ...form, paymentMethod: v })}
+125
+opts={[
+126
+['Efectivo', 'Efectivo'],
+127
+['Pago movil', 'Pago movil'],
+128
+['Divisas', 'Divisas'],
+129
+['Transferencia', 'Transferencia'],
+130
+['Mixto', 'Mixto']
+131
+]}
+132
+/>
+133
+ 
+134
+<Input
+135
+v={form.deposit}
+136
+p="Abono"
+137
+type="number"
+138
+on={(v) => setForm({ ...form, deposit: v })}
+139
+/>
+140
+ 
+141
+<div className="totalBox">
+142
+Resta:
+143
+<b>{money(form.balance)}</b>
+144
+</div>
+145
+ 
+146
+<Input
+147
+v={form.reference}
+148
+p="Referencia"
+149
+on={(v) => setForm({ ...form, reference: v })}
+150
+/>
+151
+ 
+152
+<Input
+153
+v={form.opticalDestination}
+154
+p="Destino optica"
+155
+on={(v) => setForm({ ...form, opticalDestination: v })}
+156
+/>
+157
+ 
+158
+<Select
+159
+v={form.status}
+160
+on={(v) => setForm({ ...form, status: v })}
+161
+opts={[
+162
+['Registrado', 'Registrado'],
+163
+['Enviado', 'Enviado'],
+164
+['En proceso', 'En proceso'],
+165
+['Listo', 'Listo'],
+166
+['Entregado', 'Entregado'],
+167
+['Garantia', 'Garantia']
+168
+]}
+169
+/>
+170
+ 
+171
+<Select
+172
+v={form.labPayment}
+173
+on={(v) => setForm({ ...form, labPayment: v })}
+174
+opts={[
+175
+['Pendiente', 'Pendiente'],
+176
+['Pagado', 'Pagado']
+177
+]}
+178
+/>
+179
+ 
+180
+<Input
+181
+v={form.opticalAmount}
+182
+p="Monto optica"
+183
+type="number"
+184
+on={(v) => setForm({ ...form, opticalAmount: v })}
+185
+/>
+186
+ 
+187
+<Input
+188
+v={form.deliveryDate}
+189
+p="Fecha entrega"
 }
 
 function Expenses({expenses, setList}) {
