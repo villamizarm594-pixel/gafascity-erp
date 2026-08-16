@@ -4,3 +4,5 @@
 .actions{display:flex;gap:10px;flex-wrap:wrap}.muted{line-height:1.5}
 
 .filterHint{color:#94a3b8;font-size:12px}.actions button{margin-bottom:4px}
+
+.field{display:flex;flex-direction:column;gap:6px;width:100%}.field span{font-size:12px;font-weight:800;color:#cbd5e1}.field span b{color:#38bdf8;margin-left:4px}.field small{font-size:11px;line-height:1.35;color:#94a3b8}.guideList{margin:0;padding-left:20px;color:#cbd5e1;display:grid;gap:8px}.guideList li{line-height:1.45}.formGrid .field input,.formGrid .field select{margin:0}
