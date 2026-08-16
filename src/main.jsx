@@ -1,7 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { createClient } from '@supabase/supabase-js';
 import { LayoutDashboard, Package, ShoppingCart, Users, ClipboardList, Wallet, Receipt, BarChart3, Plus, Search, Save, Microscope, Pencil, Trash2, RotateCcw, Settings } from 'lucide-react';
 import './styles.css';
+
+const SUPABASE_URL = 'https://dnxrmgpjzwodtlcchqsv.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRueHJtZ3BqendvZHRsY2NocXN2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODY4NDMyMjksImV4cCI6MjEwMjQxOTIyOX0.W-MyD3umnTM1H7ICfvrBvx-eOFnxUlXmGs0fexK1Skg';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const CLOUD_STATE_ID = 'gafascity-main';
 
 const today = () => new Date().toISOString().slice(0, 10);
 const money = (n) => `$${Number(n || 0).toFixed(2)}`;
@@ -76,7 +82,7 @@ const seed = {
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
   cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
-  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Version 8', versionDescription:'Interfaz compacta para empleados con ayuda discreta', exchangeRate:0, exchangeRateDate:today() }
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Produccion 1.0', versionDescription:'Con login y sincronizacion con Supabase', exchangeRate:0, exchangeRateDate:today() }
 };
 
 function loadStore(){
@@ -90,8 +96,34 @@ function App(){
   const [active,setActive] = useState('dashboard');
   const [store,setStore] = useState(loadStore);
   const [query,setQuery] = useState('');
+  const [session,setSession] = useState(null);
+  const [cloudStatus,setCloudStatus] = useState('Sin sincronizar');
+
+  useEffect(()=>{
+    supabase.auth.getSession().then(({data})=>setSession(data.session));
+    const { data: listener } = supabase.auth.onAuthStateChange((_event, session)=>setSession(session));
+    return ()=>listener.subscription.unsubscribe();
+  },[]);
+
   useEffect(()=>localStorage.setItem('gafascity-store-v2', JSON.stringify(store)), [store]);
   const setList = (key, updater) => setStore(prev => ({...prev, [key]: typeof updater === 'function' ? updater(prev[key]) : updater}));
+
+  const saveCloud = async () => {
+    setCloudStatus('Guardando en Supabase...');
+    const { error } = await supabase.from('app_state').upsert({ id: CLOUD_STATE_ID, data: store, updated_at: new Date().toISOString() });
+    if(error){ setCloudStatus('Error guardando'); alert(error.message); return; }
+    setCloudStatus('Guardado en nube');
+  };
+
+  const loadCloud = async () => {
+    setCloudStatus('Cargando desde Supabase...');
+    const { data, error } = await supabase.from('app_state').select('data').eq('id', CLOUD_STATE_ID).maybeSingle();
+    if(error){ setCloudStatus('Error cargando'); alert(error.message); return; }
+    if(data?.data){ setStore(data.data); setCloudStatus('Cargado desde nube'); }
+    else { setCloudStatus('No hay respaldo en nube'); alert('Todavía no hay datos guardados en Supabase. Guarda primero desde esta app.'); }
+  };
+
+  if(!session) return <Login />;
   const stats = useMemo(()=>{
     const activeSales = store.sales.filter(s=>!s.cancelled);
     const salesToday = activeSales.filter(s=>s.date===today()).reduce((a,s)=>a+Number(s.total),0);
@@ -119,7 +151,7 @@ function App(){
   const nav = [
     ['dashboard','Inicio',LayoutDashboard], ['sales','Ventas',ShoppingCart], ['orders','Ordenes / formulas',ClipboardList], ['labs','Laboratorios',Microscope], ['inventory','Inventario',Package], ['customers','Clientes',Users], ['cash','Caja diaria',Wallet], ['expenses','Gastos',Receipt], ['reports','Reportes',BarChart3], ['config','Configuracion',Settings]
   ];
-  return <div className="app"><aside className="sidebar"><div className="brand">{store.settings?.logo ? <img className="logoImg" src={store.settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{store.settings?.businessName || 'GafasCity ERP'}</b><small>{store.settings?.subtitle || 'Gestion optica interna'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button key={id} onClick={()=>setActive(id)} className={active===id?'active':''}><Icon size={18}/>{label}</button>)}</nav><div className="statusBox"><b>{store.settings?.versionTitle || 'Version 4'}</b><span>{store.settings?.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div></aside><main><header className="topbar"><div><h1>{nav.find(n=>n[0]===active)?.[1]}</h1><p>Flujo basado en inventario, ventas, trabajos de formula y laboratorios.</p></div><button className="ghost" onClick={()=>{if(confirm('Esto reinicia los datos locales.')){localStorage.removeItem('gafascity-store-v2');location.reload();}}}>Reiniciar datos</button></header>{active==='dashboard'&&<Dashboard store={store} stats={stats}/>} {active==='inventory'&&<Inventory products={store.products} setList={setList} query={query} setQuery={setQuery}/>} {active==='sales'&&<Sales store={store} setStore={setStore}/>} {active==='orders'&&<Orders orders={store.orders} labs={store.laboratories} setList={setList}/>} {active==='labs'&&<Laboratories labs={store.laboratories} orders={store.orders} setList={setList}/>} {active==='customers'&&<Customers customers={store.customers} setList={setList}/>} {active==='cash'&&<Cash store={store} setStore={setStore} stats={stats}/>} {active==='expenses'&&<Expenses expenses={store.expenses} setList={setList}/>} {active==='reports'&&<Reports store={store} stats={stats}/>} {active==='config'&&<Config store={store} setStore={setStore}/>}</main></div>;
+  return <div className="app"><aside className="sidebar"><div className="brand">{store.settings?.logo ? <img className="logoImg" src={store.settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{store.settings?.businessName || 'GafasCity ERP'}</b><small>{store.settings?.subtitle || 'Gestion optica interna'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button key={id} onClick={()=>setActive(id)} className={active===id?'active':''}><Icon size={18}/>{label}</button>)}</nav><div className="statusBox"><b>{store.settings?.versionTitle || 'Version 4'}</b><span>{store.settings?.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div></aside><main><header className="topbar"><div><h1>{nav.find(n=>n[0]===active)?.[1]}</h1><p>Flujo basado en inventario, ventas, trabajos de formula y laboratorios.</p></div><div className="actions topActions"><span className="badge">{cloudStatus}</span><button className="secondary" onClick={loadCloud}>Cargar nube</button><button onClick={saveCloud}>Guardar nube</button><button className="ghost" onClick={()=>supabase.auth.signOut()}>Salir</button><button className="ghost" onClick={()=>{if(confirm('Esto reinicia los datos locales.')){localStorage.removeItem('gafascity-store-v2');location.reload();}}}>Reiniciar local</button></div></header>{active==='dashboard'&&<Dashboard store={store} stats={stats}/>} {active==='inventory'&&<Inventory products={store.products} setList={setList} query={query} setQuery={setQuery}/>} {active==='sales'&&<Sales store={store} setStore={setStore}/>} {active==='orders'&&<Orders orders={store.orders} labs={store.laboratories} setList={setList}/>} {active==='labs'&&<Laboratories labs={store.laboratories} orders={store.orders} setList={setList}/>} {active==='customers'&&<Customers customers={store.customers} setList={setList}/>} {active==='cash'&&<Cash store={store} setStore={setStore} stats={stats}/>} {active==='expenses'&&<Expenses expenses={store.expenses} setList={setList}/>} {active==='reports'&&<Reports store={store} stats={stats}/>} {active==='config'&&<Config store={store} setStore={setStore}/>}</main></div>;
 }
 
 function KPI({label,value,hint}){return <div className="kpi"><span>{label}</span><b>{value}</b>{hint&&<small>{hint}</small>}</div>}
@@ -128,6 +160,34 @@ function FieldLabel({p}){const h=fieldHelp(p);return <span className="fieldTitle
 function Input({v,on,p,type='text'}){return <label className="field compactField"><FieldLabel p={p}/><input value={v??''} type={type} placeholder={p} onChange={e=>on(e.target.value)}/></label>}
 function Select({v,on,opts,p}){const control=<select value={v??''} onChange={e=>on(e.target.value)}>{opts.map(([val,label])=><option key={val} value={val}>{label}</option>)}</select>; if(!p)return control; return <label className="field compactField"><FieldLabel p={p}/>{control}</label>}
 function Table({rows,columns,empty='Sin registros'}){if(!rows.length)return <p className="muted">{empty}</p>;return <div className="tableWrap"><table><thead><tr>{columns.map(c=><th key={c[0]}>{c[1]}</th>)}</tr></thead><tbody>{rows.map((r,idx)=><tr key={r.id||idx}>{columns.map(([key,,fmt])=><td key={key}>{fmt?fmt(r[key],r):r[key]}</td>)}</tr>)}</tbody></table></div>}
+
+function Login(){
+  const [email,setEmail]=useState('');
+  const [password,setPassword]=useState('');
+  const [mode,setMode]=useState('login');
+  const [loading,setLoading]=useState(false);
+  const submit = async () => {
+    if(!email || !password) return alert('Correo y contraseña son obligatorios');
+    setLoading(true);
+    const result = mode === 'login'
+      ? await supabase.auth.signInWithPassword({ email, password })
+      : await supabase.auth.signUp({ email, password });
+    setLoading(false);
+    if(result.error) return alert(result.error.message);
+    if(mode === 'signup') alert('Usuario creado. Si Supabase pide confirmación, revisa el correo antes de entrar.');
+  };
+  return <div className="loginPage">
+    <div className="loginCard">
+      <div className="brand previewBrand"><span>GC</span><div><b>GafasCity ERP</b><small>Acceso interno</small></div></div>
+      <h1>{mode === 'login' ? 'Iniciar sesión' : 'Crear usuario'}</h1>
+      <p className="muted">Ingresa con un usuario autorizado para sincronizar datos en Supabase.</p>
+      <input value={email} placeholder="Correo" onChange={e=>setEmail(e.target.value)}/>
+      <input value={password} placeholder="Contraseña" type="password" onChange={e=>setPassword(e.target.value)}/>
+      <button onClick={submit} disabled={loading}>{loading ? 'Procesando...' : (mode === 'login' ? 'Entrar' : 'Crear usuario')}</button>
+      <button className="secondary" onClick={()=>setMode(mode === 'login' ? 'signup' : 'login')}>{mode === 'login' ? 'Crear usuario nuevo' : 'Ya tengo usuario'}</button>
+    </div>
+  </div>
+}
 
 function Guide({title,items}){return <details className="guideCompact"><summary>{title}<span>Ver ayuda</span></summary><ul className="guideList">{items.map((item,index)=><li key={index}>{item}</li>)}</ul></details>}
 
@@ -300,7 +360,7 @@ function Config({store,setStore}){
     </Card>
     <Card title="Vista previa" wide>
       <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
-      <div className="statusBox"><b>{settings.versionTitle || 'Version 8'}</b><span>{settings.versionDescription || 'Interfaz compacta con ayuda discreta.'}</span></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Produccion 1.0'}</b><span>{settings.versionDescription || 'Login y sincronizacion con Supabase.'}</span></div>
     </Card>
   </div>
 }
