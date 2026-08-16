@@ -6,6 +6,23 @@ import './styles.css';
 const today = () => new Date().toISOString().slice(0, 10);
 const money = (n) => `$${Number(n || 0).toFixed(2)}`;
 const uid = () => Math.random().toString(36).slice(2, 9);
+const bs = (n) => `Bs. ${Number(n || 0).toFixed(2)}`;
+const csvText = (rows) => {
+  if (!rows.length) return '';
+  const headers = Object.keys(rows[0]);
+  const clean = (v) => `"${String(v ?? '').replaceAll('\"', '\"\"')}"`;
+  return [headers.join(','), ...rows.map(row => headers.map(h => clean(row[h])).join(','))].join('\n');
+};
+const downloadCSV = (name, rows) => {
+  if (!rows.length) return alert('No hay datos para exportar');
+  const blob = new Blob([csvText(rows)], { type: 'text/csv;charset=utf-8;' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${name}-${today()}.csv`;
+  a.click();
+  URL.revokeObjectURL(url);
+};
 const defaultLabs = ['Novak', 'Opas (Vector)', 'Liberty', 'Prats', 'Jesus Tallador', 'Fer Visprolentes'];
 
 const seed = {
@@ -27,14 +44,14 @@ const seed = {
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
   cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
-  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Version 4', versionDescription:'Caja diaria mejorada, logo editable y configuracion' }
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Version 5', versionDescription:'Exportacion CSV, tasa BCV manual y respaldo de datos', exchangeRate:0, exchangeRateDate:today() }
 };
 
 function loadStore(){
   const raw = localStorage.getItem('gafascity-store-v2');
   if(!raw) return seed;
   const parsed = JSON.parse(raw);
-  return { ...seed, ...parsed, laboratories: parsed.laboratories?.length ? parsed.laboratories : seed.laboratories };
+  return { ...seed, ...parsed, settings:{...seed.settings, ...(parsed.settings||{})}, cash:{...seed.cash, ...(parsed.cash||{})}, laboratories: parsed.laboratories?.length ? parsed.laboratories : seed.laboratories };
 }
 
 function App(){
@@ -80,7 +97,18 @@ function Select({v,on,opts}){return <select value={v??''} onChange={e=>on(e.targ
 function Table({rows,columns,empty='Sin registros'}){if(!rows.length)return <p className="muted">{empty}</p>;return <div className="tableWrap"><table><thead><tr>{columns.map(c=><th key={c[0]}>{c[1]}</th>)}</tr></thead><tbody>{rows.map((r,idx)=><tr key={r.id||idx}>{columns.map(([key,,fmt])=><td key={key}>{fmt?fmt(r[key],r):r[key]}</td>)}</tr>)}</tbody></table></div>}
 
 function Dashboard({store,stats}){
-  return <div className="grid"><KPI label="Ventas hoy" value={money(stats.salesToday)} hint="Ventas activas del dia"/><KPI label="Caja disponible" value={money(stats.cashBalance)} hint="Caja inicial + ventas - gastos"/><KPI label="Ordenes pendientes" value={stats.pendingOrders.length} hint="No entregadas"/><KPI label="Stock bajo" value={stats.lowStock.length} hint="Productos a reponer"/><Card title="Inventario bajo"><Table rows={stats.lowStock} columns={[["code","Codigo"],["description","Producto"],["stock","Stock"],["minStock","Minimo"]]}/></Card><Card title="Ordenes recientes"><Table rows={store.orders.slice(-5).reverse()} columns={[["number","Orden"],["customer","Cliente"],["lab","Laboratorio"],["balance","Resta",money],["status","Estatus"]]}/></Card><Card title="Ventas recientes" wide><Table rows={store.sales.slice(-6).reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cant."],["total","Total",money],["payment","Pago"],["cancelled","Estado",v=>v?'Anulada':'Activa']]}/></Card></div>;
+  const rate = Number(store.settings?.exchangeRate || 0);
+  return <div className="grid">
+    <KPI label="Ventas hoy" value={money(stats.salesToday)} hint="Ventas activas del dia"/>
+    <KPI label="Caja disponible" value={money(stats.cashBalance)} hint="Caja inicial + ventas - gastos"/>
+    <KPI label="Ordenes pendientes" value={stats.pendingOrders.length} hint="No entregadas"/>
+    <KPI label="Tasa BCV" value={rate ? bs(rate) : 'Sin tasa'} hint={store.settings?.exchangeRateDate || 'Configurar tasa'} />
+    <KPI label="Ventas hoy en Bs." value={rate ? bs(stats.salesToday * rate) : 'Configurar'} hint="Calculado con tasa guardada"/>
+    <KPI label="Stock bajo" value={stats.lowStock.length} hint="Productos a reponer"/>
+    <Card title="Inventario bajo"><Table rows={stats.lowStock} columns={[["code","Codigo"],["description","Producto"],["stock","Stock"],["minStock","Minimo"]]}/></Card>
+    <Card title="Ordenes recientes"><Table rows={store.orders.slice(-5).reverse()} columns={[["number","Orden"],["customer","Cliente"],["lab","Laboratorio"],["balance","Resta",money],["status","Estatus"]]}/></Card>
+    <Card title="Ventas recientes" wide><Table rows={store.sales.slice(-6).reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cant."],["total","Total",money],["totalBs","Total Bs.",(v,r)=>r.totalBs?bs(r.totalBs):(rate?bs(Number(r.total||0)*rate):'-')],["payment","Pago"],["cancelled","Estado",v=>v?'Anulada':'Activa']]}/></Card>
+  </div>;
 }
 
 function Inventory({products,setList,query,setQuery}){
@@ -96,11 +124,23 @@ function Inventory({products,setList,query,setQuery}){
 }
 
 function Sales({store,setStore}){
-  const firstProduct=store.products[0]; const [sale,setSale]=useState({date:today(),customerName:'',productId:firstProduct?.id||'',qty:1,payment:'Efectivo',warranty:'No'});
-  const product=store.products.find(p=>p.id===sale.productId); const total=product?product.price*Number(sale.qty||0):0;
-  const complete=()=>{if(!sale.customerName)return alert('Nombre del cliente obligatorio'); if(!product)return alert('Selecciona un producto'); if(Number(sale.qty)<=0)return alert('Cantidad invalida'); if(product.stock<Number(sale.qty))return alert('No hay stock suficiente'); const newSale={id:uid(),date:sale.date,customerName:sale.customerName,productId:product.id,productCodeName:`${product.code} - ${product.description}`,category:product.category,description:product.description,qty:Number(sale.qty),payment:sale.payment,total,warranty:sale.warranty,cancelled:false}; setStore(prev=>({...prev,sales:[...prev.sales,newSale],products:prev.products.map(p=>p.id===product.id?{...p,stock:p.stock-Number(sale.qty)}:p)})); alert('Venta guardada y stock descontado');};
+  const firstProduct=store.products[0];
+  const [sale,setSale]=useState({date:today(),customerName:'',productId:firstProduct?.id||'',qty:1,payment:'Efectivo',warranty:'No'});
+  const product=store.products.find(p=>p.id===sale.productId);
+  const total=product?product.price*Number(sale.qty||0):0;
+  const rate = Number(store.settings?.exchangeRate || 0);
+  const totalBs = rate ? total * rate : 0;
+  const complete=()=>{
+    if(!sale.customerName)return alert('Nombre del cliente obligatorio');
+    if(!product)return alert('Selecciona un producto');
+    if(Number(sale.qty)<=0)return alert('Cantidad invalida');
+    if(product.stock<Number(sale.qty))return alert('No hay stock suficiente');
+    const newSale={id:uid(),date:sale.date,customerName:sale.customerName,productId:product.id,productCodeName:`${product.code} - ${product.description}`,category:product.category,description:product.description,qty:Number(sale.qty),payment:sale.payment,total,totalBs,exchangeRate:rate,exchangeRateDate:store.settings?.exchangeRateDate || '',warranty:sale.warranty,cancelled:false};
+    setStore(prev=>({...prev,sales:[...prev.sales,newSale],products:prev.products.map(p=>p.id===product.id?{...p,stock:p.stock-Number(sale.qty)}:p)}));
+    alert('Venta guardada y stock descontado');
+  };
   const cancelSale=(s)=>{if(s.cancelled)return; if(!confirm('Anular venta y devolver stock?'))return; setStore(prev=>({...prev,sales:prev.sales.map(x=>x.id===s.id?{...x,cancelled:true}:x),products:prev.products.map(p=>p.id===s.productId?{...p,stock:Number(p.stock)+Number(s.qty)}:p)}));};
-  return <div className="stack"><Card title="Ventas (Montura - Cristales)" wide><div className="formGrid"><Input v={sale.date} p="Fecha" type="date" on={v=>setSale({...sale,date:v})}/><Input v={sale.customerName} p="Nombre y apellido del cliente" on={v=>setSale({...sale,customerName:v})}/><Select v={sale.productId} on={v=>setSale({...sale,productId:v})} opts={store.products.map(p=>[p.id,`${p.code} - ${p.description} (${p.stock})`])}/><div className="totalBox">Categoria:<b>{product?.category||'-'}</b></div><div className="totalBox">Descripcion:<b>{product?.description||'-'}</b></div><Input v={sale.qty} p="Cantidad" type="number" on={v=>setSale({...sale,qty:v})}/><Select v={sale.payment} on={v=>setSale({...sale,payment:v})} opts={['Efectivo','Pago movil','Divisas','Transferencia','Mixto'].map(x=>[x,x])}/><div className="totalBox">Total:<b>{money(total)}</b></div><Select v={sale.warranty} on={v=>setSale({...sale,warranty:v})} opts={[["No","Sin garantia"],["Si","Con garantia"]]}/><button onClick={complete}><Save size={16}/>Registrar venta</button></div></Card><Card title="Historial de ventas" wide><Table rows={store.sales.slice().reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cantidad"],["total","Total",money],["payment","Pago"],["cancelled","Estado",v=>v?'Anulada':'Activa'],["actions","Acciones",(_,r)=><button disabled={r.cancelled} className="mini danger" onClick={()=>cancelSale(r)}><RotateCcw size={13}/>Anular</button>]]}/></Card></div>;
+  return <div className="stack"><Card title="Ventas (Montura - Cristales)" wide><div className="formGrid"><Input v={sale.date} p="Fecha" type="date" on={v=>setSale({...sale,date:v})}/><Input v={sale.customerName} p="Nombre y apellido del cliente" on={v=>setSale({...sale,customerName:v})}/><Select v={sale.productId} on={v=>setSale({...sale,productId:v})} opts={store.products.map(p=>[p.id,`${p.code} - ${p.description} (${p.stock})`])}/><div className="totalBox">Categoria:<b>{product?.category||'-'}</b></div><div className="totalBox">Descripcion:<b>{product?.description||'-'}</b></div><Input v={sale.qty} p="Cantidad" type="number" on={v=>setSale({...sale,qty:v})}/><Select v={sale.payment} on={v=>setSale({...sale,payment:v})} opts={['Efectivo','Pago movil','Divisas','Transferencia','Mixto'].map(x=>[x,x])}/><div className="totalBox">Total USD:<b>{money(total)}</b></div><div className="totalBox">Total Bs:<b>{rate?bs(totalBs):'Configurar tasa'}</b></div><Select v={sale.warranty} on={v=>setSale({...sale,warranty:v})} opts={[["No","Sin garantia"],["Si","Con garantia"]]}/><button onClick={complete}><Save size={16}/>Registrar venta</button></div></Card><Card title="Historial de ventas" wide><Table rows={store.sales.slice().reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cantidad"],["total","Total USD",money],["totalBs","Total Bs.",bs],["exchangeRate","Tasa",bs],["payment","Pago"],["cancelled","Estado",v=>v?'Anulada':'Activa'],["actions","Acciones",(_,r)=><button disabled={r.cancelled} className="mini danger" onClick={()=>cancelSale(r)}><RotateCcw size={13}/>Anular</button>]]}/></Card></div>;
 }
 
 function Orders({orders,labs,setList}){
@@ -176,6 +216,14 @@ function Config({store,setStore}){
     reader.readAsDataURL(file);
   };
   return <div className="stack">
+    <Card title="Tasa BCV / cambio diario" wide>
+      <div className="formGrid">
+        <Input v={settings.exchangeRate} p="Tasa USD a Bs" type="number" on={v=>setSetting('exchangeRate', Number(v || 0))}/>
+        <Input v={settings.exchangeRateDate} p="Fecha de tasa" type="date" on={v=>setSetting('exchangeRateDate', v)}/>
+        <div className="totalBox strong">Vista previa:<b>{settings.exchangeRate ? bs(settings.exchangeRate) : 'Sin tasa'}</b></div>
+      </div>
+      <p className="muted">Por ahora la tasa se carga manualmente. El BCV publica el tipo de cambio oficial y la tasa USD de referencia en su portal, pero para actualizarla automaticamente necesitaremos luego una funcion en servidor o una API intermedia.</p>
+    </Card>
     <Card title="Configuracion visual" wide>
       <div className="formGrid">
         <Input v={settings.businessName} p="Nombre de la empresa" on={v=>setSetting('businessName', v)}/>
@@ -188,11 +236,43 @@ function Config({store,setStore}){
     </Card>
     <Card title="Vista previa" wide>
       <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
-      <div className="statusBox"><b>{settings.versionTitle || 'Version 4'}</b><span>{settings.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Version 5'}</b><span>{settings.versionDescription || 'Exportacion CSV y tasa BCV manual.'}</span></div>
     </Card>
   </div>
 }
 
-function Reports({store,stats}){const inventoryCost=store.products.reduce((a,p)=>a+Number(p.stock||0)*Number(p.cost||0),0);const inventorySale=store.products.reduce((a,p)=>a+Number(p.stock||0)*Number(p.price||0),0);return <div className="grid"><KPI label="Valor inventario costo" value={money(inventoryCost)}/><KPI label="Valor inventario venta" value={money(inventorySale)}/><KPI label="Saldos por cobrar" value={money(stats.pendingBalances)}/><KPI label="Productos activos" value={store.products.length}/><Card title="Resumen version 3" wide><p>Esta version agrega edicion, eliminacion, ajuste de stock, anulacion de ventas y administracion basica de laboratorios.</p></Card></div>}
+function Reports({store,stats}){
+  const inventoryCost=store.products.reduce((a,p)=>a+Number(p.stock||0)*Number(p.cost||0),0);
+  const inventorySale=store.products.reduce((a,p)=>a+Number(p.stock||0)*Number(p.price||0),0);
+  const rate = Number(store.settings?.exchangeRate || 0);
+  const exportProducts = () => downloadCSV('inventario', store.products);
+  const exportSales = () => downloadCSV('ventas', store.sales.map(s=>({...s,totalBs:s.totalBs || (rate ? Number(s.total||0)*rate : 0)})));
+  const exportOrders = () => downloadCSV('ordenes-formulas', store.orders);
+  const exportLabs = () => downloadCSV('laboratorios', store.laboratories);
+  const exportCustomers = () => downloadCSV('clientes', store.customers);
+  const exportExpenses = () => downloadCSV('gastos', store.expenses);
+  const exportCash = () => downloadCSV('caja-diaria', [{fecha:today(), ...store.cash, ventasHoy:stats.salesToday, gastosHoy:stats.expensesToday, cierreEsperado:stats.cashBalance, tasa:rate, ventasHoyBs:rate?stats.salesToday*rate:0}]);
+  const exportAllBackup = () => downloadCSV('respaldo-general', [{fecha:today(), datos:JSON.stringify(store)}]);
+  return <div className="grid">
+    <KPI label="Valor inventario costo" value={money(inventoryCost)}/>
+    <KPI label="Valor inventario venta" value={money(inventorySale)}/>
+    <KPI label="Saldos por cobrar" value={money(stats.pendingBalances)}/>
+    <KPI label="Tasa actual" value={rate?bs(rate):'Sin tasa'}/>
+    <Card title="Exportar informacion" wide>
+      <div className="actions">
+        <button onClick={exportProducts}>Exportar inventario</button>
+        <button onClick={exportSales}>Exportar ventas</button>
+        <button onClick={exportOrders}>Exportar ordenes</button>
+        <button onClick={exportLabs}>Exportar laboratorios</button>
+        <button onClick={exportCustomers}>Exportar clientes</button>
+        <button onClick={exportExpenses}>Exportar gastos</button>
+        <button onClick={exportCash}>Exportar caja diaria</button>
+        <button className="secondary" onClick={exportAllBackup}>Respaldo general</button>
+      </div>
+      <p className="muted">Los archivos se descargan en formato CSV. Excel puede abrirlos directamente.</p>
+    </Card>
+    <Card title="Resumen version 5" wide><p>Esta version agrega exportacion CSV, respaldo general, tasa BCV manual y conversion automatica de ventas USD a bolivares usando la tasa guardada.</p></Card>
+  </div>
+}
 
 createRoot(document.getElementById('root')).render(<App />);
