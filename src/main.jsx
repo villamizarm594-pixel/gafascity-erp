@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { LayoutDashboard, Package, ShoppingCart, Users, ClipboardList, Wallet, Receipt, BarChart3, Plus, Search, Save, Microscope, Pencil, Trash2, RotateCcw } from 'lucide-react';
+import { LayoutDashboard, Package, ShoppingCart, Users, ClipboardList, Wallet, Receipt, BarChart3, Plus, Search, Save, Microscope, Pencil, Trash2, RotateCcw, Settings } from 'lucide-react';
 import './styles.css';
 
 const today = () => new Date().toISOString().slice(0, 10);
@@ -26,7 +26,8 @@ const seed = {
     { id:'o1', number:'GC-0001', date:today(), responsible:'Admin', customer:'Cliente prueba 2', idCard:'', age:'', phone:'0414-0000000', lab:'Novak', lens:'Monofocal', treatment:'Antirreflejo', prescription:'OD -1.25 / OI -1.00', frame:'', total:80, paymentMethod:'Efectivo', deposit:40, depositReference:'', balance:40, balanceReference:'', status:'En la tienda', labPayment:'No pago', sentDate:'', deliveredDate:'', notifiedClient:'No', opticalAmount:0, deliveryDate:today(), warranty:'No', notes:'' }
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
-  cash: { opening:100 }
+  cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Version 4', versionDescription:'Caja diaria mejorada, logo editable y configuracion' }
 };
 
 function loadStore(){
@@ -45,17 +46,31 @@ function App(){
   const stats = useMemo(()=>{
     const activeSales = store.sales.filter(s=>!s.cancelled);
     const salesToday = activeSales.filter(s=>s.date===today()).reduce((a,s)=>a+Number(s.total),0);
+    const salesByMethod = {
+      efectivo: activeSales.filter(s=>s.date===today() && s.payment==='Efectivo').reduce((a,s)=>a+Number(s.total),0),
+      pagoMovil: activeSales.filter(s=>s.date===today() && s.payment==='Pago movil').reduce((a,s)=>a+Number(s.total),0),
+      divisas: activeSales.filter(s=>s.date===today() && s.payment==='Divisas').reduce((a,s)=>a+Number(s.total),0),
+      transferencia: activeSales.filter(s=>s.date===today() && s.payment==='Transferencia').reduce((a,s)=>a+Number(s.total),0),
+      mixto: activeSales.filter(s=>s.date===today() && s.payment==='Mixto').reduce((a,s)=>a+Number(s.total),0)
+    };
     const expensesToday = store.expenses.filter(e=>e.date===today()).reduce((a,e)=>a+Number(e.amount),0);
     const lowStock = store.products.filter(p=>Number(p.stock)<=Number(p.minStock||5));
     const pendingOrders = store.orders.filter(o=>o.status!=='Entregado');
-    const cashBalance = Number(store.cash.opening)+salesToday-expensesToday;
+    const cash = store.cash || {};
+    const manualIncome = Number(cash.usdReceived||0) + Number(cash.pagoMovilReceived||0) + Number(cash.transferReceived||0) + Number(cash.divisasReceived||0);
+    const manualOut = Number(cash.purchases||0) + Number(cash.otherExpenses||0);
+    const cashBalance = Number(cash.opening||0) + salesToday + manualIncome - expensesToday - manualOut;
+    const expectedCashClose = Number(cash.opening||0) + salesByMethod.efectivo + Number(cash.usdReceived||0) + Number(cash.divisasReceived||0) - expensesToday - manualOut;
+    const expectedPagoMovilClose = salesByMethod.pagoMovil + Number(cash.pagoMovilReceived||0);
+    const expectedTransferClose = salesByMethod.transferencia + Number(cash.transferReceived||0);
+    const closingDiff = Number(cash.closingCash||0) + Number(cash.closingPagoMovil||0) - cashBalance;
     const pendingBalances = store.orders.reduce((a,o)=>a+Number(o.balance||0),0);
-    return { activeSales, salesToday, expensesToday, lowStock, pendingOrders, cashBalance, pendingBalances };
+    return { activeSales, salesToday, salesByMethod, expensesToday, lowStock, pendingOrders, cashBalance, expectedCashClose, expectedPagoMovilClose, expectedTransferClose, closingDiff, pendingBalances };
   },[store]);
   const nav = [
-    ['dashboard','Inicio',LayoutDashboard], ['sales','Ventas',ShoppingCart], ['orders','Ordenes / formulas',ClipboardList], ['labs','Laboratorios',Microscope], ['inventory','Inventario',Package], ['customers','Clientes',Users], ['cash','Caja diaria',Wallet], ['expenses','Gastos',Receipt], ['reports','Reportes',BarChart3]
+    ['dashboard','Inicio',LayoutDashboard], ['sales','Ventas',ShoppingCart], ['orders','Ordenes / formulas',ClipboardList], ['labs','Laboratorios',Microscope], ['inventory','Inventario',Package], ['customers','Clientes',Users], ['cash','Caja diaria',Wallet], ['expenses','Gastos',Receipt], ['reports','Reportes',BarChart3], ['config','Configuracion',Settings]
   ];
-  return <div className="app"><aside className="sidebar"><div className="brand"><span>GC</span><div><b>GafasCity ERP</b><small>Gestion optica interna</small></div></div><nav>{nav.map(([id,label,Icon])=><button key={id} onClick={()=>setActive(id)} className={active===id?'active':''}><Icon size={18}/>{label}</button>)}</nav><div className="statusBox"><b>Version 3</b><span>Incluye editar, eliminar, ajustar stock y anular ventas.</span></div></aside><main><header className="topbar"><div><h1>{nav.find(n=>n[0]===active)?.[1]}</h1><p>Flujo basado en inventario, ventas, trabajos de formula y laboratorios.</p></div><button className="ghost" onClick={()=>{if(confirm('Esto reinicia los datos locales.')){localStorage.removeItem('gafascity-store-v2');location.reload();}}}>Reiniciar datos</button></header>{active==='dashboard'&&<Dashboard store={store} stats={stats}/>} {active==='inventory'&&<Inventory products={store.products} setList={setList} query={query} setQuery={setQuery}/>} {active==='sales'&&<Sales store={store} setStore={setStore}/>} {active==='orders'&&<Orders orders={store.orders} labs={store.laboratories} setList={setList}/>} {active==='labs'&&<Laboratories labs={store.laboratories} orders={store.orders} setList={setList}/>} {active==='customers'&&<Customers customers={store.customers} setList={setList}/>} {active==='cash'&&<Cash store={store} setStore={setStore} stats={stats}/>} {active==='expenses'&&<Expenses expenses={store.expenses} setList={setList}/>} {active==='reports'&&<Reports store={store} stats={stats}/>}</main></div>;
+  return <div className="app"><aside className="sidebar"><div className="brand">{store.settings?.logo ? <img className="logoImg" src={store.settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{store.settings?.businessName || 'GafasCity ERP'}</b><small>{store.settings?.subtitle || 'Gestion optica interna'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button key={id} onClick={()=>setActive(id)} className={active===id?'active':''}><Icon size={18}/>{label}</button>)}</nav><div className="statusBox"><b>{store.settings?.versionTitle || 'Version 4'}</b><span>{store.settings?.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div></aside><main><header className="topbar"><div><h1>{nav.find(n=>n[0]===active)?.[1]}</h1><p>Flujo basado en inventario, ventas, trabajos de formula y laboratorios.</p></div><button className="ghost" onClick={()=>{if(confirm('Esto reinicia los datos locales.')){localStorage.removeItem('gafascity-store-v2');location.reload();}}}>Reiniciar datos</button></header>{active==='dashboard'&&<Dashboard store={store} stats={stats}/>} {active==='inventory'&&<Inventory products={store.products} setList={setList} query={query} setQuery={setQuery}/>} {active==='sales'&&<Sales store={store} setStore={setStore}/>} {active==='orders'&&<Orders orders={store.orders} labs={store.laboratories} setList={setList}/>} {active==='labs'&&<Laboratories labs={store.laboratories} orders={store.orders} setList={setList}/>} {active==='customers'&&<Customers customers={store.customers} setList={setList}/>} {active==='cash'&&<Cash store={store} setStore={setStore} stats={stats}/>} {active==='expenses'&&<Expenses expenses={store.expenses} setList={setList}/>} {active==='reports'&&<Reports store={store} stats={stats}/>} {active==='config'&&<Config store={store} setStore={setStore}/>}</main></div>;
 }
 
 function KPI({label,value,hint}){return <div className="kpi"><span>{label}</span><b>{value}</b>{hint&&<small>{hint}</small>}</div>}
@@ -103,7 +118,81 @@ function Orders({orders,labs,setList}){
 function Laboratories({labs,orders,setList}){const [selected,setSelected]=useState(labs[0]?.name||'Novak');const [form,setForm]=useState({name:'',phone:'',notes:''});const filtered=orders.filter(o=>o.lab===selected);const addLab=()=>{if(!form.name)return alert('Nombre obligatorio');setList('laboratories',list=>[...list,{...form,id:uid()}]);setSelected(form.name);setForm({name:'',phone:'',notes:''});};const removeLab=id=>{if(confirm('Eliminar laboratorio? Las ordenes no se eliminan.'))setList('laboratories',list=>list.filter(l=>l.id!==id));};return <div className="stack"><Card title="Laboratorios" wide><div className="tabs">{labs.map(l=><button key={l.id} onClick={()=>setSelected(l.name)} className={selected===l.name?'active':''}>{l.name}</button>)}</div><div className="formGrid"><Input v={form.name} p="Nuevo laboratorio" on={v=>setForm({...form,name:v})}/><Input v={form.phone} p="Telefono/contacto" on={v=>setForm({...form,phone:v})}/><Input v={form.notes} p="Observaciones" on={v=>setForm({...form,notes:v})}/><button onClick={addLab}>Agregar laboratorio</button></div></Card><div className="grid"><KPI label={`Ordenes en ${selected}`} value={filtered.length}/><KPI label="Pendientes" value={filtered.filter(o=>o.status!=='Entregado').length}/><KPI label="Pagadas" value={filtered.filter(o=>o.labPayment==='Pago').length}/><KPI label="Monto lab." value={money(filtered.reduce((a,o)=>a+Number(o.opticalAmount||0),0))}/></div><Card title={`Ordenes de ${selected}`} wide><Table rows={filtered} columns={[["number","Orden"],["customer","Cliente"],["status","Estatus"],["labPayment","Pago"],["sentDate","Enviado"],["deliveredDate","Entregado"],["opticalAmount","Monto",money],["notifiedClient","Notificado"],["notes","Observaciones"]]}/></Card><Card title="Administrar laboratorios" wide><Table rows={labs} columns={[["name","Laboratorio"],["phone","Contacto"],["notes","Notas"],["actions","Acciones",(_,r)=><button className="mini danger" onClick={()=>removeLab(r.id)}>Eliminar</button>]]}/></Card></div>}
 function Customers({customers,setList}){const blank={name:'',phone:'',notes:''};const [form,setForm]=useState(blank);const [editing,setEditing]=useState(null);const save=()=>{if(!form.name)return alert('Nombre obligatorio');if(editing)setList('customers',list=>list.map(c=>c.id===editing?{...form,id:editing}:c));else setList('customers',list=>[...list,{...form,id:uid()}]);setForm(blank);setEditing(null);};const edit=c=>{setEditing(c.id);setForm({...c});};const remove=id=>{if(confirm('Eliminar cliente?'))setList('customers',list=>list.filter(c=>c.id!==id));};return <div className="stack"><Card title={editing?'Editar cliente':'Nuevo cliente'}><div className="formGrid"><Input v={form.name} p="Nombre" on={v=>setForm({...form,name:v})}/><Input v={form.phone} p="Telefono" on={v=>setForm({...form,phone:v})}/><Input v={form.notes} p="Observaciones" on={v=>setForm({...form,notes:v})}/><button onClick={save}>{editing?'Guardar':'Agregar cliente'}</button></div></Card><Card title="Clientes" wide><Table rows={customers} columns={[["name","Nombre"],["phone","Telefono"],["notes","Notas"],["actions","Acciones",(_,r)=><div className="rowActions"><button className="mini secondary" onClick={()=>edit(r)}>Editar</button><button className="mini danger" onClick={()=>remove(r.id)}>Eliminar</button></div>]]}/></Card></div>}
 function Expenses({expenses,setList}){const [form,setForm]=useState({date:today(),category:'Operativo',description:'',amount:''});const [editing,setEditing]=useState(null);const save=()=>{if(!form.description)return alert('Descripcion obligatoria');if(editing)setList('expenses',l=>l.map(e=>e.id===editing?{...form,id:editing,amount:+form.amount}:e));else setList('expenses',l=>[...l,{...form,id:uid(),amount:+form.amount}]);setForm({date:today(),category:'Operativo',description:'',amount:''});setEditing(null);};const remove=id=>{if(confirm('Eliminar gasto?'))setList('expenses',l=>l.filter(e=>e.id!==id));};return <div className="stack"><Card title={editing?'Editar gasto':'Registrar gasto'}><div className="formGrid"><Input v={form.date} p="Fecha" type="date" on={v=>setForm({...form,date:v})}/><Input v={form.category} p="Categoria" on={v=>setForm({...form,category:v})}/><Input v={form.description} p="Descripcion" on={v=>setForm({...form,description:v})}/><Input v={form.amount} p="Monto" type="number" on={v=>setForm({...form,amount:v})}/><button onClick={save}>Guardar gasto</button></div></Card><Card title="Gastos" wide><Table rows={expenses} columns={[["date","Fecha"],["category","Categoria"],["description","Descripcion"],["amount","Monto",money],["actions","Acciones",(_,r)=><div className="rowActions"><button className="mini secondary" onClick={()=>{setEditing(r.id);setForm({...r})}}>Editar</button><button className="mini danger" onClick={()=>remove(r.id)}>Eliminar</button></div>]]}/></Card></div>}
-function Cash({store,setStore,stats}){return <Card title="Caja diaria"><div className="formGrid"><Input v={store.cash.opening} p="Caja inicial" type="number" on={v=>setStore(prev=>({...prev,cash:{...prev.cash,opening:+v}}))}/><div className="totalBox">Ventas hoy:<b>{money(stats.salesToday)}</b></div><div className="totalBox">Gastos hoy:<b>{money(stats.expensesToday)}</b></div><div className="totalBox strong">Caja disponible:<b>{money(stats.cashBalance)}</b></div></div></Card>}
+function Cash({store,setStore,stats}){
+  const cash = store.cash || {};
+  const setCash = (field, value) => setStore(prev=>({...prev, cash:{...prev.cash, [field]: value}}));
+  const numeric = (field) => (v) => setCash(field, Number(v || 0));
+  const saveToday = () => alert('Caja actualizada. En esta version los datos quedan guardados en este navegador.');
+  return <div className="stack">
+    <div className="grid">
+      <KPI label="Ventas del dia" value={money(stats.salesToday)} hint="Ventas activas registradas"/>
+      <KPI label="Gastos del dia" value={money(stats.expensesToday)} hint="Modulo gastos"/>
+      <KPI label="Cierre esperado" value={money(stats.cashBalance)} hint="Caja inicial + ingresos - egresos"/>
+      <KPI label="Diferencia cierre" value={money(stats.closingDiff)} hint="Cierre contado vs esperado"/>
+    </div>
+    <Card title="Caja diaria / cierre" wide>
+      <div className="formGrid">
+        <Input v={cash.opening} p="Caja anterior / inicial" type="number" on={numeric('opening')}/>
+        <div className="totalBox">Ventas efectivo:<b>{money(stats.salesByMethod?.efectivo || 0)}</b></div>
+        <div className="totalBox">Ventas pago movil:<b>{money(stats.salesByMethod?.pagoMovil || 0)}</b></div>
+        <div className="totalBox">Ventas divisas:<b>{money(stats.salesByMethod?.divisas || 0)}</b></div>
+        <div className="totalBox">Ventas transferencia:<b>{money(stats.salesByMethod?.transferencia || 0)}</b></div>
+        <Input v={cash.usdReceived} p="USD adicional recibido" type="number" on={numeric('usdReceived')}/>
+        <Input v={cash.pagoMovilReceived} p="Pago movil adicional" type="number" on={numeric('pagoMovilReceived')}/>
+        <Input v={cash.transferReceived} p="Transferencia adicional" type="number" on={numeric('transferReceived')}/>
+        <Input v={cash.divisasReceived} p="Divisas adicional" type="number" on={numeric('divisasReceived')}/>
+        <div className="totalBox">Gastos registrados:<b>{money(stats.expensesToday)}</b></div>
+        <Input v={cash.purchases} p="Compras / mercancia" type="number" on={numeric('purchases')}/>
+        <Input v={cash.otherExpenses} p="Otros egresos" type="number" on={numeric('otherExpenses')}/>
+        <div className="totalBox strong">Cierre esperado total:<b>{money(stats.cashBalance)}</b></div>
+        <div className="totalBox">Cierre efectivo esperado:<b>{money(stats.expectedCashClose)}</b></div>
+        <div className="totalBox">Cierre pago movil esperado:<b>{money(stats.expectedPagoMovilClose)}</b></div>
+        <div className="totalBox">Cierre transferencia esperado:<b>{money(stats.expectedTransferClose)}</b></div>
+        <Input v={cash.closingCash} p="Cierre contado efectivo" type="number" on={numeric('closingCash')}/>
+        <Input v={cash.closingPagoMovil} p="Cierre contado pago movil" type="number" on={numeric('closingPagoMovil')}/>
+        <Input v={cash.notes} p="Observaciones de caja" on={v=>setCash('notes', v)}/>
+        <button onClick={saveToday}><Save size={16}/>Guardar caja</button>
+      </div>
+    </Card>
+    <Card title="Resumen por metodo de pago" wide>
+      <Table rows={[
+        {method:'Efectivo', amount:stats.salesByMethod?.efectivo || 0},
+        {method:'Pago movil', amount:stats.salesByMethod?.pagoMovil || 0},
+        {method:'Divisas', amount:stats.salesByMethod?.divisas || 0},
+        {method:'Transferencia', amount:stats.salesByMethod?.transferencia || 0},
+        {method:'Mixto', amount:stats.salesByMethod?.mixto || 0}
+      ]} columns={[["method","Metodo"],["amount","Monto",money]]}/>
+    </Card>
+  </div>
+}
+
+function Config({store,setStore}){
+  const settings = store.settings || {};
+  const setSetting = (field, value) => setStore(prev=>({...prev, settings:{...prev.settings, [field]: value}}));
+  const uploadLogo = (file) => {
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = () => setSetting('logo', reader.result);
+    reader.readAsDataURL(file);
+  };
+  return <div className="stack">
+    <Card title="Configuracion visual" wide>
+      <div className="formGrid">
+        <Input v={settings.businessName} p="Nombre de la empresa" on={v=>setSetting('businessName', v)}/>
+        <Input v={settings.subtitle} p="Subtitulo" on={v=>setSetting('subtitle', v)}/>
+        <Input v={settings.versionTitle} p="Titulo de tarjeta lateral" on={v=>setSetting('versionTitle', v)}/>
+        <Input v={settings.versionDescription} p="Descripcion de tarjeta lateral" on={v=>setSetting('versionDescription', v)}/>
+        <input type="file" accept="image/*" onChange={e=>uploadLogo(e.target.files?.[0])}/>
+        <button className="secondary" onClick={()=>setSetting('logo','')}>Quitar logo</button>
+      </div>
+    </Card>
+    <Card title="Vista previa" wide>
+      <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Version 4'}</b><span>{settings.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div>
+    </Card>
+  </div>
+}
+
 function Reports({store,stats}){const inventoryCost=store.products.reduce((a,p)=>a+Number(p.stock||0)*Number(p.cost||0),0);const inventorySale=store.products.reduce((a,p)=>a+Number(p.stock||0)*Number(p.price||0),0);return <div className="grid"><KPI label="Valor inventario costo" value={money(inventoryCost)}/><KPI label="Valor inventario venta" value={money(inventorySale)}/><KPI label="Saldos por cobrar" value={money(stats.pendingBalances)}/><KPI label="Productos activos" value={store.products.length}/><Card title="Resumen version 3" wide><p>Esta version agrega edicion, eliminacion, ajuste de stock, anulacion de ventas y administracion basica de laboratorios.</p></Card></div>}
 
 createRoot(document.getElementById('root')).render(<App />);
