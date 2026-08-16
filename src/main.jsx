@@ -76,7 +76,7 @@ const seed = {
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
   cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
-  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Version 7', versionDescription:'Guia visual para empleados, campos explicados y desplegables claros', exchangeRate:0, exchangeRateDate:today() }
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Version 8', versionDescription:'Interfaz compacta para empleados con ayuda discreta', exchangeRate:0, exchangeRateDate:today() }
 };
 
 function loadStore(){
@@ -124,11 +124,12 @@ function App(){
 
 function KPI({label,value,hint}){return <div className="kpi"><span>{label}</span><b>{value}</b>{hint&&<small>{hint}</small>}</div>}
 function Card({title,children,action,wide}){return <section className={wide?'card wide':'card'}><div className="cardHead"><h2>{title}</h2>{action}</div>{children}</section>}
-function Input({v,on,p,type='text'}){const h=fieldHelp(p);return <label className="field"><span>{p}{h.required&&<b>*</b>}</span><input value={v??''} type={type} placeholder={p} onChange={e=>on(e.target.value)}/><small>{h.text}</small></label>}
-function Select({v,on,opts,p}){const control=<select value={v??''} onChange={e=>on(e.target.value)}>{opts.map(([val,label])=><option key={val} value={val}>{label}</option>)}</select>; if(!p)return control; const h=fieldHelp(p); return <label className="field"><span>{p}{h.required&&<b>*</b>}</span>{control}<small>{h.text}</small></label>}
+function FieldLabel({p}){const h=fieldHelp(p);return <span className="fieldTitle">{p}{h.required&&<b>*</b>}<em title={h.text}>?</em></span>}
+function Input({v,on,p,type='text'}){return <label className="field compactField"><FieldLabel p={p}/><input value={v??''} type={type} placeholder={p} onChange={e=>on(e.target.value)}/></label>}
+function Select({v,on,opts,p}){const control=<select value={v??''} onChange={e=>on(e.target.value)}>{opts.map(([val,label])=><option key={val} value={val}>{label}</option>)}</select>; if(!p)return control; return <label className="field compactField"><FieldLabel p={p}/>{control}</label>}
 function Table({rows,columns,empty='Sin registros'}){if(!rows.length)return <p className="muted">{empty}</p>;return <div className="tableWrap"><table><thead><tr>{columns.map(c=><th key={c[0]}>{c[1]}</th>)}</tr></thead><tbody>{rows.map((r,idx)=><tr key={r.id||idx}>{columns.map(([key,,fmt])=><td key={key}>{fmt?fmt(r[key],r):r[key]}</td>)}</tr>)}</tbody></table></div>}
 
-function Guide({title,items}){return <Card title={title} wide><ul className="guideList">{items.map((item,index)=><li key={index}>{item}</li>)}</ul></Card>}
+function Guide({title,items}){return <details className="guideCompact"><summary>{title}<span>Ver ayuda</span></summary><ul className="guideList">{items.map((item,index)=><li key={index}>{item}</li>)}</ul></details>}
 
 function Dashboard({store,stats}){
   const rate = Number(store.settings?.exchangeRate || 0);
@@ -299,7 +300,7 @@ function Config({store,setStore}){
     </Card>
     <Card title="Vista previa" wide>
       <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
-      <div className="statusBox"><b>{settings.versionTitle || 'Version 7'}</b><span>{settings.versionDescription || 'Guia visual para empleados y campos explicados.'}</span></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Version 8'}</b><span>{settings.versionDescription || 'Interfaz compacta con ayuda discreta.'}</span></div>
     </Card>
   </div>
 }
