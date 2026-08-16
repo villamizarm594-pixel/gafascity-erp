@@ -82,7 +82,7 @@ const seed = {
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
   cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
-  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Produccion 1.0', versionDescription:'Con login y sincronizacion con Supabase', exchangeRate:0, exchangeRateDate:today() }
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Produccion 1.1', versionDescription:'Login Supabase corregido y sincronizacion estable', exchangeRate:0, exchangeRateDate:today() }
 };
 
 function loadStore(){
@@ -123,7 +123,6 @@ function App(){
     else { setCloudStatus('No hay respaldo en nube'); alert('Todavía no hay datos guardados en Supabase. Guarda primero desde esta app.'); }
   };
 
-  if(!session) return <Login />;
   const stats = useMemo(()=>{
     const activeSales = store.sales.filter(s=>!s.cancelled);
     const salesToday = activeSales.filter(s=>s.date===today()).reduce((a,s)=>a+Number(s.total),0);
@@ -151,6 +150,9 @@ function App(){
   const nav = [
     ['dashboard','Inicio',LayoutDashboard], ['sales','Ventas',ShoppingCart], ['orders','Ordenes / formulas',ClipboardList], ['labs','Laboratorios',Microscope], ['inventory','Inventario',Package], ['customers','Clientes',Users], ['cash','Caja diaria',Wallet], ['expenses','Gastos',Receipt], ['reports','Reportes',BarChart3], ['config','Configuracion',Settings]
   ];
+
+  if(!session) return <Login />;
+
   return <div className="app"><aside className="sidebar"><div className="brand">{store.settings?.logo ? <img className="logoImg" src={store.settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{store.settings?.businessName || 'GafasCity ERP'}</b><small>{store.settings?.subtitle || 'Gestion optica interna'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button key={id} onClick={()=>setActive(id)} className={active===id?'active':''}><Icon size={18}/>{label}</button>)}</nav><div className="statusBox"><b>{store.settings?.versionTitle || 'Version 4'}</b><span>{store.settings?.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div></aside><main><header className="topbar"><div><h1>{nav.find(n=>n[0]===active)?.[1]}</h1><p>Flujo basado en inventario, ventas, trabajos de formula y laboratorios.</p></div><div className="actions topActions"><span className="badge">{cloudStatus}</span><button className="secondary" onClick={loadCloud}>Cargar nube</button><button onClick={saveCloud}>Guardar nube</button><button className="ghost" onClick={()=>supabase.auth.signOut()}>Salir</button><button className="ghost" onClick={()=>{if(confirm('Esto reinicia los datos locales.')){localStorage.removeItem('gafascity-store-v2');location.reload();}}}>Reiniciar local</button></div></header>{active==='dashboard'&&<Dashboard store={store} stats={stats}/>} {active==='inventory'&&<Inventory products={store.products} setList={setList} query={query} setQuery={setQuery}/>} {active==='sales'&&<Sales store={store} setStore={setStore}/>} {active==='orders'&&<Orders orders={store.orders} labs={store.laboratories} setList={setList}/>} {active==='labs'&&<Laboratories labs={store.laboratories} orders={store.orders} setList={setList}/>} {active==='customers'&&<Customers customers={store.customers} setList={setList}/>} {active==='cash'&&<Cash store={store} setStore={setStore} stats={stats}/>} {active==='expenses'&&<Expenses expenses={store.expenses} setList={setList}/>} {active==='reports'&&<Reports store={store} stats={stats}/>} {active==='config'&&<Config store={store} setStore={setStore}/>}</main></div>;
 }
 
@@ -360,7 +362,7 @@ function Config({store,setStore}){
     </Card>
     <Card title="Vista previa" wide>
       <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
-      <div className="statusBox"><b>{settings.versionTitle || 'Produccion 1.0'}</b><span>{settings.versionDescription || 'Login y sincronizacion con Supabase.'}</span></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Produccion 1.1'}</b><span>{settings.versionDescription || 'Login corregido y sincronizacion estable.'}</span></div>
     </Card>
   </div>
 }
