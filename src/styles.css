@@ -2,3 +2,5 @@
 .logoImg{width:44px;height:44px;border-radius:14px;object-fit:cover;border:1px solid #334155;background:#0f172a}.previewBrand{margin-bottom:16px}.previewBrand span{background:linear-gradient(135deg,#2563eb,#06b6d4);width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-weight:900}
 
 .actions{display:flex;gap:10px;flex-wrap:wrap}.muted{line-height:1.5}
+
+.filterHint{color:#94a3b8;font-size:12px}.actions button{margin-bottom:4px}
