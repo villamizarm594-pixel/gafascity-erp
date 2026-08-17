@@ -9,8 +9,16 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const CLOUD_STATE_ID = 'gafascity-main';
 const ADMIN_EMAILS = ['admin@gafascity.com'];
-const EMPLOYEE_EMAILS = ['empleado1@gafascity.com','empleado2@gafascity.com','empleado3@gafascity.com'];
+const EMPLOYEE_EMAILS = ['empleado1@gafascity.com','empleado2@gafascity.com','empleado3@gafascity.com','empleado4@gafascity.com'];
+const STAFF_NAMES = {
+  'admin@gafascity.com': 'Administrador',
+  'empleado1@gafascity.com': 'Rhoy',
+  'empleado2@gafascity.com': 'Ely',
+  'empleado3@gafascity.com': 'Anyi',
+  'empleado4@gafascity.com': 'Yngrid'
+};
 const getUserRole = (email = '') => ADMIN_EMAILS.includes(email.toLowerCase()) ? 'admin' : 'empleado';
+const getStaffName = (email = '') => STAFF_NAMES[email.toLowerCase()] || email || 'Usuario';
 
 const today = () => new Date().toISOString().slice(0, 10);
 const money = (n) => `$${Number(n || 0).toFixed(2)}`;
@@ -87,7 +95,7 @@ const seed = {
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
   cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
-  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Produccion 1.3', versionDescription:'Modo administrador y modo empleado', exchangeRate:0, exchangeRateDate:today() }
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Produccion 1.4', versionDescription:'Ventas identificadas por empleado', exchangeRate:0, exchangeRateDate:today() }
 };
 
 function loadStore(){
@@ -166,7 +174,7 @@ function App(){
 
   if(!session) return <Login />;
 
-  return <div className="app"><aside className="sidebar"><div className="brand">{store.settings?.logo ? <img className="logoImg" src={store.settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{store.settings?.businessName || 'GafasCity ERP'}</b><small>{store.settings?.subtitle || 'Gestion optica interna'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button key={id} onClick={()=>setActive(id)} className={displayActive===id?'active':''}><Icon size={18}/>{label}</button>)}</nav><div className="statusBox"><b>{store.settings?.versionTitle || 'Version 4'}</b><span>{store.settings?.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div></aside><main><header className="topbar"><div><h1>{nav.find(n=>n[0]===displayActive)?.[1]}</h1><p>Flujo basado en inventario, ventas, trabajos de formula y laboratorios.</p></div><div className="actions topActions"><span className="badge">{isAdmin ? 'Admin' : 'Empleado'} - {cloudStatus}</span><button className="secondary" onClick={loadCloud}>Cargar nube</button><button onClick={saveCloud}>{isAdmin ? 'Guardar nube' : 'Guardar cambios'}</button><button className="ghost" onClick={()=>supabase.auth.signOut()}>Salir</button>{isAdmin&&<button className="ghost" onClick={()=>{if(confirm('Esto reinicia los datos locales.')){localStorage.removeItem('gafascity-store-v2');location.reload();}}}>Reiniciar local</button>}</div></header>{isAdmin && displayActive==='dashboard'&&<Dashboard store={store} stats={stats}/>} {isAdmin && displayActive==='inventory'&&<Inventory products={store.products} setList={setList} query={query} setQuery={setQuery}/>} {displayActive==='sales'&&(isAdmin ? <Sales store={store} setStore={setStore}/> : <EmployeeSales store={store} setStore={setStore}/>) } {isAdmin && displayActive==='orders'&&<Orders orders={store.orders} labs={store.laboratories} setList={setList}/>} {isAdmin && displayActive==='labs'&&<Laboratories labs={store.laboratories} orders={store.orders} setList={setList}/>} {isAdmin && displayActive==='customers'&&<Customers customers={store.customers} setList={setList}/>} {isAdmin && displayActive==='cash'&&<Cash store={store} setStore={setStore} stats={stats}/>} {isAdmin && displayActive==='expenses'&&<Expenses expenses={store.expenses} setList={setList}/>} {isAdmin && displayActive==='reports'&&<Reports store={store} stats={stats}/>} {isAdmin && displayActive==='config'&&<Config store={store} setStore={setStore}/>} {!isAdmin && displayActive==='tracking'&&<EmployeeTracking orders={store.orders} labs={store.laboratories}/>}</main></div>;
+  return <div className="app"><aside className="sidebar"><div className="brand">{store.settings?.logo ? <img className="logoImg" src={store.settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{store.settings?.businessName || 'GafasCity ERP'}</b><small>{store.settings?.subtitle || 'Gestion optica interna'}</small></div></div><nav>{nav.map(([id,label,Icon])=><button key={id} onClick={()=>setActive(id)} className={displayActive===id?'active':''}><Icon size={18}/>{label}</button>)}</nav><div className="statusBox"><b>{store.settings?.versionTitle || 'Version 4'}</b><span>{store.settings?.versionDescription || 'Caja diaria mejorada y logo editable.'}</span></div></aside><main><header className="topbar"><div><h1>{nav.find(n=>n[0]===displayActive)?.[1]}</h1><p>Flujo basado en inventario, ventas, trabajos de formula y laboratorios.</p></div><div className="actions topActions"><span className="badge">{isAdmin ? 'Admin' : 'Empleado'} - {cloudStatus}</span><button className="secondary" onClick={loadCloud}>Cargar nube</button><button onClick={saveCloud}>{isAdmin ? 'Guardar nube' : 'Guardar cambios'}</button><button className="ghost" onClick={()=>supabase.auth.signOut()}>Salir</button>{isAdmin&&<button className="ghost" onClick={()=>{if(confirm('Esto reinicia los datos locales.')){localStorage.removeItem('gafascity-store-v2');location.reload();}}}>Reiniciar local</button>}</div></header>{isAdmin && displayActive==='dashboard'&&<Dashboard store={store} stats={stats}/>} {isAdmin && displayActive==='inventory'&&<Inventory products={store.products} setList={setList} query={query} setQuery={setQuery}/>} {displayActive==='sales'&&(isAdmin ? <Sales store={store} setStore={setStore} currentUser={userEmail}/> : <EmployeeSales store={store} setStore={setStore} currentUser={userEmail}/>) } {isAdmin && displayActive==='orders'&&<Orders orders={store.orders} labs={store.laboratories} setList={setList}/>} {isAdmin && displayActive==='labs'&&<Laboratories labs={store.laboratories} orders={store.orders} setList={setList}/>} {isAdmin && displayActive==='customers'&&<Customers customers={store.customers} setList={setList}/>} {isAdmin && displayActive==='cash'&&<Cash store={store} setStore={setStore} stats={stats}/>} {isAdmin && displayActive==='expenses'&&<Expenses expenses={store.expenses} setList={setList}/>} {isAdmin && displayActive==='reports'&&<Reports store={store} stats={stats}/>} {isAdmin && displayActive==='config'&&<Config store={store} setStore={setStore}/>} {!isAdmin && displayActive==='tracking'&&<EmployeeTracking orders={store.orders} labs={store.laboratories}/>}</main></div>;
 }
 
 function KPI({label,value,hint}){return <div className="kpi"><span>{label}</span><b>{value}</b>{hint&&<small>{hint}</small>}</div>}
@@ -206,7 +214,7 @@ function Login(){
 
 function Guide({title,items}){return <details className="guideCompact"><summary>{title}<span>Ver ayuda</span></summary><ul className="guideList">{items.map((item,index)=><li key={index}>{item}</li>)}</ul></details>}
 
-function EmployeeSales({store,setStore}){
+function EmployeeSales({store,setStore,currentUser}){
   const firstProduct=store.products[0];
   const [sale,setSale]=useState({date:today(),customerName:'',category:'Montura',productId:firstProduct?.id||'',qty:1,payment:'Efectivo',warranty:'No'});
   const categoryProducts = store.products.filter(p => !sale.category || p.category === sale.category);
@@ -214,20 +222,22 @@ function EmployeeSales({store,setStore}){
   const total=product?product.price*Number(sale.qty||0):0;
   const rate = Number(store.settings?.exchangeRate || 0);
   const totalBs = rate ? total * rate : 0;
+  const sellerName = getStaffName(currentUser);
+  const sellerEmail = currentUser || '';
   const complete=()=>{
     if(!sale.customerName)return alert('Nombre del cliente obligatorio');
     if(!product)return alert('Selecciona un producto');
     if(Number(sale.qty)<=0)return alert('Cantidad invalida');
     if(product.stock<Number(sale.qty))return alert('No hay stock suficiente');
-    const newSale={id:uid(),date:sale.date,customerName:sale.customerName,productId:product.id,productCodeName:`${product.code} - ${product.description}`,category:sale.category || product.category,description:product.description,qty:Number(sale.qty),payment:sale.payment,total,totalBs,exchangeRate:rate,exchangeRateDate:store.settings?.exchangeRateDate || '',warranty:sale.warranty,cancelled:false};
+    const newSale={id:uid(),date:sale.date,customerName:sale.customerName,productId:product.id,productCodeName:`${product.code} - ${product.description}`,category:sale.category || product.category,description:product.description,qty:Number(sale.qty),payment:sale.payment,total,totalBs,exchangeRate:rate,exchangeRateDate:store.settings?.exchangeRateDate || '',warranty:sale.warranty,sellerName,sellerEmail,cancelled:false};
     setStore(prev=>({...prev,sales:[...prev.sales,newSale],products:prev.products.map(p=>p.id===product.id?{...p,stock:p.stock-Number(sale.qty)}:p)}));
     alert('Venta registrada. Ahora presiona Guardar cambios para respaldar la venta en la nube.');
   };
   const recent = store.sales.filter(s=>!s.cancelled).slice(-5).reverse();
   return <div className="stack">
     <Guide title="Modo empleado - Registrar venta" items={["Selecciona categoría y producto vendido.","Registra cliente, cantidad y método de pago.","Al terminar, presiona Guardar cambios para respaldar la información.","No tienes acceso a caja, gastos, reportes ni configuración."]}/>
-    <Card title="Registrar venta" wide><div className="formGrid"><Input v={sale.date} p="Fecha" type="date" on={v=>setSale({...sale,date:v})}/><Input v={sale.customerName} p="Nombre y apellido del cliente" on={v=>setSale({...sale,customerName:v})}/><Select p="Categoría" v={sale.category} on={v=>{const filtered=store.products.filter(p=>p.category===v);setSale({...sale,category:v,productId:filtered[0]?.id||''})}} opts={saleCategoryOptions.map(x=>[x,x])}/><Select p="Producto vendido" v={sale.productId} on={v=>setSale({...sale,productId:v})} opts={(categoryProducts.length?categoryProducts:store.products).map(p=>[p.id,`${p.code} - ${p.description} (${p.stock})`])}/><div className="totalBox">Descripcion:<b>{product?.description||'-'}</b></div><Input v={sale.qty} p="Cantidad" type="number" on={v=>setSale({...sale,qty:v})}/><Select p="Método de pago" v={sale.payment} on={v=>setSale({...sale,payment:v})} opts={paymentOptions.map(x=>[x,x])}/><div className="totalBox">Total USD:<b>{money(total)}</b></div><div className="totalBox">Total Bs:<b>{rate?bs(totalBs):'Configurar tasa'}</b></div><Select p="Garantía" v={sale.warranty} on={v=>setSale({...sale,warranty:v})} opts={[["No","Sin garantia"],["Si","Con garantia"]]}/><button onClick={complete}><Save size={16}/>Registrar venta</button></div></Card>
-    <Card title="Últimas ventas activas" wide><Table rows={recent} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cantidad"],["total","Total USD",money],["payment","Pago"]]}/></Card>
+    <Card title="Registrar venta" wide><div className="sellerBanner">Venta registrada por: <b>{sellerName}</b></div><div className="formGrid"><Input v={sale.date} p="Fecha" type="date" on={v=>setSale({...sale,date:v})}/><Input v={sale.customerName} p="Nombre y apellido del cliente" on={v=>setSale({...sale,customerName:v})}/><Select p="Categoría" v={sale.category} on={v=>{const filtered=store.products.filter(p=>p.category===v);setSale({...sale,category:v,productId:filtered[0]?.id||''})}} opts={saleCategoryOptions.map(x=>[x,x])}/><Select p="Producto vendido" v={sale.productId} on={v=>setSale({...sale,productId:v})} opts={(categoryProducts.length?categoryProducts:store.products).map(p=>[p.id,`${p.code} - ${p.description} (${p.stock})`])}/><div className="totalBox">Descripcion:<b>{product?.description||'-'}</b></div><Input v={sale.qty} p="Cantidad" type="number" on={v=>setSale({...sale,qty:v})}/><Select p="Método de pago" v={sale.payment} on={v=>setSale({...sale,payment:v})} opts={paymentOptions.map(x=>[x,x])}/><div className="totalBox">Total USD:<b>{money(total)}</b></div><div className="totalBox">Total Bs:<b>{rate?bs(totalBs):'Configurar tasa'}</b></div><Select p="Garantía" v={sale.warranty} on={v=>setSale({...sale,warranty:v})} opts={[["No","Sin garantia"],["Si","Con garantia"]]}/><button onClick={complete}><Save size={16}/>Registrar venta</button></div></Card>
+    <Card title="Últimas ventas activas" wide><Table rows={recent} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cantidad"],["total","Total USD",money],["payment","Pago"],["sellerName","Vendedor",(v)=>v||'-']]}/></Card>
   </div>;
 }
 
@@ -252,7 +262,7 @@ function Dashboard({store,stats}){
     <KPI label="Stock bajo" value={stats.lowStock.length} hint="Productos a reponer"/>
     <Card title="Inventario bajo"><Table rows={stats.lowStock} columns={[["code","Codigo"],["description","Producto"],["stock","Stock"],["minStock","Minimo"]]}/></Card>
     <Card title="Ordenes recientes"><Table rows={store.orders.slice(-5).reverse()} columns={[["number","Orden"],["customer","Cliente"],["lab","Laboratorio"],["balance","Resta",money],["status","Estatus"]]}/></Card>
-    <Card title="Ventas recientes" wide><Table rows={store.sales.slice(-6).reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cant."],["total","Total",money],["totalBs","Total Bs.",(v,r)=>r.totalBs?bs(r.totalBs):(rate?bs(Number(r.total||0)*rate):'-')],["payment","Pago"],["cancelled","Estado",v=>v?'Anulada':'Activa']]}/></Card>
+    <Card title="Ventas recientes" wide><Table rows={store.sales.slice(-6).reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["qty","Cant."],["total","Total",money],["totalBs","Total Bs.",(v,r)=>r.totalBs?bs(r.totalBs):(rate?bs(Number(r.total||0)*rate):'-')],["payment","Pago"],["sellerName","Vendedor",(v)=>v||'-'],["cancelled","Estado",v=>v?'Anulada':'Activa']]}/></Card>
   </div>;
 }
 
@@ -268,7 +278,7 @@ function Inventory({products,setList,query,setQuery}){
   return <div className="stack"><Guide title="Guía rápida Inventario" items={["Use Código para identificar el producto dentro de la tienda.","Categoría define si es Montura, Cristal, Accesorio o Servicio.","Costo es lo que paga la tienda; Precio es lo que paga el cliente.","Stock mínimo sirve para alertas de reposición."]}/><Card title={editing?'Editar producto':'Inventario / nuevo producto'} wide action={editing&&<button className="secondary" onClick={reset}>Cancelar edicion</button>}><div className="formGrid"><Input v={form.code} p="Codigo" on={v=>setForm({...form,code:v})}/><Input v={form.date} p="Fecha" type="date" on={v=>setForm({...form,date:v})}/><Select p="Categoría" v={form.category} on={v=>setForm({...form,category:v})} opts={['Montura','Cristal','Accesorio','Servicio','Otros'].map(x=>[x,x])}/><Input v={form.description} p="Descripcion" on={v=>setForm({...form,description:v})}/><Input v={form.qty} p="Cantidad" type="number" on={v=>setForm({...form,qty:v,stock:v})}/><Input v={form.cost} p="Costo" type="number" on={v=>setForm({...form,cost:v})}/><Input v={form.price} p="Precio" type="number" on={v=>setForm({...form,price:v})}/><Select p="Método de pago" v={form.paymentMethod} on={v=>setForm({...form,paymentMethod:v})} opts={paymentOptions.map(x=>[x,x])}/><Input v={form.stock} p="Stock" type="number" on={v=>setForm({...form,stock:v})}/><Input v={form.minStock} p="Stock minimo" type="number" on={v=>setForm({...form,minStock:v})}/><button onClick={save}><Save size={16}/>{editing?'Guardar cambios':'Agregar'}</button></div></Card><Card title="Productos" wide action={<div className="search"><Search size={16}/><input placeholder="Buscar codigo, categoria o producto" value={query} onChange={e=>setQuery(e.target.value)}/></div>}><Table rows={filtered} columns={[["code","Codigo"],["date","Fecha"],["category","Categoria"],["description","Descripcion"],["cost","Costo",money],["price","Precio",money],["stock","Stock"],["actions","Acciones",(_,r)=><div className="rowActions"><button className="mini secondary" onClick={()=>edit(r)}><Pencil size={13}/>Editar</button><button className="mini warn" onClick={()=>adjust(r.id)}>Ajustar stock</button><button className="mini danger" onClick={()=>remove(r.id)}><Trash2 size={13}/>Eliminar</button></div>]]}/></Card></div>;
 }
 
-function Sales({store,setStore}){
+function Sales({store,setStore,currentUser}){
   const firstProduct=store.products[0];
   const [sale,setSale]=useState({date:today(),customerName:'',category:'Montura',productId:firstProduct?.id||'',qty:1,payment:'Efectivo',warranty:'No'});
   const [filters,setFilters]=useState({q:'',from:'',to:'',payment:'Todos',status:'Todos'});
@@ -277,6 +287,8 @@ function Sales({store,setStore}){
   const total=product?product.price*Number(sale.qty||0):0;
   const rate = Number(store.settings?.exchangeRate || 0);
   const totalBs = rate ? total * rate : 0;
+  const sellerName = getStaffName(currentUser);
+  const sellerEmail = currentUser || '';
   const filteredSales = store.sales.filter(s =>
     inDateRange(s.date, filters.from, filters.to) &&
     (filters.payment==='Todos' || s.payment===filters.payment) &&
@@ -290,16 +302,16 @@ function Sales({store,setStore}){
     if(!product)return alert('Selecciona un producto');
     if(Number(sale.qty)<=0)return alert('Cantidad invalida');
     if(product.stock<Number(sale.qty))return alert('No hay stock suficiente');
-    const newSale={id:uid(),date:sale.date,customerName:sale.customerName,productId:product.id,productCodeName:`${product.code} - ${product.description}`,category:sale.category || product.category,description:product.description,qty:Number(sale.qty),payment:sale.payment,total,totalBs,exchangeRate:rate,exchangeRateDate:store.settings?.exchangeRateDate || '',warranty:sale.warranty,cancelled:false};
+    const newSale={id:uid(),date:sale.date,customerName:sale.customerName,productId:product.id,productCodeName:`${product.code} - ${product.description}`,category:sale.category || product.category,description:product.description,qty:Number(sale.qty),payment:sale.payment,total,totalBs,exchangeRate:rate,exchangeRateDate:store.settings?.exchangeRateDate || '',warranty:sale.warranty,sellerName,sellerEmail,cancelled:false};
     setStore(prev=>({...prev,sales:[...prev.sales,newSale],products:prev.products.map(p=>p.id===product.id?{...p,stock:p.stock-Number(sale.qty)}:p)}));
     alert('Venta guardada y stock descontado');
   };
   const cancelSale=(s)=>{if(s.cancelled)return; if(!confirm('Anular venta y devolver stock?'))return; setStore(prev=>({...prev,sales:prev.sales.map(x=>x.id===s.id?{...x,cancelled:true}:x),products:prev.products.map(p=>p.id===s.productId?{...p,stock:Number(p.stock)+Number(s.qty)}:p)}));};
   return <div className="stack">
     <Guide title="Guía rápida Ventas" items={["Primero selecciona la categoría para filtrar la lista de productos.","Luego selecciona el producto vendido. Esto descuenta stock automáticamente.","El método de pago alimenta Caja diaria: ahora incluye Zelle y Binance.","Si se equivoca, anule la venta para devolver stock."]}/>
-    <Card title="Ventas (producto vendido)" wide><div className="formGrid"><Input v={sale.date} p="Fecha" type="date" on={v=>setSale({...sale,date:v})}/><Input v={sale.customerName} p="Nombre y apellido del cliente" on={v=>setSale({...sale,customerName:v})}/><Select p="Categoría" v={sale.category} on={v=>{const filtered=store.products.filter(p=>p.category===v);setSale({...sale,category:v,productId:filtered[0]?.id||''})}} opts={saleCategoryOptions.map(x=>[x,x])}/><Select p="Producto vendido" v={sale.productId} on={v=>setSale({...sale,productId:v})} opts={(categoryProducts.length?categoryProducts:store.products).map(p=>[p.id,`${p.code} - ${p.description} (${p.stock})`])}/><div className="totalBox">Categoria:<b>{sale.category || product?.category || '-'}</b></div><div className="totalBox">Descripcion:<b>{product?.description||'-'}</b></div><Input v={sale.qty} p="Cantidad" type="number" on={v=>setSale({...sale,qty:v})}/><Select p="Método de pago" v={sale.payment} on={v=>setSale({...sale,payment:v})} opts={paymentOptions.map(x=>[x,x])}/><div className="totalBox">Total USD:<b>{money(total)}</b></div><div className="totalBox">Total Bs:<b>{rate?bs(totalBs):'Configurar tasa'}</b></div><Select p="Garantía" v={sale.warranty} on={v=>setSale({...sale,warranty:v})} opts={[["No","Sin garantia"],["Si","Con garantia"]]}/><button onClick={complete}><Save size={16}/>Registrar venta</button></div></Card>
+    <Card title="Ventas (producto vendido)" wide><div className="sellerBanner">Usuario actual: <b>{sellerName}</b></div><div className="formGrid"><Input v={sale.date} p="Fecha" type="date" on={v=>setSale({...sale,date:v})}/><Input v={sale.customerName} p="Nombre y apellido del cliente" on={v=>setSale({...sale,customerName:v})}/><Select p="Categoría" v={sale.category} on={v=>{const filtered=store.products.filter(p=>p.category===v);setSale({...sale,category:v,productId:filtered[0]?.id||''})}} opts={saleCategoryOptions.map(x=>[x,x])}/><Select p="Producto vendido" v={sale.productId} on={v=>setSale({...sale,productId:v})} opts={(categoryProducts.length?categoryProducts:store.products).map(p=>[p.id,`${p.code} - ${p.description} (${p.stock})`])}/><div className="totalBox">Categoria:<b>{sale.category || product?.category || '-'}</b></div><div className="totalBox">Descripcion:<b>{product?.description||'-'}</b></div><Input v={sale.qty} p="Cantidad" type="number" on={v=>setSale({...sale,qty:v})}/><Select p="Método de pago" v={sale.payment} on={v=>setSale({...sale,payment:v})} opts={paymentOptions.map(x=>[x,x])}/><div className="totalBox">Total USD:<b>{money(total)}</b></div><div className="totalBox">Total Bs:<b>{rate?bs(totalBs):'Configurar tasa'}</b></div><Select p="Garantía" v={sale.warranty} on={v=>setSale({...sale,warranty:v})} opts={[["No","Sin garantia"],["Si","Con garantia"]]}/><button onClick={complete}><Save size={16}/>Registrar venta</button></div></Card>
     <Card title="Filtros de ventas" wide><div className="formGrid"><Input v={filters.q} p="Buscar cliente, producto o codigo" on={v=>setFilters({...filters,q:v})}/><Input v={filters.from} p="Desde" type="date" on={v=>setFilters({...filters,from:v})}/><Input v={filters.to} p="Hasta" type="date" on={v=>setFilters({...filters,to:v})}/><Select p="Filtrar método de pago" v={filters.payment} on={v=>setFilters({...filters,payment:v})} opts={['Todos',...paymentOptions].map(x=>[x,x])}/><Select p="Filtrar estatus" v={filters.status} on={v=>setFilters({...filters,status:v})} opts={['Todos','Activas','Anuladas'].map(x=>[x,x])}/><div className="totalBox">Registros:<b>{filteredSales.length}</b></div><div className="totalBox">Total USD:<b>{money(filteredTotal)}</b></div><div className="totalBox">Total Bs:<b>{bs(filteredTotalBs)}</b></div><button className="secondary" onClick={()=>downloadCSV('ventas-filtradas', filteredSales)}>Exportar filtrado</button></div></Card>
-    <Card title="Historial de ventas" wide><Table rows={filteredSales.slice().reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["category","Categoría"],["qty","Cantidad"],["total","Total USD",money],["totalBs","Total Bs.",bs],["exchangeRate","Tasa",bs],["payment","Pago"],["cancelled","Estado",v=>v?'Anulada':'Activa'],["actions","Acciones",(_,r)=><button disabled={r.cancelled} className="mini danger" onClick={()=>cancelSale(r)}><RotateCcw size={13}/>Anular</button>]]}/></Card>
+    <Card title="Historial de ventas" wide><Table rows={filteredSales.slice().reverse()} columns={[["date","Fecha"],["customerName","Cliente"],["productCodeName","Producto"],["category","Categoría"],["qty","Cantidad"],["total","Total USD",money],["totalBs","Total Bs.",bs],["exchangeRate","Tasa",bs],["payment","Pago"],["sellerName","Vendedor",(v)=>v||'-'],["cancelled","Estado",v=>v?'Anulada':'Activa'],["actions","Acciones",(_,r)=><button disabled={r.cancelled} className="mini danger" onClick={()=>cancelSale(r)}><RotateCcw size={13}/>Anular</button>]]}/></Card>
   </div>;
 }
 
@@ -411,7 +423,7 @@ function Config({store,setStore}){
     </Card>
     <Card title="Vista previa" wide>
       <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
-      <div className="statusBox"><b>{settings.versionTitle || 'Produccion 1.3'}</b><span>{settings.versionDescription || 'Modo admin y empleado activo.'}</span></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Produccion 1.4'}</b><span>{settings.versionDescription || 'Ventas identificadas por empleado.'}</span></div>
     </Card>
   </div>
 }
