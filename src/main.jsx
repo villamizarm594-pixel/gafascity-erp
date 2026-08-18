@@ -100,7 +100,7 @@ const seed = {
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
   cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
-  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Produccion 2.0 Final', versionDescription:'Abonos, inventario empleado, comisiones y fórmulas', exchangeRate:0, exchangeRateDate:today() }
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', versionTitle:'Produccion 2.0 Final Fix', versionDescription:'Abonos, inventario empleado, comisiones y fórmulas', exchangeRate:0, exchangeRateDate:today() }
 };
 
 function normalizeStore(raw = {}) {
@@ -162,6 +162,17 @@ function App(){
     const { error } = await supabase.from('app_state').upsert({ id: CLOUD_STATE_ID, data: store, updated_at: new Date().toISOString() });
     if(error){ setCloudStatus('Error guardando'); alert(error.message); return; }
     setCloudStatus('Guardado en nube');
+  };
+
+  const updateStoreAndCloud = (updater, message='Guardado automático') => {
+    setStore(prev => {
+      const next = normalizeStore(typeof updater === 'function' ? updater(normalizeStore(prev)) : updater);
+      localStorage.setItem('gafascity-store-v2', JSON.stringify(next));
+      setCloudStatus('Guardando automático...');
+      supabase.from('app_state').upsert({ id: CLOUD_STATE_ID, data: next, updated_at: new Date().toISOString() })
+        .then(({ error }) => setCloudStatus(error ? 'Error guardando' : message));
+      return next;
+    });
   };
 
   const loadCloud = async () => {
@@ -513,7 +524,7 @@ function Config({store,setStore}){
     </Card>
     <Card title="Vista previa" wide>
       <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
-      <div className="statusBox"><b>{settings.versionTitle || 'Produccion 2.0 Final'}</b><span>{settings.versionDescription || 'Abonos, inventario empleado, comisiones y fórmulas.'}</span></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Produccion 2.0 Final Fix'}</b><span>{settings.versionDescription || 'Abonos, inventario empleado, comisiones y fórmulas.'}</span></div>
     </Card>
   </div>
 }
