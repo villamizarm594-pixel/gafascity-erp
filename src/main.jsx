@@ -22,7 +22,13 @@ const COMMISSION_RATE = 0.05;
 const getUserRole = (email = '') => { const e = email.toLowerCase(); if (ADMIN_EMAILS.includes(e)) return 'admin'; if (e === 'empleado4@gafascity.com') return 'formula'; return 'empleado'; };
 const getStaffName = (email = '') => STAFF_NAMES[email.toLowerCase()] || email || 'Usuario';
 
-const today = () => new Date().toISOString().slice(0, 10);
+const today = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
 const money = (n) => `$${Number(n || 0).toFixed(2)}`;
 const uid = () => Math.random().toString(36).slice(2, 9);
 const bs = (n) => `Bs. ${Number(n || 0).toFixed(2)}`;
