@@ -260,17 +260,23 @@ function Login(){
     if(result.error) return alert(result.error.message);
     if(mode === 'signup') alert('Usuario creado. Si Supabase pide confirmación, revisa el correo antes de entrar.');
   };
-  return <div className="loginPage">
-    <div className="loginCard">
-      <div className="brand previewBrand"><span>GC</span><div><b>GafasCity ERP</b><small>Acceso interno</small></div></div>
-      <h1>{mode === 'login' ? 'Iniciar sesión' : 'Crear usuario'}</h1>
-      <p className="muted">Ingresa con un usuario autorizado para sincronizar datos en Supabase.</p>
-      <input value={email} placeholder="Correo" onChange={e=>setEmail(e.target.value)}/>
-      <input value={password} placeholder="Contraseña" type="password" onChange={e=>setPassword(e.target.value)}/>
-      <button onClick={submit} disabled={loading}>{loading ? 'Procesando...' : (mode === 'login' ? 'Entrar' : 'Crear usuario')}</button>
-      <button className="secondary" onClick={()=>setMode(mode === 'login' ? 'signup' : 'login')}>{mode === 'login' ? 'Crear usuario nuevo' : 'Ya tengo usuario'}</button>
-    </div>
-  </div>
+  return <div className="loginPage loginV2">
+    <div className="loginAurora auroraA"></div><div className="loginAurora auroraB"></div>
+    <div className="opticalOrb orbA"></div><div className="opticalOrb orbB"></div><div className="opticalBridge"></div>
+    <main className="loginV2Shell">
+      <section className="loginHeroPanel">
+        <div className="heroBrand">{settings.logo ? <img className="heroLogo" src={settings.logo} alt="Logo GafasCity"/> : <div className="heroLogoFallback">GC</div>}<div><span>GAFASCITY</span><small>Sistema de gestión óptica</small></div></div>
+        <div className="heroCopy"><span className="heroPill">OPERACIÓN INTELIGENTE</span><h2>Todo el control de la óptica en un solo lugar.</h2><p>Ventas, inventario, fórmulas, órdenes y laboratorios conectados en una experiencia clara y segura.</p><div className="heroFeatures"><span>✓ Acceso por empleado</span><span>✓ Información sincronizada</span><span>✓ Seguimiento en tiempo real</span></div></div>
+        <div className="heroFoot">GafasCity ERP <span>•</span> Producción 3.2</div>
+      </section>
+      <section className="loginFormPanel">
+        <div className="mobileLoginLogo">{settings.logo ? <img src={settings.logo} alt="Logo GafasCity"/> : <span>GC</span>}</div>
+        <div className="loginFormHead"><span className="loginMiniLabel">ACCESO SEGURO</span><h1>{mode === 'login' ? 'Iniciar sesión' : 'Crear usuario'}</h1><p>{mode === 'login'?'Ingresa tus datos para continuar al sistema.':'Crea una cuenta autorizada para ingresar.'}</p></div>
+        <div className="loginFormBody"><label className="loginV2Field"><span>Correo electrónico</span><div><span className="inputGlyph">@</span><input value={email} placeholder="usuario@gafascity.com" onChange={e=>setEmail(e.target.value)}/></div></label><label className="loginV2Field"><span>Contraseña</span><div><span className="inputGlyph">●</span><input value={password} placeholder="Escribe tu contraseña" type="password" onChange={e=>setPassword(e.target.value)}/></div></label><button className="loginV2Primary" onClick={submit} disabled={loading}>{loading ? 'Procesando...' : (mode === 'login' ? 'Entrar a GafasCity' : 'Crear usuario')}</button><button className="loginV2Link" onClick={()=>setMode(mode === 'login' ? 'signup' : 'login')}>{mode === 'login' ? '¿Necesitas crear un usuario?' : 'Volver a iniciar sesión'}</button></div>
+        <div className="loginSecurity">🔒 Conexión protegida y acceso autorizado</div>
+      </section>
+    </main>
+  </div>  
 }
 
 function Guide({title,items}){return <details className="guideCompact"><summary>{title}<span>Ver ayuda</span></summary><ul className="guideList">{items.map((item,index)=><li key={index}>{item}</li>)}</ul></details>}
