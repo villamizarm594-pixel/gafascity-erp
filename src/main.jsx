@@ -157,6 +157,20 @@ function App(){
   },[]);
 
   useEffect(()=>localStorage.setItem('gafascity-store-v2', JSON.stringify(store)), [store]);
+
+  useEffect(()=>{
+    let active=true;
+    const refreshRate=async()=>{
+      try{
+        const res=await fetch('/api/bcv-rate',{cache:'no-store'});
+        const data=await res.json();
+        if(!active||!res.ok||!data.ok)return;
+        setStore(prev=>{const currentDate=prev.settings?.exchangeRateDate||'';if(currentDate===data.date&&Number(prev.settings?.exchangeRate||0)===Number(data.rate))return prev;return normalizeStore({...prev,settings:{...prev.settings,exchangeRate:Number(data.rate),exchangeRateDate:data.date,exchangeRateSource:'BCV',exchangeRateUpdatedAt:data.checkedAt,exchangeRateAutomatic:true,exchangeRateSourceDateText:data.sourceDateText||''}})});
+      }catch(error){console.warn('No se pudo actualizar BCV',error);}
+    };
+    refreshRate();
+    return()=>{active=false};
+  },[]);
   const setList = (key, updater) => setStore(prev => ({...prev, [key]: typeof updater === 'function' ? updater(prev[key]) : updater}));
 
   const saveCloud = async () => {
@@ -425,6 +439,8 @@ function Cash({store,setStore}){
 function Config({store,setStore}){
   const settings = store.settings || {};
   const setSetting = (field, value) => setStore(prev=>({...prev, settings:{...prev.settings, [field]: value}}));
+  const [bcvLoading,setBcvLoading]=useState(false);
+  const updateBcvNow=async()=>{setBcvLoading(true);try{const res=await fetch('/api/bcv-rate',{cache:'no-store'});const data=await res.json();if(!res.ok||!data.ok)throw new Error(data.error||'No fue posible consultar el BCV');setStore(prev=>({...prev,settings:{...prev.settings,exchangeRate:Number(data.rate),exchangeRateDate:data.date,exchangeRateSource:'BCV',exchangeRateUpdatedAt:data.checkedAt,exchangeRateAutomatic:true,exchangeRateSourceDateText:data.sourceDateText||''}}));alert(`Tasa BCV actualizada: ${bs(data.rate)}`);}catch(error){alert(`No se pudo actualizar la tasa: ${error.message}`);}finally{setBcvLoading(false)}};
   const uploadLogo = (file) => {
     if(!file) return;
     const reader = new FileReader();
@@ -437,9 +453,9 @@ function Config({store,setStore}){
       <div className="formGrid">
         <Input v={settings.exchangeRate} p="Tasa USD a Bs" type="number" on={v=>setSetting('exchangeRate', Number(v || 0))}/>
         <Input v={settings.exchangeRateDate} p="Fecha de tasa" type="date" on={v=>setSetting('exchangeRateDate', v)}/>
-        <div className="totalBox strong">Vista previa:<b>{settings.exchangeRate ? bs(settings.exchangeRate) : 'Sin tasa'}</b></div>
+        <div className="totalBox strong">Vista previa:<b>{settings.exchangeRate ? bs(settings.exchangeRate) : 'Sin tasa'}</b></div><div className="totalBox">Fuente:<b>{settings.exchangeRateSource||'Manual'}</b></div><button onClick={updateBcvNow} disabled={bcvLoading}>{bcvLoading?'Consultando BCV...':'Actualizar BCV ahora'}</button>
       </div>
-      <p className="muted">Por ahora la tasa se carga manualmente. El BCV publica el tipo de cambio oficial y la tasa USD de referencia en su portal, pero para actualizarla automaticamente necesitaremos luego una funcion en servidor o una API intermedia.</p>
+      <p className="muted">La tasa se consulta automáticamente desde el BCV al iniciar. Netlify también intenta actualizarla de lunes a viernes en varios horarios. Si la consulta falla, se conserva la última tasa válida y el administrador puede actualizarla manualmente.</p>
     </Card>
     <Card title="Comisiones" wide><div className="featureToggle"><div><b>Cálculo de comisiones</b><span>{settings.commissionsEnabled?'Activado: se calculan comisiones por ventas y trabajos.':'Desactivado: se siguen guardando responsables, pero no se calculan comisiones.'}</span></div><button className={settings.commissionsEnabled?'warn':'secondary'} onClick={()=>setSetting('commissionsEnabled',!settings.commissionsEnabled)}>{settings.commissionsEnabled?'Desactivar comisiones':'Activar comisiones'}</button></div></Card><Card title="Configuracion visual" wide>
       <div className="formGrid">
@@ -453,7 +469,7 @@ function Config({store,setStore}){
     </Card>
     <Card title="Vista previa" wide>
       <div className="brand previewBrand">{settings.logo ? <img className="logoImg" src={settings.logo} alt="Logo"/> : <span>GC</span>}<div><b>{settings.businessName || 'GafasCity ERP'}</b><small>{settings.subtitle || 'Gestion optica interna'}</small></div></div>
-      <div className="statusBox"><b>{settings.versionTitle || 'Producción Final 3.4.1'}</b><span>{settings.versionDescription || 'Inventario físico y catálogo de cristales separados.'}</span></div>
+      <div className="statusBox"><b>{settings.versionTitle || 'Producción Final 3.5'}</b><span>{settings.versionDescription || 'Inventario físico y catálogo de cristales separados.'}</span></div>
     </Card>
   </div>
 }
