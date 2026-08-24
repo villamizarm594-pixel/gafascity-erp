@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "cry-2",
+    "crystal": "VS",
+    "treatment": "CR",
+    "colors": "",
+    "price": 25.0,
+    "range": "HASTA 2.50"
+  },
+  {
+    "id": "cry-3",
+    "crystal": "VS",
+    "treatment": "AR",
+    "colors": "",
+    "price": 35.0,
+    "range": "HASTA 2.50"
+  },
+  {
+    "id": "cry-4",
+    "crystal": "VS",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 62.5,
+    "range": "HASTA 2.50"
+  },
+  {
+    "id": "cry-5",
+    "crystal": "VS / BATMAN",
+    "treatment": "CR",
+    "colors": "",
+    "price": 35.0,
+    "range": "HASTA 2.50"
+  },
+  {
+    "id": "cry-6",
+    "crystal": "VS / BATMAN",
+    "treatment": "AR",
+    "colors": "",
+    "price": 65.0,
+    "range": "HASTA 2.50"
+  },
+  {
+    "id": "cry-7",
+    "crystal": "VS / BATMAN",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 95.0,
+    "range": "HASTA 2.50"
+  },
+  {
+    "id": "cry-8",
+    "crystal": "VS",
+    "treatment": "CR",
+    "colors": "",
+    "price": 35.0,
+    "range": "DESDE 2.50 HASTA 4.00"
+  },
+  {
+    "id": "cry-9",
+    "crystal": "VS",
+    "treatment": "AR",
+    "colors": "",
+    "price": 45.0,
+    "range": "DESDE 2.50 HASTA 4.00"
+  },
+  {
+    "id": "cry-10",
+    "crystal": "VS",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 80.0,
+    "range": "DESDE 2.50 HASTA 4.00"
+  },
+  {
+    "id": "cry-11",
+    "crystal": "VS",
+    "treatment": "CR",
+    "colors": "",
+    "price": 80.0,
+    "range": "DESDE 4.00 HASTA 10.00"
+  },
+  {
+    "id": "cry-12",
+    "crystal": "VS",
+    "treatment": "AR",
+    "colors": "",
+    "price": 120.0,
+    "range": "DESDE 4.00 HASTA 10.00"
+  },
+  {
+    "id": "cry-13",
+    "crystal": "VS",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 140.0,
+    "range": "DESDE 4.00 HASTA 10.00"
+  },
+  {
+    "id": "cry-14",
+    "crystal": "VS",
+    "treatment": "CR",
+    "colors": "",
+    "price": 120.0,
+    "range": "DESDE 10.00 HASTA 20.00"
+  },
+  {
+    "id": "cry-15",
+    "crystal": "VS",
+    "treatment": "AR",
+    "colors": "",
+    "price": 160.0,
+    "range": "DESDE 10.00 HASTA 20.00"
+  },
+  {
+    "id": "cry-16",
+    "crystal": "VS",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 200.0,
+    "range": "DESDE 10.00 HASTA 20.00"
+  },
+  {
+    "id": "cry-17",
+    "crystal": "VS NOVAK ACCURACY",
+    "treatment": "CR",
+    "colors": "",
+    "price": 63.0,
+    "range": ""
+  },
+  {
+    "id": "cry-18",
+    "crystal": "VS NOVAK ACCURACY",
+    "treatment": "AR",
+    "colors": "",
+    "price": 123.0,
+    "range": ""
+  },
+  {
+    "id": "cry-19",
+    "crystal": "VS NOVAK ACCURACY",
+    "treatment": "FOTO",
+    "colors": "",
+    "price": 103.0,
+    "range": ""
+  },
+  {
+    "id": "cry-20",
+    "crystal": "VS NOVAK ACCURACY",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 163.0,
+    "range": ""
+  },
+  {
+    "id": "cry-21",
+    "crystal": "VS NOVAK ACCURACY POLY",
+    "treatment": "CR",
+    "colors": "",
+    "price": 75.0,
+    "range": ""
+  },
+  {
+    "id": "cry-22",
+    "crystal": "VS NOVAK ACCURACY POLY",
+    "treatment": "AR",
+    "colors": "",
+    "price": 135.0,
+    "range": ""
+  },
+  {
+    "id": "cry-23",
+    "crystal": "VS NOVAK ACCURACY POLY",
+    "treatment": "FOTO",
+    "colors": "",
+    "price": 153.0,
+    "range": ""
+  },
+  {
+    "id": "cry-24",
+    "crystal": "VS NOVAK ACCURACY POLY",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 213.0,
+    "range": ""
+  },
+  {
+    "id": "cry-25",
+    "crystal": "VS NOVAK ACCURACY HI INDEX 1.67",
+    "treatment": "CR",
+    "colors": "",
+    "price": 176.0,
+    "range": ""
+  },
+  {
+    "id": "cry-26",
+    "crystal": "VS NOVAK ACCURACY HI INDEX 1.67",
+    "treatment": "AR",
+    "colors": "",
+    "price": 236.0,
+    "range": ""
+  },
+  {
+    "id": "cry-27",
+    "crystal": "VS NOVAK ACCURACY HI INDEX 1.67",
+    "treatment": "FOTO",
+    "colors": "",
+    "price": 281.0,
+    "range": ""
+  },
+  {
+    "id": "cry-28",
+    "crystal": "VS NOVAK ACCURACY HI INDEX 1.67",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 341.0,
+    "range": ""
+  },
+  {
+    "id": "cry-29",
+    "crystal": "VS NOVAK ACCURACY TRANSITIONS GEN S",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 224.0,
+    "range": ""
+  },
+  {
+    "id": "cry-30",
+    "crystal": "VS NOVAK ACCURACY TRANSITIONS GEN S",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 284.0,
+    "range": ""
+  },
+  {
+    "id": "cry-31",
+    "crystal": "VS NOVAK ACCURACY TRANSITIONS GEN S POLY",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ, RUBY,AMBAR, AMATISTA",
+    "price": 243.0,
+    "range": ""
+  },
+  {
+    "id": "cry-32",
+    "crystal": "VS NOVAK ACCURACY TRANSITIONS GEN S POLY",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ, RUBY,AMBAR, AMATISTA",
+    "price": 303.0,
+    "range": ""
+  },
+  {
+    "id": "cry-33",
+    "crystal": "VS NOVAK ACCURACY TRANSITIONS XTRACTIVE POLARIZED POLY",
+    "treatment": "SIN AR",
+    "colors": "GRIS",
+    "price": 471.0,
+    "range": ""
+  },
+  {
+    "id": "cry-34",
+    "crystal": "VS NOVAK ACCURACY TRANSITIONS XTRACTIVE POLARIZED POLY",
+    "treatment": "CON AR",
+    "colors": "GRIS",
+    "price": 531.0,
+    "range": ""
+  },
+  {
+    "id": "cry-35",
+    "crystal": "VS NOVAK ACCURACY POLY (STEP BACK)",
+    "treatment": "CR",
+    "colors": "",
+    "price": 107.0,
+    "range": ""
+  },
+  {
+    "id": "cry-36",
+    "crystal": "VS NOVAK ACCURACY POLY (STEP BACK)",
+    "treatment": "AR",
+    "colors": "",
+    "price": 167.0,
+    "range": ""
+  },
+  {
+    "id": "cry-37",
+    "crystal": "VS NOVAK ACCURACY POLY (STEP BACK)",
+    "treatment": "FOTO",
+    "colors": "",
+    "price": 185.0,
+    "range": ""
+  },
+  {
+    "id": "cry-38",
+    "crystal": "VS NOVAK ACCURACY POLY (STEP BACK)",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 245.0,
+    "range": ""
+  },
+  {
+    "id": "cry-39",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR POLARIZED LENSES",
+    "treatment": "SIN AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 125.0,
+    "range": ""
+  },
+  {
+    "id": "cry-40",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR POLARIZED LENSES",
+    "treatment": "CON AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 185.0,
+    "range": ""
+  },
+  {
+    "id": "cry-41",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR MIRROR",
+    "treatment": "SIN AR",
+    "colors": "DORADO, AZUL, PLATA",
+    "price": 200.0,
+    "range": ""
+  },
+  {
+    "id": "cry-42",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR MIRROR",
+    "treatment": "CON AR",
+    "colors": "DORADO, AZUL, PLATA",
+    "price": 260.0,
+    "range": ""
+  },
+  {
+    "id": "cry-43",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR GRADIENTE POLARIZED LENSES",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 194.0,
+    "range": ""
+  },
+  {
+    "id": "cry-44",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR GRADIENTE POLARIZED LENSES",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 254.0,
+    "range": ""
+  },
+  {
+    "id": "cry-45",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR POLARIZED LENSES (STEP BACK)",
+    "treatment": "SIN AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 157.0,
+    "range": ""
+  },
+  {
+    "id": "cry-46",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR POLARIZED LENSES (STEP BACK)",
+    "treatment": "CON AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 217.0,
+    "range": ""
+  },
+  {
+    "id": "cry-47",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR MIRROR (STEP BACK)",
+    "treatment": "SIN AR",
+    "colors": "DORADO, AZUL, PLATA",
+    "price": 232.0,
+    "range": ""
+  },
+  {
+    "id": "cry-48",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR MIRROR (STEP BACK)",
+    "treatment": "CON AR",
+    "colors": "DORADO, AZUL, PLATA",
+    "price": 292.0,
+    "range": ""
+  },
+  {
+    "id": "cry-49",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR GRADIENTE POLARIZED LENSES (STEP BACK)",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 226.0,
+    "range": ""
+  },
+  {
+    "id": "cry-50",
+    "crystal": "VS NOVAK ACCURACY NUPOLAR GRADIENTE POLARIZED LENSES (STEP BACK)",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 286.0,
+    "range": ""
+  },
+  {
+    "id": "cry-51",
+    "crystal": "BIFOCAL TERMINADO",
+    "treatment": "CR",
+    "colors": "",
+    "price": 40.0,
+    "range": "NO TENGA CILINDRO"
+  },
+  {
+    "id": "cry-52",
+    "crystal": "BIFOCAL TERMINADO",
+    "treatment": "AR",
+    "colors": "",
+    "price": 60.0,
+    "range": "NO TENGA CILINDRO"
+  },
+  {
+    "id": "cry-53",
+    "crystal": "BIFOCAL TERMINADO",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 95.0,
+    "range": "NO TENGA CILINDRO"
+  },
+  {
+    "id": "cry-54",
+    "crystal": "BIFOCAL TALLADO",
+    "treatment": "CR",
+    "colors": "",
+    "price": 70.0,
+    "range": "CON CILINDRO"
+  },
+  {
+    "id": "cry-55",
+    "crystal": "BIFOCAL TALLADO",
+    "treatment": "AR",
+    "colors": "",
+    "price": 95.0,
+    "range": "CON CILINDRO"
+  },
+  {
+    "id": "cry-56",
+    "crystal": "BIFOCAL TALLADO",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 140.0,
+    "range": "CON CILINDRO"
+  },
+  {
+    "id": "cry-57",
+    "crystal": "MULTIFOCAL CONVENCIONAL",
+    "treatment": "CR",
+    "colors": "",
+    "price": 80.0,
+    "range": ""
+  },
+  {
+    "id": "cry-58",
+    "crystal": "MULTIFOCAL CONVENCIONAL",
+    "treatment": "AR",
+    "colors": "",
+    "price": 110.0,
+    "range": ""
+  },
+  {
+    "id": "cry-59",
+    "crystal": "MULTIFOCAL CONVENCIONAL",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 140.0,
+    "range": ""
+  },
+  {
+    "id": "cry-60",
+    "crystal": "MULTIFOCAL DIGITAL VECTOR 2.0",
+    "treatment": "CR",
+    "colors": "",
+    "price": 150.0,
+    "range": ""
+  },
+  {
+    "id": "cry-61",
+    "crystal": "MULTIFOCAL DIGITAL VECTOR 2.0",
+    "treatment": "AR",
+    "colors": "",
+    "price": 180.0,
+    "range": ""
+  },
+  {
+    "id": "cry-62",
+    "crystal": "MULTIFOCAL DIGITAL VECTOR 2.0",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 220.0,
+    "range": ""
+  },
+  {
+    "id": "cry-63",
+    "crystal": "MULT. NOVAK FIRST",
+    "treatment": "CR",
+    "colors": "",
+    "price": 75.0,
+    "range": ""
+  },
+  {
+    "id": "cry-64",
+    "crystal": "MULT. NOVAK FIRST",
+    "treatment": "AR",
+    "colors": "",
+    "price": 135.0,
+    "range": ""
+  },
+  {
+    "id": "cry-65",
+    "crystal": "MULT. NOVAK FIRST",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 170.0,
+    "range": ""
+  },
+  {
+    "id": "cry-66",
+    "crystal": "MULT. NOVAK PRECISA",
+    "treatment": "CR",
+    "colors": "",
+    "price": 98.5,
+    "range": ""
+  },
+  {
+    "id": "cry-67",
+    "crystal": "MULT. NOVAK PRECISA",
+    "treatment": "AR",
+    "colors": "",
+    "price": 155.0,
+    "range": ""
+  },
+  {
+    "id": "cry-68",
+    "crystal": "MULT. NOVAK PRECISA",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 190.0,
+    "range": ""
+  },
+  {
+    "id": "cry-69",
+    "crystal": "MULT. NOVAK 3D",
+    "treatment": "CR",
+    "colors": "",
+    "price": 120.0,
+    "range": ""
+  },
+  {
+    "id": "cry-70",
+    "crystal": "MULT. NOVAK 3D",
+    "treatment": "AR",
+    "colors": "",
+    "price": 180.0,
+    "range": ""
+  },
+  {
+    "id": "cry-71",
+    "crystal": "MULT. NOVAK 3D",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 220.0,
+    "range": ""
+  },
+  {
+    "id": "cry-72",
+    "crystal": "MULT. NOVAK E-LIFE",
+    "treatment": "CR",
+    "colors": "",
+    "price": 165.0,
+    "range": ""
+  },
+  {
+    "id": "cry-73",
+    "crystal": "MULT. NOVAK E-LIFE",
+    "treatment": "AR",
+    "colors": "",
+    "price": 225.0,
+    "range": ""
+  },
+  {
+    "id": "cry-74",
+    "crystal": "MULT. NOVAK E-LIFE",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 265.0,
+    "range": ""
+  },
+  {
+    "id": "cry-75",
+    "crystal": "MULT. NOVAK EVO-S",
+    "treatment": "CR",
+    "colors": "",
+    "price": 270.0,
+    "range": ""
+  },
+  {
+    "id": "cry-76",
+    "crystal": "MULT. NOVAK EVO-S",
+    "treatment": "AR",
+    "colors": "",
+    "price": 320.0,
+    "range": ""
+  },
+  {
+    "id": "cry-77",
+    "crystal": "MULT. NOVAK EVO-S",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 370.0,
+    "range": ""
+  },
+  {
+    "id": "cry-78",
+    "crystal": "MULT. NOVAK AL LENS",
+    "treatment": "CR",
+    "colors": "",
+    "price": 395.0,
+    "range": ""
+  },
+  {
+    "id": "cry-79",
+    "crystal": "MULT. NOVAK AL LENS",
+    "treatment": "AR",
+    "colors": "",
+    "price": 465.0,
+    "range": ""
+  },
+  {
+    "id": "cry-80",
+    "crystal": "MULT. NOVAK AL LENS",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 545.0,
+    "range": ""
+  },
+  {
+    "id": "cry-81",
+    "crystal": "MULT. NOVAK FIRST HI INDEX 1.67",
+    "treatment": "CR",
+    "colors": "",
+    "price": 192.0,
+    "range": ""
+  },
+  {
+    "id": "cry-82",
+    "crystal": "MULT. NOVAK FIRST HI INDEX 1.67",
+    "treatment": "AR",
+    "colors": "",
+    "price": 252.0,
+    "range": ""
+  },
+  {
+    "id": "cry-83",
+    "crystal": "MULT. NOVAK FIRST HI INDEX 1.67",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 357.0,
+    "range": ""
+  },
+  {
+    "id": "cry-84",
+    "crystal": "MULT. NOVAK PRECISA HI INDEX 1.67",
+    "treatment": "CR",
+    "colors": "",
+    "price": 209.0,
+    "range": ""
+  },
+  {
+    "id": "cry-85",
+    "crystal": "MULT. NOVAK PRECISA HI INDEX 1.67",
+    "treatment": "AR",
+    "colors": "",
+    "price": 269.0,
+    "range": ""
+  },
+  {
+    "id": "cry-86",
+    "crystal": "MULT. NOVAK PRECISA HI INDEX 1.67",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 363.0,
+    "range": ""
+  },
+  {
+    "id": "cry-87",
+    "crystal": "MULT. NOVAK 3D HI INDEX 1.67",
+    "treatment": "CR",
+    "colors": "",
+    "price": 227.0,
+    "range": ""
+  },
+  {
+    "id": "cry-88",
+    "crystal": "MULT. NOVAK 3D HI INDEX 1.67",
+    "treatment": "AR",
+    "colors": "",
+    "price": 287.0,
+    "range": ""
+  },
+  {
+    "id": "cry-89",
+    "crystal": "MULT. NOVAK 3D HI INDEX 1.67",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 392.0,
+    "range": ""
+  },
+  {
+    "id": "cry-90",
+    "crystal": "MULT. NOVAK E-LIFE HI INDEX 1.67",
+    "treatment": "CR",
+    "colors": "",
+    "price": 278.0,
+    "range": ""
+  },
+  {
+    "id": "cry-91",
+    "crystal": "MULT. NOVAK E-LIFE HI INDEX 1.67",
+    "treatment": "AR",
+    "colors": "",
+    "price": 338.0,
+    "range": ""
+  },
+  {
+    "id": "cry-92",
+    "crystal": "MULT. NOVAK E-LIFE HI INDEX 1.67",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 443.0,
+    "range": ""
+  },
+  {
+    "id": "cry-93",
+    "crystal": "MULT. NOVAK EVO-S HI INDEX 1.67",
+    "treatment": "CR",
+    "colors": "",
+    "price": 383.0,
+    "range": ""
+  },
+  {
+    "id": "cry-94",
+    "crystal": "MULT. NOVAK EVO-S HI INDEX 1.67",
+    "treatment": "AR",
+    "colors": "",
+    "price": 443.0,
+    "range": ""
+  },
+  {
+    "id": "cry-95",
+    "crystal": "MULT. NOVAK EVO-S HI INDEX 1.67",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 548.0,
+    "range": ""
+  },
+  {
+    "id": "cry-96",
+    "crystal": "MULT. NOVAK FIRST NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 168.0,
+    "range": "NOTA: LOS MULTIFOCALES NUPOLAR O TRANSITIONS EN LA MONTURA FLAK 2.0 SE LE HACE UN RECARGO DE 32$ (MOTIVO: STEP BACK)"
+  },
+  {
+    "id": "cry-97",
+    "crystal": "MULT. NOVAK FIRST NUPOLAR",
+    "treatment": "CON AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 228.0,
+    "range": ""
+  },
+  {
+    "id": "cry-98",
+    "crystal": "MULT. NOVAK PRECISA NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 183.0,
+    "range": ""
+  },
+  {
+    "id": "cry-99",
+    "crystal": "MULT. NOVAK PRECISA NUPOLAR",
+    "treatment": "CON AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 243.0,
+    "range": ""
+  },
+  {
+    "id": "cry-100",
+    "crystal": "MULT. NOVAK 3D NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 199.0,
+    "range": ""
+  },
+  {
+    "id": "cry-101",
+    "crystal": "MULT. NOVAK 3D NUPOLAR",
+    "treatment": "CON AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 259.0,
+    "range": ""
+  },
+  {
+    "id": "cry-102",
+    "crystal": "MULT. NOVAK EVO-S NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 336.0,
+    "range": ""
+  },
+  {
+    "id": "cry-103",
+    "crystal": "MULT. NOVAK EVO-S NUPOLAR",
+    "treatment": "FOTOAR",
+    "colors": "GRIS, VERDE Y CAFÉ",
+    "price": 396.0,
+    "range": ""
+  },
+  {
+    "id": "cry-104",
+    "crystal": "MULT. NOVAK FIRST NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 244.0,
+    "range": ""
+  },
+  {
+    "id": "cry-105",
+    "crystal": "MULT. NOVAK FIRST NUPOLAR",
+    "treatment": "CON AR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 304.0,
+    "range": ""
+  },
+  {
+    "id": "cry-106",
+    "crystal": "MULT. NOVAK PRECISA NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 258.0,
+    "range": ""
+  },
+  {
+    "id": "cry-107",
+    "crystal": "MULT. NOVAK PRECISA NUPOLAR",
+    "treatment": "CON AR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 318.0,
+    "range": ""
+  },
+  {
+    "id": "cry-108",
+    "crystal": "MULT. NOVAK 3D NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 274.0,
+    "range": ""
+  },
+  {
+    "id": "cry-109",
+    "crystal": "MULT. NOVAK 3D NUPOLAR",
+    "treatment": "CON AR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 334.0,
+    "range": ""
+  },
+  {
+    "id": "cry-110",
+    "crystal": "MULT. NOVAK EVO-S NUPOLAR",
+    "treatment": "SIN AR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 411.0,
+    "range": ""
+  },
+  {
+    "id": "cry-111",
+    "crystal": "MULT. NOVAK EVO-S NUPOLAR",
+    "treatment": "FOTOAR",
+    "colors": "DORADO, AZUL Y PLATA",
+    "price": 471.0,
+    "range": ""
+  },
+  {
+    "id": "cry-112",
+    "crystal": "MULT. NOVAK FIRST NUPOLAR GRADIENTE",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 209.0,
+    "range": ""
+  },
+  {
+    "id": "cry-113",
+    "crystal": "MULT. NOVAK FIRST NUPOLAR GRADIENTE",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 269.0,
+    "range": ""
+  },
+  {
+    "id": "cry-114",
+    "crystal": "MULT. NOVAK PRECISA NUPOLAR GRADIENTE",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 223.0,
+    "range": ""
+  },
+  {
+    "id": "cry-115",
+    "crystal": "MULT. NOVAK PRECISA NUPOLAR GRADIENTE",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 283.0,
+    "range": ""
+  },
+  {
+    "id": "cry-116",
+    "crystal": "MULT. NOVAK 3D NUPOLAR GRADIENTE",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 239.0,
+    "range": ""
+  },
+  {
+    "id": "cry-117",
+    "crystal": "MULT. NOVAK 3D NUPOLAR GRADIENTE",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 299.0,
+    "range": ""
+  },
+  {
+    "id": "cry-118",
+    "crystal": "MULT. NOVAK EVO-S NUPOLAR GRADIENTE",
+    "treatment": "CR",
+    "colors": "GRIS, CAFÉ",
+    "price": 376.0,
+    "range": ""
+  },
+  {
+    "id": "cry-119",
+    "crystal": "MULT. NOVAK EVO-S NUPOLAR GRADIENTE",
+    "treatment": "FOTOAR",
+    "colors": "GRIS, CAFÉ",
+    "price": 436.0,
+    "range": ""
+  },
+  {
+    "id": "cry-120",
+    "crystal": "MULT. NOVAK FIRST TRANSITIONS GEN S",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 268.0,
+    "range": ""
+  },
+  {
+    "id": "cry-121",
+    "crystal": "MULT. NOVAK FIRST TRANSITIONS GEN S",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 328.0,
+    "range": ""
+  },
+  {
+    "id": "cry-122",
+    "crystal": "MULT. NOVAK PRECISA TRANSITIONS GEN S",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 283.0,
+    "range": ""
+  },
+  {
+    "id": "cry-123",
+    "crystal": "MULT. NOVAK PRECISA TRANSITIONS GEN S",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 343.0,
+    "range": ""
+  },
+  {
+    "id": "cry-124",
+    "crystal": "MULT. NOVAK 3D TRANSITIONS GEN S",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 298.0,
+    "range": ""
+  },
+  {
+    "id": "cry-125",
+    "crystal": "MULT. NOVAK 3D TRANSITIONS GEN S",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ",
+    "price": 358.0,
+    "range": ""
+  },
+  {
+    "id": "cry-126",
+    "crystal": "MULT. NOVAK E-LIFE TRANSITIONS GEN S",
+    "treatment": "CR",
+    "colors": "GRIS, CAFÉ",
+    "price": 343.0,
+    "range": ""
+  },
+  {
+    "id": "cry-127",
+    "crystal": "MULT. NOVAK E-LIFE TRANSITIONS GEN S",
+    "treatment": "FOTOAR",
+    "colors": "GRIS, CAFÉ",
+    "price": 403.0,
+    "range": ""
+  },
+  {
+    "id": "cry-128",
+    "crystal": "MULT. NOVAK EVO-S TRANSITIONS GEN S",
+    "treatment": "CR",
+    "colors": "GRIS, CAFÉ",
+    "price": 436.0,
+    "range": ""
+  },
+  {
+    "id": "cry-129",
+    "crystal": "MULT. NOVAK EVO-S TRANSITIONS GEN S",
+    "treatment": "FOTOAR",
+    "colors": "GRIS, CAFÉ",
+    "price": 496.0,
+    "range": ""
+  },
+  {
+    "id": "cry-130",
+    "crystal": "MULT. NOVAK FIRST TRANSITIONS GEN S POLY",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 287.0,
+    "range": ""
+  },
+  {
+    "id": "cry-131",
+    "crystal": "MULT. NOVAK FIRST TRANSITIONS GEN S POLY",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 347.0,
+    "range": ""
+  },
+  {
+    "id": "cry-132",
+    "crystal": "MULT. NOVAK PRECISA TRANSITIONS GEN S POLY",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 302.0,
+    "range": ""
+  },
+  {
+    "id": "cry-133",
+    "crystal": "MULT. NOVAK PRECISA TRANSITIONS GEN S POLY",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 362.0,
+    "range": ""
+  },
+  {
+    "id": "cry-134",
+    "crystal": "MULT. NOVAK 3D TRANSITIONS GEN S POLY",
+    "treatment": "SIN AR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 318.0,
+    "range": ""
+  },
+  {
+    "id": "cry-135",
+    "crystal": "MULT. NOVAK 3D TRANSITIONS GEN S POLY",
+    "treatment": "CON AR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 378.0,
+    "range": ""
+  },
+  {
+    "id": "cry-136",
+    "crystal": "MULT. NOVAK E-LIFE TRANSITIONS GEN S POLY",
+    "treatment": "CR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 363.0,
+    "range": ""
+  },
+  {
+    "id": "cry-137",
+    "crystal": "MULT. NOVAK E-LIFE TRANSITIONS GEN S POLY",
+    "treatment": "FOTOAR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 423.0,
+    "range": ""
+  },
+  {
+    "id": "cry-138",
+    "crystal": "MULT. NOVAK EVO-S TRANSITIONS GEN S POLY",
+    "treatment": "CR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 455.0,
+    "range": ""
+  },
+  {
+    "id": "cry-139",
+    "crystal": "MULT. NOVAK EVO-S TRANSITIONS GEN S POLY",
+    "treatment": "FOTOAR",
+    "colors": "GRIS, CAFÉ, RUBI, AMBAR, AMATISTA",
+    "price": 515.0,
+    "range": ""
+  },
+  {
+    "id": "cry-140",
+    "crystal": "MULT. NOVAK FIRST TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "SIN AR",
+    "colors": "GRIS",
+    "price": 486.0,
+    "range": ""
+  },
+  {
+    "id": "cry-141",
+    "crystal": "MULT. NOVAK FIRST TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "CON AR",
+    "colors": "GRIS",
+    "price": 546.0,
+    "range": ""
+  },
+  {
+    "id": "cry-142",
+    "crystal": "MULT. NOVAK PRECISA TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "SIN AR",
+    "colors": "GRIS",
+    "price": 500.0,
+    "range": ""
+  },
+  {
+    "id": "cry-143",
+    "crystal": "MULT. NOVAK PRECISA TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "CON AR",
+    "colors": "GRIS",
+    "price": 560.0,
+    "range": ""
+  },
+  {
+    "id": "cry-144",
+    "crystal": "MULT. NOVAK 3D TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "SIN AR",
+    "colors": "GRIS",
+    "price": 516.0,
+    "range": ""
+  },
+  {
+    "id": "cry-145",
+    "crystal": "MULT. NOVAK 3D TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "CON AR",
+    "colors": "GRIS",
+    "price": 576.0,
+    "range": ""
+  },
+  {
+    "id": "cry-146",
+    "crystal": "MULT. NOVAK E-LIFE TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "CR",
+    "colors": "GRIS",
+    "price": 561.0,
+    "range": ""
+  },
+  {
+    "id": "cry-147",
+    "crystal": "MULT. NOVAK E-LIFE TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "FOTOAR",
+    "colors": "GRIS",
+    "price": 621.0,
+    "range": ""
+  },
+  {
+    "id": "cry-148",
+    "crystal": "MULT. NOVAK EVO-S TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "CR",
+    "colors": "GRIS",
+    "price": 654.0,
+    "range": ""
+  },
+  {
+    "id": "cry-149",
+    "crystal": "MULT. NOVAK EVO-S TRANSITIONS XTRACTIVE POLARIZED",
+    "treatment": "FOTOAR",
+    "colors": "GRIS",
+    "price": 714.0,
+    "range": ""
+  },
+  {
+    "id": "cry-150",
+    "crystal": "MULT. NOVAK 3D POLY (STEP BACK)",
+    "treatment": "CR",
+    "colors": "",
+    "price": 158.0,
+    "range": ""
+  },
+  {
+    "id": "cry-151",
+    "crystal": "MULT. NOVAK 3D POLY (STEP BACK)",
+    "treatment": "AR",
+    "colors": "",
+    "price": 218.0,
+    "range": ""
+  },
+  {
+    "id": "cry-152",
+    "crystal": "MULT. NOVAK 3D POLY (STEP BACK)",
+    "treatment": "FOTO",
+    "colors": "",
+    "price": 236.0,
+    "range": ""
+  },
+  {
+    "id": "cry-153",
+    "crystal": "MULT. NOVAK 3D POLY (STEP BACK)",
+    "treatment": "FOTOAR",
+    "colors": "",
+    "price": 296.0,
+    "range": ""
+  }
+]
