@@ -101,7 +101,7 @@ const seed = {
   ],
   expenses: [{ id:'e1', date:today(), category:'Operativo', description:'Fundas', amount:10 }],
   cash: { opening:100, usdReceived:0, pagoMovilReceived:0, transferReceived:0, divisasReceived:0, purchases:0, otherExpenses:0, closingCash:0, closingPagoMovil:0, notes:'' },
-  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', userPhotos:{}, versionTitle:'Producción Final inventario manual', versionDescription:'Inventario fisico y catalogo de cristales separados', commissionsEnabled:false, exchangeRate:0, exchangeRateDate:today() }
+  settings: { businessName:'GafasCity ERP', subtitle:'Gestion optica interna', logo:'', userPhotos:{}, versionTitle:'Producción Final inventario actualizado', versionDescription:'Inventario fisico y catalogo de cristales separados', commissionsEnabled:false, exchangeRate:0, exchangeRateDate:today(), inventorySeedVersion:'2026-08-28-inventory-v2' }
 };
 function normalizeStore(raw = {}) {
   const base = seed;
@@ -109,7 +109,7 @@ function normalizeStore(raw = {}) {
   return {
     ...base,
     ...raw,
-    products: (!Array.isArray(raw.products) || raw.products.length<100 || raw.products.some(p=>String(p.id||'').startsWith('imp-cr-'))) ? initialInventory : raw.products.filter(p=>p.category!=='Cristales'),
+    products: (!Array.isArray(raw.products) || raw.products.length<100 || raw.products.some(p=>String(p.id||'').startsWith('imp-cr-')) || raw.settings?.inventorySeedVersion!=='2026-08-28-inventory-v2') ? initialInventory : raw.products.filter(p=>p.category!=='Cristales'),
     crystalCatalog: Array.isArray(raw.crystalCatalog) && raw.crystalCatalog.length ? raw.crystalCatalog : initialCrystalCatalog,
     customers: Array.isArray(raw.customers) ? raw.customers : [],
     laboratories: Array.isArray(raw.laboratories) && raw.laboratories.length ? raw.laboratories : base.laboratories,
