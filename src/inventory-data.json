@@ -1,7 +1,7 @@
 [
   {
-    "id": "inv-2",
-    "date": "2026-08-24",
+    "id": "inv-new-2",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9731",
     "description": "MONTURA RAYBAN REDONDO",
@@ -15,38 +15,8 @@
     "sourceRow": 2
   },
   {
-    "id": "inv-3",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "9730",
-    "description": "MONTURA RAYBAN REDONDO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 3
-  },
-  {
-    "id": "inv-4",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "RB2140",
-    "description": "MONTURA RAYBAN REDONDO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 4
-  },
-  {
-    "id": "inv-5",
-    "date": "2026-08-24",
+    "id": "inv-new-3",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "AR8011",
     "description": "MONTURA PORSCHE",
@@ -57,11 +27,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 5
+    "sourceRow": 3
   },
   {
-    "id": "inv-6",
-    "date": "2026-08-24",
+    "id": "inv-new-4",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "95920",
     "description": "MONTURA ZERO TONY STARK",
@@ -72,11 +42,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 6
+    "sourceRow": 4
   },
   {
-    "id": "inv-7",
-    "date": "2026-08-24",
+    "id": "inv-new-5",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "991005",
     "description": "MONTURA ZERO NIÑO",
@@ -87,11 +57,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 7
+    "sourceRow": 5
   },
   {
-    "id": "inv-8",
-    "date": "2026-08-24",
+    "id": "inv-new-6",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "40205",
     "description": "MONTURA VERTICAL",
@@ -102,13 +72,43 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
+    "sourceRow": 6
+  },
+  {
+    "id": "inv-new-7",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "TR87333",
+    "description": "MONTURA TR90",
+    "qty": 5,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 5,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 7
+  },
+  {
+    "id": "inv-new-8",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "82026",
+    "description": "MONTURA TR90",
+    "qty": 4,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 4,
+    "minStock": 1,
+    "pricePending": true,
     "sourceRow": 8
   },
   {
-    "id": "inv-9",
-    "date": "2026-08-24",
+    "id": "inv-new-9",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "TR87333",
+    "code": "81063",
     "description": "MONTURA TR90",
     "qty": 5,
     "cost": 0,
@@ -120,38 +120,8 @@
     "sourceRow": 9
   },
   {
-    "id": "inv-10",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "82026",
-    "description": "MONTURA TR90",
-    "qty": 4,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 4,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 10
-  },
-  {
-    "id": "inv-11",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "81063",
-    "description": "MONTURA TR90",
-    "qty": 5,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 5,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 11
-  },
-  {
-    "id": "inv-12",
-    "date": "2026-08-24",
+    "id": "inv-new-10",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "93398",
     "description": "MONTURA TR90",
@@ -162,28 +132,58 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 12
+    "sourceRow": 10
   },
   {
-    "id": "inv-13",
-    "date": "2026-08-24",
+    "id": "inv-new-11",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "93527",
     "description": "MONTURA TR90",
-    "qty": 3,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 3,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 11
+  },
+  {
+    "id": "inv-new-12",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "TH101163",
+    "description": "MONTURA TOMMY HILFIGER",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 12
+  },
+  {
+    "id": "inv-new-13",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "9756",
+    "description": "MONTURA TOMMY HILFIGER",
+    "qty": 10,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 10,
     "minStock": 1,
     "pricePending": true,
     "sourceRow": 13
   },
   {
-    "id": "inv-14",
-    "date": "2026-08-24",
+    "id": "inv-new-14",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "TH101163",
+    "code": "TH2483",
     "description": "MONTURA TOMMY HILFIGER",
     "qty": 2,
     "cost": 0,
@@ -195,38 +195,8 @@
     "sourceRow": 14
   },
   {
-    "id": "inv-15",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "9756",
-    "description": "MONTURA TOMMY HILFIGER",
-    "qty": 13,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 13,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 15
-  },
-  {
-    "id": "inv-16",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "TH2483",
-    "description": "MONTURA TOMMY HILFIGER",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 16
-  },
-  {
-    "id": "inv-17",
-    "date": "2026-08-24",
+    "id": "inv-new-15",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9961",
     "description": "MONTURA TOMMY HILFIGER",
@@ -237,11 +207,11 @@
     "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 17
+    "sourceRow": 15
   },
   {
-    "id": "inv-18",
-    "date": "2026-08-24",
+    "id": "inv-new-16",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "TF101160",
     "description": "MONTURA TOM FORD",
@@ -252,11 +222,11 @@
     "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 18
+    "sourceRow": 16
   },
   {
-    "id": "inv-19",
-    "date": "2026-08-24",
+    "id": "inv-new-17",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP24112",
     "description": "MONTURA TOM FORD DAMA",
@@ -267,13 +237,43 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
+    "sourceRow": 17
+  },
+  {
+    "id": "inv-new-18",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "991507",
+    "description": "MONTURA TENDENCIA NIÑO",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 18
+  },
+  {
+    "id": "inv-new-19",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "991506",
+    "description": "MONTURA TENDENCIA NIÑO",
+    "qty": 3,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 3,
+    "minStock": 1,
+    "pricePending": true,
     "sourceRow": 19
   },
   {
-    "id": "inv-20",
-    "date": "2026-08-24",
+    "id": "inv-new-20",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "991507",
+    "code": "991508",
     "description": "MONTURA TENDENCIA NIÑO",
     "qty": 2,
     "cost": 0,
@@ -285,38 +285,8 @@
     "sourceRow": 20
   },
   {
-    "id": "inv-21",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "991506",
-    "description": "MONTURA TENDENCIA NIÑO",
-    "qty": 3,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 3,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 21
-  },
-  {
-    "id": "inv-22",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "991508",
-    "description": "MONTURA TENDENCIA NIÑO",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 22
-  },
-  {
-    "id": "inv-23",
-    "date": "2026-08-24",
+    "id": "inv-new-21",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9725",
     "description": "MONTURA TAG HEUER",
@@ -327,11 +297,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 23
+    "sourceRow": 21
   },
   {
-    "id": "inv-24",
-    "date": "2026-08-24",
+    "id": "inv-new-22",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "94323",
     "description": "MONTURA SEBASTIAN",
@@ -342,26 +312,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 24
+    "sourceRow": 22
   },
   {
-    "id": "inv-25",
-    "date": "2026-08-24",
+    "id": "inv-new-23",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "94315-B",
     "description": "MONTURA SEBASTIAN",
-    "qty": 3,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 3,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 25
+    "sourceRow": 23
   },
   {
-    "id": "inv-26",
-    "date": "2026-08-24",
+    "id": "inv-new-24",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "FD1113",
     "description": "MONTURA SALVATORE FERRAGAMO",
@@ -372,41 +342,41 @@
     "stock": 8,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 26
+    "sourceRow": 24
   },
   {
-    "id": "inv-27",
-    "date": "2026-08-24",
+    "id": "inv-new-25",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "FDA3532F",
     "description": "MONTURA RUSED",
-    "qty": 7,
+    "qty": 6,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 7,
+    "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 27
+    "sourceRow": 25
   },
   {
-    "id": "inv-28",
-    "date": "2026-08-24",
+    "id": "inv-new-26",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "FDA3534F",
     "description": "MONTURA RUSED",
-    "qty": 2,
+    "qty": 3,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 28
+    "sourceRow": 26
   },
   {
-    "id": "inv-29",
-    "date": "2026-08-24",
+    "id": "inv-new-27",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "2202",
     "description": "MONTURA RAYBAN",
@@ -417,26 +387,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 29
+    "sourceRow": 27
   },
   {
-    "id": "inv-30",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "RB101165",
-    "description": "MONTURA RAYBAN",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 30
-  },
-  {
-    "id": "inv-31",
-    "date": "2026-08-24",
+    "id": "inv-new-28",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RB5387",
     "description": "MONTURA RAYBAN",
@@ -447,11 +402,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 31
+    "sourceRow": 28
   },
   {
-    "id": "inv-32",
-    "date": "2026-08-24",
+    "id": "inv-new-29",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RB5341",
     "description": "MONTURA RAYBAN",
@@ -462,11 +417,11 @@
     "stock": 11,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 32
+    "sourceRow": 29
   },
   {
-    "id": "inv-33",
-    "date": "2026-08-24",
+    "id": "inv-new-30",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9762",
     "description": "MONTURA PUMA",
@@ -477,11 +432,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 33
+    "sourceRow": 30
   },
   {
-    "id": "inv-34",
-    "date": "2026-08-24",
+    "id": "inv-new-31",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "PRM102B",
     "description": "MONTURA PRIMERA",
@@ -492,11 +447,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 34
+    "sourceRow": 31
   },
   {
-    "id": "inv-35",
-    "date": "2026-08-24",
+    "id": "inv-new-32",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "AR8018",
     "description": "MONTURA PRADA",
@@ -507,11 +462,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 35
+    "sourceRow": 32
   },
   {
-    "id": "inv-36",
-    "date": "2026-08-24",
+    "id": "inv-new-33",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "VPS01LA",
     "description": "MONTURA PRADA",
@@ -522,11 +477,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 36
+    "sourceRow": 33
   },
   {
-    "id": "inv-37",
-    "date": "2026-08-24",
+    "id": "inv-new-34",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "AR8017",
     "description": "MONTURA PRADA",
@@ -537,56 +492,56 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 37
+    "sourceRow": 34
   },
   {
-    "id": "inv-38",
-    "date": "2026-08-24",
+    "id": "inv-new-35",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9851",
     "description": "MONTURA PRADA",
-    "qty": 2,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 38
+    "sourceRow": 35
   },
   {
-    "id": "inv-39",
-    "date": "2026-08-24",
+    "id": "inv-new-36",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "91064",
     "description": "MONTURA PRADA",
-    "qty": 2,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 39
+    "sourceRow": 36
   },
   {
-    "id": "inv-40",
-    "date": "2026-08-24",
+    "id": "inv-new-37",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "FD6601",
     "description": "MONTURA PRADA",
-    "qty": 9,
+    "qty": 7,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 9,
+    "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 40
+    "sourceRow": 37
   },
   {
-    "id": "inv-41",
-    "date": "2026-08-24",
+    "id": "inv-new-38",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "FD1130",
     "description": "MONTURA PRADA",
@@ -597,11 +552,11 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 41
+    "sourceRow": 38
   },
   {
-    "id": "inv-42",
-    "date": "2026-08-24",
+    "id": "inv-new-39",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "AR8014",
     "description": "MONTURA PORSCHE",
@@ -612,86 +567,86 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 42
+    "sourceRow": 39
   },
   {
-    "id": "inv-43",
-    "date": "2026-08-24",
+    "id": "inv-new-40",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JM31308",
     "description": "MONTURA PALAZZO ACETATO",
-    "qty": 3,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 3,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 40
+  },
+  {
+    "id": "inv-new-41",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OK-405",
+    "description": "MONTURA OKORE",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 41
+  },
+  {
+    "id": "inv-new-42",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OK-407",
+    "description": "MONTURA OKORE",
+    "qty": 6,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 6,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 42
+  },
+  {
+    "id": "inv-new-43",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OK-402",
+    "description": "MONTURA OKORE",
+    "qty": 6,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 6,
     "minStock": 1,
     "pricePending": true,
     "sourceRow": 43
   },
   {
-    "id": "inv-44",
-    "date": "2026-08-24",
+    "id": "inv-new-44",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "OK-405",
-    "description": "MONTURA OKORE",
-    "qty": 8,
+    "code": "OX8166",
+    "description": "MONTURA OAKLEY WHEEL HOUSE",
+    "qty": 6,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 8,
+    "stock": 6,
     "minStock": 1,
     "pricePending": true,
     "sourceRow": 44
   },
   {
-    "id": "inv-45",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "OK-407",
-    "description": "MONTURA OKORE",
-    "qty": 16,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 16,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 45
-  },
-  {
-    "id": "inv-46",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "OK-402",
-    "description": "MONTURA OKORE",
-    "qty": 9,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 9,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 46
-  },
-  {
-    "id": "inv-47",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "OX8166",
-    "description": "MONTURA OAKLEY WHEEL HOUSE",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 47
-  },
-  {
-    "id": "inv-48",
-    "date": "2026-08-24",
+    "id": "inv-new-45",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8192",
     "description": "MONTURA OAKLEY UPTURN",
@@ -702,56 +657,56 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 48
+    "sourceRow": 45
   },
   {
-    "id": "inv-49",
-    "date": "2026-08-24",
+    "id": "inv-new-46",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "3184",
-    "description": "MONTURA OAKLEY TINCUN",
-    "qty": 7,
+    "description": "MONTURA OAKLEY TINCUP",
+    "qty": 6,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 7,
+    "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 49
+    "sourceRow": 46
   },
   {
-    "id": "inv-50",
-    "date": "2026-08-24",
+    "id": "inv-new-47",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8077",
     "description": "MONTURA OAKLEY SPLINTER",
-    "qty": 1,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 50
+    "sourceRow": 47
   },
   {
-    "id": "inv-51",
-    "date": "2026-08-24",
+    "id": "inv-new-48",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "006047.",
     "description": "MONTURA OAKLEY SEMI AL AIRE RESORTE INTERNO",
-    "qty": 7,
+    "qty": 6,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 7,
+    "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 51
+    "sourceRow": 48
   },
   {
-    "id": "inv-52",
-    "date": "2026-08-24",
+    "id": "inv-new-49",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "25256",
     "description": "MONTURA OAKLEY SEMI AL AIRE METAL",
@@ -762,26 +717,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 52
+    "sourceRow": 49
   },
   {
-    "id": "inv-53",
-    "date": "2026-08-24",
+    "id": "inv-new-50",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX3827",
     "description": "MONTURA OAKLEY SEMI AL AIRE",
-    "qty": 2,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 53
+    "sourceRow": 50
   },
   {
-    "id": "inv-54",
-    "date": "2026-08-24",
+    "id": "inv-new-51",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "256ZF",
     "description": "MONTURA OAKLEY SEMI AL AIRE",
@@ -792,11 +747,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 54
+    "sourceRow": 51
   },
   {
-    "id": "inv-55",
-    "date": "2026-08-24",
+    "id": "inv-new-52",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX4118",
     "description": "MONTURA OAKLEY SEMI AL AIRE",
@@ -807,26 +762,26 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 55
+    "sourceRow": 52
   },
   {
-    "id": "inv-56",
-    "date": "2026-08-24",
+    "id": "inv-new-53",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8061",
     "description": "MONTURA OAKLEY PLAZLINK",
-    "qty": 74,
+    "qty": 78,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 74,
+    "stock": 78,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 56
+    "sourceRow": 53
   },
   {
-    "id": "inv-57",
-    "date": "2026-08-24",
+    "id": "inv-new-54",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8149",
     "description": "MONTURA OAKLEY PITCHMAN CARBON",
@@ -837,28 +792,43 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 57
+    "sourceRow": 54
   },
   {
-    "id": "inv-58",
-    "date": "2026-08-24",
+    "id": "inv-new-55",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX1034",
     "description": "MONTURA OAKLEY MUFFLER",
-    "qty": 6,
+    "qty": 61,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 6,
+    "stock": 61,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 58
+    "sourceRow": 55
   },
   {
-    "id": "inv-59",
-    "date": "2026-08-24",
+    "id": "inv-new-56",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8237",
+    "description": "MONTURA OAKLEY METALINK",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 56
+  },
+  {
+    "id": "inv-new-57",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OX8153",
     "description": "MONTURA OAKLEY METALINK",
     "qty": 5,
     "cost": 0,
@@ -867,26 +837,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 59
+    "sourceRow": 57
   },
   {
-    "id": "inv-60",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "OX8153",
-    "description": "MONTURA OAKLEY METALINK",
-    "qty": 7,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 7,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 60
-  },
-  {
-    "id": "inv-61",
-    "date": "2026-08-24",
+    "id": "inv-new-58",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5153",
     "description": "MONTURA OAKLEY METAL PLATE TI",
@@ -897,11 +852,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 61
+    "sourceRow": 58
   },
   {
-    "id": "inv-62",
-    "date": "2026-08-24",
+    "id": "inv-new-59",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5627",
     "description": "MONTURA OAKLEY METAL PLATE TI",
@@ -912,11 +867,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 62
+    "sourceRow": 59
   },
   {
-    "id": "inv-63",
-    "date": "2026-08-24",
+    "id": "inv-new-60",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8516",
     "description": "MONTURA OAKLEY METAL PLATE TI",
@@ -927,11 +882,11 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 63
+    "sourceRow": 60
   },
   {
-    "id": "inv-64",
-    "date": "2026-08-24",
+    "id": "inv-new-61",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8139",
     "description": "MONTURA OAKLEY MBAPPE HSTN",
@@ -942,11 +897,11 @@
     "stock": 11,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 64
+    "sourceRow": 61
   },
   {
-    "id": "inv-65",
-    "date": "2026-08-24",
+    "id": "inv-new-62",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5042",
     "description": "MONTURA OAKLEY MATTER SILVER",
@@ -957,11 +912,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 65
+    "sourceRow": 62
   },
   {
-    "id": "inv-66",
-    "date": "2026-08-24",
+    "id": "inv-new-63",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX3218",
     "description": "MONTURA OAKLEY MATTER",
@@ -972,11 +927,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 66
+    "sourceRow": 63
   },
   {
-    "id": "inv-67",
-    "date": "2026-08-24",
+    "id": "inv-new-64",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5050",
     "description": "MONTURA OAKLEY MATTER",
@@ -987,26 +942,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 67
+    "sourceRow": 64
   },
   {
-    "id": "inv-68",
-    "date": "2026-08-24",
+    "id": "inv-new-65",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8027",
     "description": "MONTURA OAKLEY MARSHALL",
-    "qty": 67,
+    "qty": 58,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 67,
+    "stock": 58,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 68
+    "sourceRow": 65
   },
   {
-    "id": "inv-69",
-    "date": "2026-08-24",
+    "id": "inv-new-66",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5113",
     "description": "MONTURA OAKLEY LIZARO",
@@ -1017,11 +972,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 69
+    "sourceRow": 66
   },
   {
-    "id": "inv-70",
-    "date": "2026-08-24",
+    "id": "inv-new-67",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8156",
     "description": "MONTURA OAKLEY HOLBROOK RX",
@@ -1032,56 +987,56 @@
     "stock": 13,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 70
+    "sourceRow": 67
   },
   {
-    "id": "inv-71",
-    "date": "2026-08-24",
+    "id": "inv-new-68",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8098",
     "description": "MONTURA OAKLEY HOLBROOK MIX RX",
-    "qty": 34,
+    "qty": 50,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 34,
+    "stock": 50,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 71
+    "sourceRow": 68
   },
   {
-    "id": "inv-72",
-    "date": "2026-08-24",
+    "id": "inv-new-69",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5081",
     "description": "MONTURA OAKLEY HOLBROOK METAL RK",
-    "qty": 10,
+    "qty": 9,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 10,
+    "stock": 9,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 72
+    "sourceRow": 69
   },
   {
-    "id": "inv-73",
-    "date": "2026-08-24",
+    "id": "inv-new-70",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8182",
     "description": "MONTURA OAKLEY HIP TONE",
-    "qty": 12,
+    "qty": 11,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 12,
+    "stock": 11,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 73
+    "sourceRow": 70
   },
   {
-    "id": "inv-74",
-    "date": "2026-08-24",
+    "id": "inv-new-71",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8136",
     "description": "MONTURA OAKLEY GUESBUNS",
@@ -1092,11 +1047,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 74
+    "sourceRow": 71
   },
   {
-    "id": "inv-75",
-    "date": "2026-08-24",
+    "id": "inv-new-72",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8071",
     "description": "MONTURA OAKLEY GHFSPPL",
@@ -1107,41 +1062,41 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 75
+    "sourceRow": 72
   },
   {
-    "id": "inv-76",
-    "date": "2026-08-24",
+    "id": "inv-new-73",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8052",
     "description": "MONTURA OAKLEY FUTURITY",
-    "qty": 21,
+    "qty": 20,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 21,
+    "stock": 20,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 76
+    "sourceRow": 73
   },
   {
-    "id": "inv-77",
-    "date": "2026-08-24",
+    "id": "inv-new-74",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8145",
     "description": "MONTURA OAKLEY FUTURITY",
-    "qty": 35,
+    "qty": 30,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 35,
+    "stock": 30,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 77
+    "sourceRow": 74
   },
   {
-    "id": "inv-78",
-    "date": "2026-08-24",
+    "id": "inv-new-75",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8055",
     "description": "MONTURA OAKLEY EXCHANGE",
@@ -1152,11 +1107,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 78
+    "sourceRow": 75
   },
   {
-    "id": "inv-79",
-    "date": "2026-08-24",
+    "id": "inv-new-76",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8269",
     "description": "MONTURA OAKLEY EXCHANGE",
@@ -1167,11 +1122,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 79
+    "sourceRow": 76
   },
   {
-    "id": "inv-80",
-    "date": "2026-08-24",
+    "id": "inv-new-77",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8265",
     "description": "MONTURA OAKLEY EXCHANGE",
@@ -1182,56 +1137,41 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 80
+    "sourceRow": 77
   },
   {
-    "id": "inv-81",
-    "date": "2026-08-24",
+    "id": "inv-new-78",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8191",
     "description": "MONTURA OAKLEY ENIGMAM ASS",
-    "qty": 39,
+    "qty": 34,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 39,
+    "stock": 34,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 81
+    "sourceRow": 78
   },
   {
-    "id": "inv-82",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "OX8188",
-    "description": "MONTURA OAKLEY DOUBLE DOWN",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 82
-  },
-  {
-    "id": "inv-83",
-    "date": "2026-08-24",
+    "id": "inv-new-79",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8054",
     "description": "MONTURA OAKLEY DEHAVEN",
-    "qty": 4,
+    "qty": 3,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 4,
+    "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 83
+    "sourceRow": 79
   },
   {
-    "id": "inv-84",
-    "date": "2026-08-24",
+    "id": "inv-new-80",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8266",
     "description": "MONTURA OAKLEY DEHAVEN",
@@ -1242,29 +1182,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 84
+    "sourceRow": 80
   },
   {
-    "id": "inv-85",
-    "date": "2026-08-24",
+    "id": "inv-new-81",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8267",
     "description": "MONTURA OAKLEY DEHAVEN",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 85
-  },
-  {
-    "id": "inv-86",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "5141",
-    "description": "MONTURA OAKLEY DEADBOLT",
     "qty": 5,
     "cost": 0,
     "costTotal": 0,
@@ -1272,11 +1197,26 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 86
+    "sourceRow": 81
   },
   {
-    "id": "inv-87",
-    "date": "2026-08-24",
+    "id": "inv-new-82",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "5141",
+    "description": "MONTURA OAKLEY DEADBOLT",
+    "qty": 4,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 4,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 82
+  },
+  {
+    "id": "inv-new-83",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8080",
     "description": "MONTURA OAKLEY CROSSLIN",
@@ -1287,26 +1227,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 87
+    "sourceRow": 83
   },
   {
-    "id": "inv-88",
-    "date": "2026-08-24",
+    "id": "inv-new-84",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8053",
-    "description": "MONTURA OAKLEY COUPLER",
-    "qty": 53,
+    "description": "MONTURA OAKLEY COUPLER SEMI AL AIRE",
+    "qty": 54,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 53,
+    "stock": 54,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 88
+    "sourceRow": 84
   },
   {
-    "id": "inv-89",
-    "date": "2026-08-24",
+    "id": "inv-new-85",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8255",
     "description": "MONTURA OAKLEY COUPLER",
@@ -1317,26 +1257,26 @@
     "stock": 15,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 89
+    "sourceRow": 85
   },
   {
-    "id": "inv-90",
-    "date": "2026-08-24",
+    "id": "inv-new-86",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5043",
     "description": "MONTURA OAKLEY COILOVER SEMI AL AIRE",
-    "qty": 2,
+    "qty": 33,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 33,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 90
+    "sourceRow": 86
   },
   {
-    "id": "inv-91",
-    "date": "2026-08-24",
+    "id": "inv-new-87",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX3102",
     "description": "MONTURA OAKLEY CLUBFACE",
@@ -1347,11 +1287,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 91
+    "sourceRow": 87
   },
   {
-    "id": "inv-92",
-    "date": "2026-08-24",
+    "id": "inv-new-88",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8087",
     "description": "MONTURA OAKLEY CLASCO",
@@ -1362,11 +1302,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 92
+    "sourceRow": 88
   },
   {
-    "id": "inv-93",
-    "date": "2026-08-24",
+    "id": "inv-new-89",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8187",
     "description": "MONTURA OAKLEY CEREBRAL REDONDO",
@@ -1377,56 +1317,56 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 93
+    "sourceRow": 89
   },
   {
-    "id": "inv-94",
-    "date": "2026-08-24",
+    "id": "inv-new-90",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8518",
     "description": "MONTURA OAKLEY CEREBRAL",
-    "qty": 5,
+    "qty": 3,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 5,
+    "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 94
+    "sourceRow": 90
   },
   {
-    "id": "inv-95",
-    "date": "2026-08-24",
+    "id": "inv-new-91",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX5368",
     "description": "MONTURA OAKLEY CEREBRAL",
-    "qty": 48,
+    "qty": 37,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 48,
+    "stock": 37,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 95
+    "sourceRow": 91
   },
   {
-    "id": "inv-96",
-    "date": "2026-08-24",
+    "id": "inv-new-92",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8163",
     "description": "MONTURA OAKLEY CENTERBOARD",
-    "qty": 1,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 96
+    "sourceRow": 92
   },
   {
-    "id": "inv-97",
-    "date": "2026-08-24",
+    "id": "inv-new-93",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8029",
     "description": "MONTURA OAKLEY BOTTUC",
@@ -1437,11 +1377,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 97
+    "sourceRow": 93
   },
   {
-    "id": "inv-98",
-    "date": "2026-08-24",
+    "id": "inv-new-94",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8189",
     "description": "MONTURA OAKLEY BMNG SQ",
@@ -1452,11 +1392,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 98
+    "sourceRow": 94
   },
   {
-    "id": "inv-99",
-    "date": "2026-08-24",
+    "id": "inv-new-95",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8183",
     "description": "MONTURA OAKLEY BAT FLIP",
@@ -1467,11 +1407,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 99
+    "sourceRow": 95
   },
   {
-    "id": "inv-100",
-    "date": "2026-08-24",
+    "id": "inv-new-96",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8152",
     "description": "MONTURA OAKLEY APPARITION",
@@ -1482,11 +1422,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 100
+    "sourceRow": 96
   },
   {
-    "id": "inv-101",
-    "date": "2026-08-24",
+    "id": "inv-new-97",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8173",
     "description": "MONTURA OAKLEY ACTIVATE",
@@ -1497,11 +1437,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 101
+    "sourceRow": 97
   },
   {
-    "id": "inv-102",
-    "date": "2026-08-24",
+    "id": "inv-new-98",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8625",
     "description": "MONTURA OAKLEY ACTIVATE",
@@ -1512,26 +1452,26 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 102
+    "sourceRow": 98
   },
   {
-    "id": "inv-103",
-    "date": "2026-08-24",
+    "id": "inv-new-99",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8144",
     "description": "MONTURA OAKLEY ACTIVATE",
-    "qty": 34,
+    "qty": 20,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 34,
+    "stock": 20,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 103
+    "sourceRow": 99
   },
   {
-    "id": "inv-104",
-    "date": "2026-08-24",
+    "id": "inv-new-100",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9972",
     "description": "MONTURA OAKLEY",
@@ -1542,11 +1482,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 104
+    "sourceRow": 100
   },
   {
-    "id": "inv-105",
-    "date": "2026-08-24",
+    "id": "inv-new-101",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9969",
     "description": "MONTURA OAKLEY",
@@ -1557,11 +1497,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 105
+    "sourceRow": 101
   },
   {
-    "id": "inv-106",
-    "date": "2026-08-24",
+    "id": "inv-new-102",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "NOW2205",
     "description": "MONTURA NOWY NIÑO",
@@ -1572,11 +1512,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 106
+    "sourceRow": 102
   },
   {
-    "id": "inv-107",
-    "date": "2026-08-24",
+    "id": "inv-new-103",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9966",
     "description": "MONTURA NIKE",
@@ -1587,11 +1527,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 107
+    "sourceRow": 103
   },
   {
-    "id": "inv-108",
-    "date": "2026-08-24",
+    "id": "inv-new-104",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "91033",
     "description": "MONTURA NIKE",
@@ -1602,11 +1542,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 108
+    "sourceRow": 104
   },
   {
-    "id": "inv-109",
-    "date": "2026-08-24",
+    "id": "inv-new-105",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "NK3312",
     "description": "MONTURA NIKE",
@@ -1617,11 +1557,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 109
+    "sourceRow": 105
   },
   {
-    "id": "inv-110",
-    "date": "2026-08-24",
+    "id": "inv-new-106",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9818",
     "description": "MONTURA NIKE",
@@ -1632,26 +1572,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 110
+    "sourceRow": 106
   },
   {
-    "id": "inv-111",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "NK7057",
-    "description": "MONTURA NIKE",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 111
-  },
-  {
-    "id": "inv-112",
-    "date": "2026-08-24",
+    "id": "inv-new-107",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "91115",
     "description": "MONTURA NIKE",
@@ -1662,56 +1587,41 @@
     "stock": 18,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 112
+    "sourceRow": 107
   },
   {
-    "id": "inv-113",
-    "date": "2026-08-24",
+    "id": "inv-new-108",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "91104",
     "description": "MONTURA NIKE",
-    "qty": 13,
+    "qty": 15,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 13,
+    "stock": 15,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 113
+    "sourceRow": 108
   },
   {
-    "id": "inv-114",
-    "date": "2026-08-24",
+    "id": "inv-new-109",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "91138",
     "description": "MONTURA MONT BLANC",
-    "qty": 7,
+    "qty": 9,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 7,
+    "stock": 9,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 114
+    "sourceRow": 109
   },
   {
-    "id": "inv-115",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "91039",
-    "description": "MONTURA MONT BLANC",
-    "qty": 3,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 3,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 115
-  },
-  {
-    "id": "inv-116",
-    "date": "2026-08-24",
+    "id": "inv-new-110",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MN888",
     "description": "MONTURA MIEN",
@@ -1722,44 +1632,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 116
+    "sourceRow": 110
   },
   {
-    "id": "inv-117",
-    "date": "2026-08-24",
+    "id": "inv-new-111",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "CY230",
     "description": "MONTURA METAL TONY STARK",
-    "qty": 3,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 3,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 117
-  },
-  {
-    "id": "inv-118",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "91314",
-    "description": "MONTURA METAL TIPO TONY STARK",
-    "qty": 9,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 9,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 118
-  },
-  {
-    "id": "inv-119",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "91770",
-    "description": "MONTURA LONGONI",
     "qty": 1,
     "cost": 0,
     "costTotal": 0,
@@ -1767,11 +1647,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 119
+    "sourceRow": 111
   },
   {
-    "id": "inv-120",
-    "date": "2026-08-24",
+    "id": "inv-new-112",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "91314",
+    "description": "MONTURA METAL TIPO TONY STARK",
+    "qty": 7,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 7,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 112
+  },
+  {
+    "id": "inv-new-113",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "L2708",
     "description": "MONTURA LACOSTE",
@@ -1782,26 +1677,26 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 120
+    "sourceRow": 113
   },
   {
-    "id": "inv-121",
-    "date": "2026-08-24",
+    "id": "inv-new-114",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "KR060",
     "description": "MONTURA KRITISH",
-    "qty": 3,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 3,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 121
+    "sourceRow": 114
   },
   {
-    "id": "inv-122",
-    "date": "2026-08-24",
+    "id": "inv-new-115",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "G9023",
     "description": "MONTURA KEIKO SOBRELENTE",
@@ -1812,11 +1707,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 122
+    "sourceRow": 115
   },
   {
-    "id": "inv-123",
-    "date": "2026-08-24",
+    "id": "inv-new-116",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "G9036",
     "description": "MONTURA KEIKO SOBRELENTE",
@@ -1827,26 +1722,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 123
+    "sourceRow": 116
   },
   {
-    "id": "inv-124",
-    "date": "2026-08-24",
+    "id": "inv-new-117",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "G5990",
     "description": "MONTURA KEIKO SOBRELENTE",
-    "qty": 2,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 124
+    "sourceRow": 117
   },
   {
-    "id": "inv-125",
-    "date": "2026-08-24",
+    "id": "inv-new-118",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "A01124",
     "description": "MONTURA KEIKO ACETATO",
@@ -1857,26 +1752,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 125
+    "sourceRow": 118
   },
   {
-    "id": "inv-126",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "F3327",
-    "description": "MONTURA KEIKO ACETATO",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 126
-  },
-  {
-    "id": "inv-127",
-    "date": "2026-08-24",
+    "id": "inv-new-119",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "G9008",
     "description": "MONTURA KEIKO ACETATO",
@@ -1887,11 +1767,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 127
+    "sourceRow": 119
   },
   {
-    "id": "inv-128",
-    "date": "2026-08-24",
+    "id": "inv-new-120",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "F2716",
     "description": "MONTURA KEIKO ACETATO",
@@ -1902,11 +1782,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 128
+    "sourceRow": 120
   },
   {
-    "id": "inv-129",
-    "date": "2026-08-24",
+    "id": "inv-new-121",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RTA-4506",
     "description": "MONTURA KEIKO ACETATO",
@@ -1917,11 +1797,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 129
+    "sourceRow": 121
   },
   {
-    "id": "inv-130",
-    "date": "2026-08-24",
+    "id": "inv-new-122",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RTA-4501",
     "description": "MONTURA KEIKO ACETATO",
@@ -1932,11 +1812,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 130
+    "sourceRow": 122
   },
   {
-    "id": "inv-131",
-    "date": "2026-08-24",
+    "id": "inv-new-123",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "YD1337",
     "description": "MONTURA KEIKO ACETATO",
@@ -1947,11 +1827,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 131
+    "sourceRow": 123
   },
   {
-    "id": "inv-132",
-    "date": "2026-08-24",
+    "id": "inv-new-124",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MG6900A",
     "description": "MONTURA KEIKO ACETATO",
@@ -1962,11 +1842,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 132
+    "sourceRow": 124
   },
   {
-    "id": "inv-133",
-    "date": "2026-08-24",
+    "id": "inv-new-125",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "IAM-146",
     "description": "MONTURA IBIZA NIÑO",
@@ -1977,11 +1857,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 133
+    "sourceRow": 125
   },
   {
-    "id": "inv-134",
-    "date": "2026-08-24",
+    "id": "inv-new-126",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9797",
     "description": "MONTURA HUGO BOSS",
@@ -1992,11 +1872,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 134
+    "sourceRow": 126
   },
   {
-    "id": "inv-135",
-    "date": "2026-08-24",
+    "id": "inv-new-127",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9810",
     "description": "MONTURA HUGO BOSS",
@@ -2007,11 +1887,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 135
+    "sourceRow": 127
   },
   {
-    "id": "inv-136",
-    "date": "2026-08-24",
+    "id": "inv-new-128",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9855",
     "description": "MONTURA HUGO BOSS",
@@ -2022,11 +1902,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 136
+    "sourceRow": 128
   },
   {
-    "id": "inv-137",
-    "date": "2026-08-24",
+    "id": "inv-new-129",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "HOL2604",
     "description": "MONTURA HOLLY KIDS NIÑO",
@@ -2037,11 +1917,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 137
+    "sourceRow": 129
   },
   {
-    "id": "inv-138",
-    "date": "2026-08-24",
+    "id": "inv-new-130",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "HOL2606",
     "description": "MONTURA HOLLY KIDS NIÑO",
@@ -2052,11 +1932,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 138
+    "sourceRow": 130
   },
   {
-    "id": "inv-139",
-    "date": "2026-08-24",
+    "id": "inv-new-131",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "HOL2602",
     "description": "MONTURA HOLLY KIDS NIÑO",
@@ -2067,11 +1947,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 139
+    "sourceRow": 131
   },
   {
-    "id": "inv-140",
-    "date": "2026-08-24",
+    "id": "inv-new-132",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP23117",
     "description": "MONTURA GUCCI",
@@ -2082,11 +1962,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 140
+    "sourceRow": 132
   },
   {
-    "id": "inv-141",
-    "date": "2026-08-24",
+    "id": "inv-new-133",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9795",
     "description": "MONTURA GUCCI",
@@ -2097,11 +1977,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 141
+    "sourceRow": 133
   },
   {
-    "id": "inv-142",
-    "date": "2026-08-24",
+    "id": "inv-new-134",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP25147",
     "description": "MONTURA GUCCI DAMA",
@@ -2112,11 +1992,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 142
+    "sourceRow": 134
   },
   {
-    "id": "inv-143",
-    "date": "2026-08-24",
+    "id": "inv-new-135",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9896",
     "description": "MONTURA EMPORIO ARMANI",
@@ -2127,11 +2007,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 143
+    "sourceRow": 135
   },
   {
-    "id": "inv-144",
-    "date": "2026-08-24",
+    "id": "inv-new-136",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "DT101172",
     "description": "MONTURA DITA",
@@ -2142,14 +2022,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 144
+    "sourceRow": 136
   },
   {
-    "id": "inv-145",
-    "date": "2026-08-24",
+    "id": "inv-new-137",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "DLÑ00",
-    "description": "MONTURA DEPORTIVO DE LIGA NIÑO",
+    "description": "MONTURA DEPORTIVA DE LIGA NIÑO",
     "qty": 4,
     "cost": 0,
     "costTotal": 0,
@@ -2157,43 +2037,28 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 145
+    "sourceRow": 137
   },
   {
-    "id": "inv-146",
-    "date": "2026-08-24",
+    "id": "inv-new-138",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "036.",
     "description": "MONTURA DEPORTIVA + LIGA",
-    "qty": 6,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 6,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 146
+    "sourceRow": 138
   },
   {
-    "id": "inv-147",
-    "date": "2026-08-24",
+    "id": "inv-new-139",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9305",
-    "description": "MONTURA CASHFOR",
-    "qty": 4,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 4,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 147
-  },
-  {
-    "id": "inv-148",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "9309",
     "description": "MONTURA CASHFOR",
     "qty": 1,
     "cost": 0,
@@ -2202,11 +2067,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 148
+    "sourceRow": 139
   },
   {
-    "id": "inv-149",
-    "date": "2026-08-24",
+    "id": "inv-new-140",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "9309",
+    "description": "MONTURA CASHFOR",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 140
+  },
+  {
+    "id": "inv-new-141",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9817",
     "description": "MONTURA CARTIER",
@@ -2217,26 +2097,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 149
+    "sourceRow": 141
   },
   {
-    "id": "inv-150",
-    "date": "2026-08-24",
+    "id": "inv-new-142",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9891",
     "description": "MONTURA CARRERA",
-    "qty": 4,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 4,
+    "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 150
+    "sourceRow": 142
   },
   {
-    "id": "inv-151",
-    "date": "2026-08-24",
+    "id": "inv-new-143",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "EST-4310N",
     "description": "MONTURA CARIBB NIÑO",
@@ -2247,11 +2127,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 151
+    "sourceRow": 143
   },
   {
-    "id": "inv-152",
-    "date": "2026-08-24",
+    "id": "inv-new-144",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "9925",
     "description": "MONTURA ADIDAS",
@@ -2262,11 +2142,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 152
+    "sourceRow": 144
   },
   {
-    "id": "inv-153",
-    "date": "2026-08-24",
+    "id": "inv-new-145",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "F061",
     "description": "MONTURA ADIDAS",
@@ -2277,14 +2157,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 153
+    "sourceRow": 145
   },
   {
-    "id": "inv-154",
-    "date": "2026-08-24",
+    "id": "inv-new-146",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "DLC00",
-    "description": "MONTURA DEPORTIVO DE LIGA CABALLERO",
+    "description": "MONTURA DEPORTIVA DE LIGA CABALLERO",
     "qty": 3,
     "cost": 0,
     "costTotal": 0,
@@ -2292,11 +2172,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 154
+    "sourceRow": 146
   },
   {
-    "id": "inv-155",
-    "date": "2026-08-24",
+    "id": "inv-new-147",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "2804",
     "description": "MONTURA CARTIER DAMA",
@@ -2307,11 +2187,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 155
+    "sourceRow": 147
   },
   {
-    "id": "inv-156",
-    "date": "2026-08-24",
+    "id": "inv-new-148",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "95921",
     "description": "MONTURA TONY STARK",
@@ -2322,11 +2202,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 156
+    "sourceRow": 148
   },
   {
-    "id": "inv-157",
-    "date": "2026-08-24",
+    "id": "inv-new-149",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GD2327",
     "description": "MONTURA TONY STARK",
@@ -2337,11 +2217,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 157
+    "sourceRow": 149
   },
   {
-    "id": "inv-158",
-    "date": "2026-08-24",
+    "id": "inv-new-150",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "TR87209",
     "description": "MONTURA TR90",
@@ -2352,11 +2232,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 158
+    "sourceRow": 150
   },
   {
-    "id": "inv-159",
-    "date": "2026-08-24",
+    "id": "inv-new-151",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "ARA-5376L",
     "description": "MONTURA SEIDO DAMA",
@@ -2367,11 +2247,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 159
+    "sourceRow": 151
   },
   {
-    "id": "inv-160",
-    "date": "2026-08-24",
+    "id": "inv-new-152",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP23103",
     "description": "MONTURA PRADA DAMA",
@@ -2382,11 +2262,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 160
+    "sourceRow": 152
   },
   {
-    "id": "inv-161",
-    "date": "2026-08-24",
+    "id": "inv-new-153",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "TR87252",
     "description": "MONTURA TR90",
@@ -2397,11 +2277,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 161
+    "sourceRow": 153
   },
   {
-    "id": "inv-162",
-    "date": "2026-08-24",
+    "id": "inv-new-154",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "81157",
     "description": "MONTURA TR90",
@@ -2412,11 +2292,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 162
+    "sourceRow": 154
   },
   {
-    "id": "inv-163",
-    "date": "2026-08-24",
+    "id": "inv-new-155",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82142",
     "description": "MONTURA TR90",
@@ -2427,11 +2307,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 163
+    "sourceRow": 155
   },
   {
-    "id": "inv-164",
-    "date": "2026-08-24",
+    "id": "inv-new-156",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "97713",
     "description": "MONTURA TR90",
@@ -2442,11 +2322,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 164
+    "sourceRow": 156
   },
   {
-    "id": "inv-165",
-    "date": "2026-08-24",
+    "id": "inv-new-157",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP25112",
     "description": "MONTURA PRADA DAMA",
@@ -2457,11 +2337,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 165
+    "sourceRow": 157
   },
   {
-    "id": "inv-166",
-    "date": "2026-08-24",
+    "id": "inv-new-158",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP24200",
     "description": "MONTURA BVLGARI DAMA",
@@ -2472,26 +2352,26 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 166
+    "sourceRow": 158
   },
   {
-    "id": "inv-167",
-    "date": "2026-08-24",
+    "id": "inv-new-159",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "2818",
     "description": "MONTURA MIU MIU DAMA",
-    "qty": 2,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 167
+    "sourceRow": 159
   },
   {
-    "id": "inv-168",
-    "date": "2026-08-24",
+    "id": "inv-new-160",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "92603",
     "description": "MONTURA LONGONI DAMA",
@@ -2502,11 +2382,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 168
+    "sourceRow": 160
   },
   {
-    "id": "inv-169",
-    "date": "2026-08-24",
+    "id": "inv-new-161",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP23243",
     "description": "MONTURA VERSACE DAMA",
@@ -2517,11 +2397,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 169
+    "sourceRow": 161
   },
   {
-    "id": "inv-170",
-    "date": "2026-08-24",
+    "id": "inv-new-162",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "BAF4002",
     "description": "MONTURA KEIKO DAMA",
@@ -2532,13 +2412,133 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
+    "sourceRow": 162
+  },
+  {
+    "id": "inv-new-163",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "BAF4003",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 163
+  },
+  {
+    "id": "inv-new-164",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "R8242",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 164
+  },
+  {
+    "id": "inv-new-165",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "N1028S",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 165
+  },
+  {
+    "id": "inv-new-166",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "R8280",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 166
+  },
+  {
+    "id": "inv-new-167",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "RB8272",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 167
+  },
+  {
+    "id": "inv-new-168",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "YD1373",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 168
+  },
+  {
+    "id": "inv-new-169",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "P23019",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 169
+  },
+  {
+    "id": "inv-new-170",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "FG1647",
+    "description": "MONTURA KEIKO DAMA",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
     "sourceRow": 170
   },
   {
-    "id": "inv-171",
-    "date": "2026-08-24",
+    "id": "inv-new-171",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "BAF4003",
+    "code": "YG21229",
     "description": "MONTURA KEIKO DAMA",
     "qty": 1,
     "cost": 0,
@@ -2550,143 +2550,8 @@
     "sourceRow": 171
   },
   {
-    "id": "inv-172",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "R8242",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 172
-  },
-  {
-    "id": "inv-173",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "N1028S",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 173
-  },
-  {
-    "id": "inv-174",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "BAF2066L",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 174
-  },
-  {
-    "id": "inv-175",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "R8280",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 175
-  },
-  {
-    "id": "inv-176",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "RB8272",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 176
-  },
-  {
-    "id": "inv-177",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YD1373",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 177
-  },
-  {
-    "id": "inv-178",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "P23019",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 178
-  },
-  {
-    "id": "inv-179",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "FG1647",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 179
-  },
-  {
-    "id": "inv-180",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG21229",
-    "description": "MONTURA KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 180
-  },
-  {
-    "id": "inv-181",
-    "date": "2026-08-24",
+    "id": "inv-new-172",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "95726",
     "description": "MONTURA ZKH DAMA",
@@ -2697,26 +2562,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 181
+    "sourceRow": 172
   },
   {
-    "id": "inv-182",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "82295",
-    "description": "MONTURA TR90",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 182
-  },
-  {
-    "id": "inv-183",
-    "date": "2026-08-24",
+    "id": "inv-new-173",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "97782",
     "description": "MONTURA TR90",
@@ -2727,11 +2577,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 183
+    "sourceRow": 173
   },
   {
-    "id": "inv-184",
-    "date": "2026-08-24",
+    "id": "inv-new-174",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82257",
     "description": "MONTURA LONGONI DAMA",
@@ -2742,26 +2592,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 184
+    "sourceRow": 174
   },
   {
-    "id": "inv-185",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "82290",
-    "description": "MONTURA LONGONI DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 185
-  },
-  {
-    "id": "inv-186",
-    "date": "2026-08-24",
+    "id": "inv-new-175",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "95386",
     "description": "MONTURA TR90",
@@ -2772,11 +2607,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 186
+    "sourceRow": 175
   },
   {
-    "id": "inv-187",
-    "date": "2026-08-24",
+    "id": "inv-new-176",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "24022",
     "description": "MONTURA TR90",
@@ -2787,11 +2622,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 187
+    "sourceRow": 176
   },
   {
-    "id": "inv-188",
-    "date": "2026-08-24",
+    "id": "inv-new-177",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "81677",
     "description": "MONTURA TR90",
@@ -2802,11 +2637,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 188
+    "sourceRow": 177
   },
   {
-    "id": "inv-189",
-    "date": "2026-08-24",
+    "id": "inv-new-178",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82292",
     "description": "MONTURA TR90",
@@ -2817,11 +2652,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 189
+    "sourceRow": 178
   },
   {
-    "id": "inv-190",
-    "date": "2026-08-24",
+    "id": "inv-new-179",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82179",
     "description": "MONTURA TR90",
@@ -2832,11 +2667,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 190
+    "sourceRow": 179
   },
   {
-    "id": "inv-191",
-    "date": "2026-08-24",
+    "id": "inv-new-180",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "97819",
     "description": "MONTURA TR90",
@@ -2847,11 +2682,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 191
+    "sourceRow": 180
   },
   {
-    "id": "inv-192",
-    "date": "2026-08-24",
+    "id": "inv-new-181",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MM05",
     "description": "MONTURA MIU MIU DAMA",
@@ -2862,26 +2697,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 192
+    "sourceRow": 181
   },
   {
-    "id": "inv-193",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "G8188",
-    "description": "MONTURA VISION FASHION DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 193
-  },
-  {
-    "id": "inv-194",
-    "date": "2026-08-24",
+    "id": "inv-new-182",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "92607",
     "description": "MONTURA TR90",
@@ -2892,11 +2712,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 194
+    "sourceRow": 182
   },
   {
-    "id": "inv-195",
-    "date": "2026-08-24",
+    "id": "inv-new-183",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "ZKH9341",
     "description": "MONTURA ZKH DAMA",
@@ -2907,11 +2727,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 195
+    "sourceRow": 183
   },
   {
-    "id": "inv-196",
-    "date": "2026-08-24",
+    "id": "inv-new-184",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "ZKH9335",
     "description": "MONTURA ZKH DAMA",
@@ -2922,11 +2742,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 196
+    "sourceRow": 184
   },
   {
-    "id": "inv-197",
-    "date": "2026-08-24",
+    "id": "inv-new-185",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "ARA-5374L",
     "description": "MONTURA SEIDO DAMA",
@@ -2937,26 +2757,26 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 197
+    "sourceRow": 185
   },
   {
-    "id": "inv-198",
-    "date": "2026-08-24",
+    "id": "inv-new-186",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP23218",
     "description": "MONTURA CHANEL DAMA",
-    "qty": 4,
+    "qty": 6,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 4,
+    "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 198
+    "sourceRow": 186
   },
   {
-    "id": "inv-199",
-    "date": "2026-08-24",
+    "id": "inv-new-187",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "G8030",
     "description": "MONTURA VISION FASHION DAMA",
@@ -2967,11 +2787,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 199
+    "sourceRow": 187
   },
   {
-    "id": "inv-200",
-    "date": "2026-08-24",
+    "id": "inv-new-188",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "G8019",
     "description": "MONTURA VISION FASHION DAMA",
@@ -2982,11 +2802,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 200
+    "sourceRow": 188
   },
   {
-    "id": "inv-201",
-    "date": "2026-08-24",
+    "id": "inv-new-189",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP24199",
     "description": "MONTURA BVLGARI DAMA",
@@ -2997,11 +2817,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 201
+    "sourceRow": 189
   },
   {
-    "id": "inv-202",
-    "date": "2026-08-24",
+    "id": "inv-new-190",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "ZKH2919",
     "description": "MONTURA ZKH DAMA",
@@ -3012,11 +2832,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 202
+    "sourceRow": 190
   },
   {
-    "id": "inv-203",
-    "date": "2026-08-24",
+    "id": "inv-new-191",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82320",
     "description": "MONTURA TR90",
@@ -3027,11 +2847,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 203
+    "sourceRow": 191
   },
   {
-    "id": "inv-204",
-    "date": "2026-08-24",
+    "id": "inv-new-192",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82262",
     "description": "MONTURA TR90",
@@ -3042,26 +2862,26 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 204
+    "sourceRow": 192
   },
   {
-    "id": "inv-205",
-    "date": "2026-08-24",
+    "id": "inv-new-193",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82205",
     "description": "MONTURA TR90",
-    "qty": 4,
+    "qty": 3,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 4,
+    "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 205
+    "sourceRow": 193
   },
   {
-    "id": "inv-206",
-    "date": "2026-08-24",
+    "id": "inv-new-194",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "KR054",
     "description": "MONTURA KRITISH DAMA",
@@ -3072,26 +2892,26 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 206
+    "sourceRow": 194
   },
   {
-    "id": "inv-207",
-    "date": "2026-08-24",
+    "id": "inv-new-195",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "83615",
     "description": "MONTURA TR90",
-    "qty": 4,
+    "qty": 3,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 4,
+    "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 207
+    "sourceRow": 195
   },
   {
-    "id": "inv-208",
-    "date": "2026-08-24",
+    "id": "inv-new-196",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82010",
     "description": "MONTURA TR90",
@@ -3102,11 +2922,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 208
+    "sourceRow": 196
   },
   {
-    "id": "inv-209",
-    "date": "2026-08-24",
+    "id": "inv-new-197",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JB6053",
     "description": "MONTURA KEIKO DAMA",
@@ -3117,11 +2937,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 209
+    "sourceRow": 197
   },
   {
-    "id": "inv-210",
-    "date": "2026-08-24",
+    "id": "inv-new-198",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "BR-2422",
     "description": "MONTURA BARI DAMA",
@@ -3132,11 +2952,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 210
+    "sourceRow": 198
   },
   {
-    "id": "inv-211",
-    "date": "2026-08-24",
+    "id": "inv-new-199",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "81177",
     "description": "MONTURA VERTICAL",
@@ -3147,11 +2967,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 211
+    "sourceRow": 199
   },
   {
-    "id": "inv-212",
-    "date": "2026-08-24",
+    "id": "inv-new-200",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP24135",
     "description": "MONTURA DAMA FENDI",
@@ -3162,11 +2982,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 212
+    "sourceRow": 200
   },
   {
-    "id": "inv-213",
-    "date": "2026-08-24",
+    "id": "inv-new-201",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "97725",
     "description": "MONTURA TR90",
@@ -3177,11 +2997,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 213
+    "sourceRow": 201
   },
   {
-    "id": "inv-214",
-    "date": "2026-08-24",
+    "id": "inv-new-202",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "81595",
     "description": "MONTURA TR90",
@@ -3192,11 +3012,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 214
+    "sourceRow": 202
   },
   {
-    "id": "inv-215",
-    "date": "2026-08-24",
+    "id": "inv-new-203",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "81536",
     "description": "MONTURA TR90",
@@ -3207,28 +3027,13 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 215
+    "sourceRow": 203
   },
   {
-    "id": "inv-216",
-    "date": "2026-08-24",
+    "id": "inv-new-204",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "83623",
-    "description": "MONTURA LONGONI DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 216
-  },
-  {
-    "id": "inv-217",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "82234",
     "description": "MONTURA LONGONI DAMA",
     "qty": 2,
     "cost": 0,
@@ -3237,41 +3042,26 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 217
+    "sourceRow": 204
   },
   {
-    "id": "inv-218",
-    "date": "2026-08-24",
+    "id": "inv-new-205",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "97807",
-    "description": "MONTURA TENDENCIA DAMA",
-    "qty": 1,
+    "code": "82234",
+    "description": "MONTURA FANDIA DAMA",
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 218
+    "sourceRow": 205
   },
   {
-    "id": "inv-219",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "83620",
-    "description": "MONTURA LONGONI DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 219
-  },
-  {
-    "id": "inv-220",
-    "date": "2026-08-24",
+    "id": "inv-new-206",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "57181K",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3282,11 +3072,11 @@
     "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 220
+    "sourceRow": 206
   },
   {
-    "id": "inv-221",
-    "date": "2026-08-24",
+    "id": "inv-new-207",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "17269",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3297,11 +3087,11 @@
     "stock": 12,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 221
+    "sourceRow": 207
   },
   {
-    "id": "inv-222",
-    "date": "2026-08-24",
+    "id": "inv-new-208",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JM30891",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3312,11 +3102,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 222
+    "sourceRow": 208
   },
   {
-    "id": "inv-223",
-    "date": "2026-08-24",
+    "id": "inv-new-209",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OLD3007A",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3327,11 +3117,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 223
+    "sourceRow": 209
   },
   {
-    "id": "inv-224",
-    "date": "2026-08-24",
+    "id": "inv-new-210",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OLD5661A",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3342,11 +3132,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 224
+    "sourceRow": 210
   },
   {
-    "id": "inv-225",
-    "date": "2026-08-24",
+    "id": "inv-new-211",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JM30872",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3357,11 +3147,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 225
+    "sourceRow": 211
   },
   {
-    "id": "inv-226",
-    "date": "2026-08-24",
+    "id": "inv-new-212",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OLD5660A",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3372,11 +3162,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 226
+    "sourceRow": 212
   },
   {
-    "id": "inv-227",
-    "date": "2026-08-24",
+    "id": "inv-new-213",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JM31318",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3387,26 +3177,26 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 227
+    "sourceRow": 213
   },
   {
-    "id": "inv-228",
-    "date": "2026-08-24",
+    "id": "inv-new-214",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JM31406",
     "description": "MONTURA PALAZZO ACETATO",
-    "qty": 1,
+    "qty": 3,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 228
+    "sourceRow": 214
   },
   {
-    "id": "inv-229",
-    "date": "2026-08-24",
+    "id": "inv-new-215",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "95169",
     "description": "MONTURA SEBASTIAN METAL",
@@ -3417,11 +3207,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 229
+    "sourceRow": 215
   },
   {
-    "id": "inv-230",
-    "date": "2026-08-24",
+    "id": "inv-new-216",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "TTS-9088",
     "description": "MONTURA SEBASTIAN METAL",
@@ -3432,11 +3222,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 230
+    "sourceRow": 216
   },
   {
-    "id": "inv-231",
-    "date": "2026-08-24",
+    "id": "inv-new-217",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MF7786",
     "description": "MONTURA KEIKO METAL",
@@ -3447,26 +3237,26 @@
     "stock": 9,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 231
+    "sourceRow": 217
   },
   {
-    "id": "inv-232",
-    "date": "2026-08-24",
+    "id": "inv-new-218",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MF7787",
     "description": "MONTURA KEIKO METAL",
-    "qty": 1,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 232
+    "sourceRow": 218
   },
   {
-    "id": "inv-233",
-    "date": "2026-08-24",
+    "id": "inv-new-219",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RM-6014",
     "description": "MONTURA MORETTO",
@@ -3477,11 +3267,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 233
+    "sourceRow": 219
   },
   {
-    "id": "inv-234",
-    "date": "2026-08-24",
+    "id": "inv-new-220",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RB-8030",
     "description": "MONTURA MORETTO",
@@ -3492,11 +3282,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 234
+    "sourceRow": 220
   },
   {
-    "id": "inv-235",
-    "date": "2026-08-24",
+    "id": "inv-new-221",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RB-5018",
     "description": "MONTURA MORETTO",
@@ -3507,11 +3297,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 235
+    "sourceRow": 221
   },
   {
-    "id": "inv-236",
-    "date": "2026-08-24",
+    "id": "inv-new-222",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "DP6019",
     "description": "MONTURA MORETTO",
@@ -3522,11 +3312,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 236
+    "sourceRow": 222
   },
   {
-    "id": "inv-237",
-    "date": "2026-08-24",
+    "id": "inv-new-223",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "RM-6022",
     "description": "MONTURA MORETTO",
@@ -3537,26 +3327,26 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 237
+    "sourceRow": 223
   },
   {
-    "id": "inv-238",
-    "date": "2026-08-24",
+    "id": "inv-new-224",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "91038",
     "description": "MONTURA MONT BLANC",
-    "qty": 9,
+    "qty": 12,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 9,
+    "stock": 12,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 238
+    "sourceRow": 224
   },
   {
-    "id": "inv-239",
-    "date": "2026-08-24",
+    "id": "inv-new-225",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "LSK033",
     "description": "MONTURA KEIKO NIÑO",
@@ -3567,11 +3357,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 239
+    "sourceRow": 225
   },
   {
-    "id": "inv-240",
-    "date": "2026-08-24",
+    "id": "inv-new-226",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "LSK013",
     "description": "MONTURA KEIKO NIÑO",
@@ -3582,11 +3372,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 240
+    "sourceRow": 226
   },
   {
-    "id": "inv-241",
-    "date": "2026-08-24",
+    "id": "inv-new-227",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "LSK001",
     "description": "MONTURA KEIKO NIÑO",
@@ -3597,11 +3387,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 241
+    "sourceRow": 227
   },
   {
-    "id": "inv-242",
-    "date": "2026-08-24",
+    "id": "inv-new-228",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "T1212",
     "description": "MONTURA KEIKO NIÑO",
@@ -3612,11 +3402,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 242
+    "sourceRow": 228
   },
   {
-    "id": "inv-243",
-    "date": "2026-08-24",
+    "id": "inv-new-229",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "LSK002",
     "description": "MONTURA KEIKO NIÑO",
@@ -3627,11 +3417,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 243
+    "sourceRow": 229
   },
   {
-    "id": "inv-244",
-    "date": "2026-08-24",
+    "id": "inv-new-230",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "LSK010",
     "description": "MONTURA KEIKO NIÑO",
@@ -3642,11 +3432,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 244
+    "sourceRow": 230
   },
   {
-    "id": "inv-245",
-    "date": "2026-08-24",
+    "id": "inv-new-231",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "T1200",
     "description": "MONTURA KEIKO NIÑO",
@@ -3657,11 +3447,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 245
+    "sourceRow": 231
   },
   {
-    "id": "inv-246",
-    "date": "2026-08-24",
+    "id": "inv-new-232",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MM1054",
     "description": "MONTURA MORETTO",
@@ -3672,11 +3462,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 246
+    "sourceRow": 232
   },
   {
-    "id": "inv-247",
-    "date": "2026-08-24",
+    "id": "inv-new-233",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "PL8003",
     "description": "MONTURA MORETTO",
@@ -3687,11 +3477,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 247
+    "sourceRow": 233
   },
   {
-    "id": "inv-248",
-    "date": "2026-08-24",
+    "id": "inv-new-234",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "YC-14054",
     "description": "MONTURA KEIKO",
@@ -3702,11 +3492,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 248
+    "sourceRow": 234
   },
   {
-    "id": "inv-249",
-    "date": "2026-08-24",
+    "id": "inv-new-235",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "35024",
     "description": "MONTURA KEIKO",
@@ -3717,11 +3507,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 249
+    "sourceRow": 235
   },
   {
-    "id": "inv-250",
-    "date": "2026-08-24",
+    "id": "inv-new-236",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "F2730",
     "description": "MONTURA KEIKO ACETATO",
@@ -3732,11 +3522,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 250
+    "sourceRow": 236
   },
   {
-    "id": "inv-251",
-    "date": "2026-08-24",
+    "id": "inv-new-237",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JM31222",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3747,11 +3537,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 251
+    "sourceRow": 237
   },
   {
-    "id": "inv-252",
-    "date": "2026-08-24",
+    "id": "inv-new-238",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX6047",
     "description": "MONTURA OAKLEY SEMI AL AIRE",
@@ -3762,11 +3552,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 252
+    "sourceRow": 238
   },
   {
-    "id": "inv-253",
-    "date": "2026-08-24",
+    "id": "inv-new-239",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "JM31404",
     "description": "MONTURA PALAZZO ACETATO",
@@ -3777,29 +3567,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 253
+    "sourceRow": 239
   },
   {
-    "id": "inv-254",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "JM31406",
-    "description": "MONTURA PALAZZO ACETATO",
-    "qty": 3,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 3,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 254
-  },
-  {
-    "id": "inv-255",
-    "date": "2026-08-24",
+    "id": "inv-new-240",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "YG21120",
-    "description": "MONTURA PALAZZO ACETATO",
+    "description": "MONTURA KEIKO ACETATO",
     "qty": 1,
     "cost": 0,
     "costTotal": 0,
@@ -3807,14 +3582,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 255
+    "sourceRow": 240
   },
   {
-    "id": "inv-256",
-    "date": "2026-08-24",
+    "id": "inv-new-241",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GS5868",
-    "description": "MONTURA PALAZZO ACETATO",
+    "description": "MONTURA KEIKO ACETATO",
     "qty": 1,
     "cost": 0,
     "costTotal": 0,
@@ -3822,11 +3597,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 256
+    "sourceRow": 241
   },
   {
-    "id": "inv-257",
-    "date": "2026-08-24",
+    "id": "inv-new-242",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "BAF2026L",
     "description": "MONTURA KEIKO ACETATO",
@@ -3837,11 +3612,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 257
+    "sourceRow": 242
   },
   {
-    "id": "inv-258",
-    "date": "2026-08-24",
+    "id": "inv-new-243",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "BAF2031L",
     "description": "MONTURA KEIKO ACETATO",
@@ -3852,11 +3627,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 258
+    "sourceRow": 243
   },
   {
-    "id": "inv-259",
-    "date": "2026-08-24",
+    "id": "inv-new-244",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "VG66312",
     "description": "MONTURA KEIKO ACETATO",
@@ -3867,11 +3642,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 259
+    "sourceRow": 244
   },
   {
-    "id": "inv-260",
-    "date": "2026-08-24",
+    "id": "inv-new-245",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "P90018",
     "description": "MONTURA KEIKO ACETATO",
@@ -3882,26 +3657,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 260
+    "sourceRow": 245
   },
   {
-    "id": "inv-261",
-    "date": "2026-08-24",
+    "id": "inv-new-246",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GS5111",
     "description": "MONTURA KEIKO ACETATO",
-    "qty": 2,
+    "qty": 1,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 2,
+    "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 261
+    "sourceRow": 246
   },
   {
-    "id": "inv-262",
-    "date": "2026-08-24",
+    "id": "inv-new-247",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "QM33302",
     "description": "MONTURA KEIKO ACETATO",
@@ -3912,11 +3687,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 262
+    "sourceRow": 247
   },
   {
-    "id": "inv-263",
-    "date": "2026-08-24",
+    "id": "inv-new-248",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "VG66314",
     "description": "MONTURA KEIKO ACETATO",
@@ -3927,11 +3702,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 263
+    "sourceRow": 248
   },
   {
-    "id": "inv-264",
-    "date": "2026-08-24",
+    "id": "inv-new-249",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MF7790",
     "description": "MONTURA KEIKO METAL",
@@ -3942,11 +3717,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 264
+    "sourceRow": 249
   },
   {
-    "id": "inv-265",
-    "date": "2026-08-24",
+    "id": "inv-new-250",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "97748",
     "description": "MONTURA TR90",
@@ -3957,11 +3732,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 265
+    "sourceRow": 250
   },
   {
-    "id": "inv-266",
-    "date": "2026-08-24",
+    "id": "inv-new-251",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "92161",
     "description": "MONTURA TR90",
@@ -3972,26 +3747,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 266
+    "sourceRow": 251
   },
   {
-    "id": "inv-267",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "82246",
-    "description": "MONTURA TR90",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 267
-  },
-  {
-    "id": "inv-268",
-    "date": "2026-08-24",
+    "id": "inv-new-252",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "92620",
     "description": "MONTURA TR90",
@@ -4002,11 +3762,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 268
+    "sourceRow": 252
   },
   {
-    "id": "inv-269",
-    "date": "2026-08-24",
+    "id": "inv-new-253",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP24132",
     "description": "MONTURA FENDI DAMA",
@@ -4017,14 +3777,14 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 269
+    "sourceRow": 253
   },
   {
-    "id": "inv-270",
-    "date": "2026-08-24",
+    "id": "inv-new-254",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "FD6016",
-    "description": "MONTURA TR90",
+    "description": "MONTURA MIU MIU DAMA",
     "qty": 3,
     "cost": 0,
     "costTotal": 0,
@@ -4032,26 +3792,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 270
+    "sourceRow": 254
   },
   {
-    "id": "inv-271",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "82010",
-    "description": "MONTURA ZKH DAMA",
-    "qty": 3,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 3,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 271
-  },
-  {
-    "id": "inv-272",
-    "date": "2026-08-24",
+    "id": "inv-new-255",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82190",
     "description": "MONTURA TR90",
@@ -4062,11 +3807,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 272
+    "sourceRow": 255
   },
   {
-    "id": "inv-273",
-    "date": "2026-08-24",
+    "id": "inv-new-256",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "82177",
     "description": "MONTURA TR90",
@@ -4077,11 +3822,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 273
+    "sourceRow": 256
   },
   {
-    "id": "inv-274",
-    "date": "2026-08-24",
+    "id": "inv-new-257",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "81135",
     "description": "MONTURA TR90",
@@ -4092,11 +3837,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 274
+    "sourceRow": 257
   },
   {
-    "id": "inv-275",
-    "date": "2026-08-24",
+    "id": "inv-new-258",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "93517",
     "description": "MONTURA TR90",
@@ -4107,11 +3852,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 275
+    "sourceRow": 258
   },
   {
-    "id": "inv-276",
-    "date": "2026-08-24",
+    "id": "inv-new-259",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP26103",
     "description": "MONTURA VERSACE DAMA",
@@ -4122,26 +3867,26 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 276
+    "sourceRow": 259
   },
   {
-    "id": "inv-277",
-    "date": "2026-08-24",
+    "id": "inv-new-260",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "GP23136",
     "description": "MONTURA LOUIS VUITTON",
-    "qty": 4,
+    "qty": 5,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 4,
+    "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 277
+    "sourceRow": 260
   },
   {
-    "id": "inv-278",
-    "date": "2026-08-24",
+    "id": "inv-new-261",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "TF2025",
     "description": "MONTURA TIFFANY & CO.",
@@ -4152,11 +3897,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 278
+    "sourceRow": 261
   },
   {
-    "id": "inv-279",
-    "date": "2026-08-24",
+    "id": "inv-new-262",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "MAD43",
     "description": "MONTURA CHANEL DAMA",
@@ -4167,11 +3912,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 279
+    "sourceRow": 262
   },
   {
-    "id": "inv-280",
-    "date": "2026-08-24",
+    "id": "inv-new-263",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "WT11936",
     "description": "LENTES EMPORIO ARMANI",
@@ -4182,11 +3927,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 280
+    "sourceRow": 263
   },
   {
-    "id": "inv-281",
-    "date": "2026-08-24",
+    "id": "inv-new-264",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "AR21092",
     "description": "LENTES EMPORIO ARMANI",
@@ -4197,11 +3942,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 281
+    "sourceRow": 264
   },
   {
-    "id": "inv-282",
-    "date": "2026-08-24",
+    "id": "inv-new-265",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "OK-4",
     "description": "LENTES OAKLEY DEPORTIVO",
@@ -4212,11 +3957,11 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 282
+    "sourceRow": 265
   },
   {
-    "id": "inv-283",
-    "date": "2026-08-24",
+    "id": "inv-new-266",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "OK-5",
     "description": "LENTES OAKLEY DEPORTIVO",
@@ -4227,11 +3972,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 283
+    "sourceRow": 266
   },
   {
-    "id": "inv-284",
-    "date": "2026-08-24",
+    "id": "inv-new-267",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "OK-3",
     "description": "LENTES OAKLEY DEPORTIVO",
@@ -4242,26 +3987,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 284
+    "sourceRow": 267
   },
   {
-    "id": "inv-285",
-    "date": "2026-08-24",
+    "id": "inv-new-268",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "006020.",
     "description": "LENTES OAKLEY BATMAN",
-    "qty": 223,
+    "qty": 204,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 223,
+    "stock": 204,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 285
+    "sourceRow": 268
   },
   {
-    "id": "inv-286",
-    "date": "2026-08-24",
+    "id": "inv-new-269",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "009464.",
     "description": "LENTES OAKLEY MBAPPE",
@@ -4272,11 +4017,11 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 286
+    "sourceRow": 269
   },
   {
-    "id": "inv-287",
-    "date": "2026-08-24",
+    "id": "inv-new-270",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "ZJ3356",
     "description": "LENTES OAKLEY",
@@ -4287,14 +4032,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 287
+    "sourceRow": 270
   },
   {
-    "id": "inv-288",
-    "date": "2026-08-24",
+    "id": "inv-new-271",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "11-828",
-    "description": "LENTES OAKLEY",
+    "description": "LENTES OAKLEY SEMI AL AIRE",
     "qty": 5,
     "cost": 0,
     "costTotal": 0,
@@ -4302,11 +4047,11 @@
     "stock": 5,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 288
+    "sourceRow": 271
   },
   {
-    "id": "inv-289",
-    "date": "2026-08-24",
+    "id": "inv-new-272",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "OK1611",
     "description": "LENTES OAKLEY",
@@ -4317,11 +4062,11 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 289
+    "sourceRow": 272
   },
   {
-    "id": "inv-290",
-    "date": "2026-08-24",
+    "id": "inv-new-273",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "OK1608",
     "description": "LENTES OAKLEY",
@@ -4332,14 +4077,14 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 290
+    "sourceRow": 273
   },
   {
-    "id": "inv-291",
-    "date": "2026-08-24",
+    "id": "inv-new-274",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "OK7001",
-    "description": "LENTES OAKLEY",
+    "description": "LENTES OAKLEY PITBULL",
     "qty": 8,
     "cost": 0,
     "costTotal": 0,
@@ -4347,41 +4092,41 @@
     "stock": 8,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 291
+    "sourceRow": 274
   },
   {
-    "id": "inv-292",
-    "date": "2026-08-24",
+    "id": "inv-new-275",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "004123.",
-    "description": "LENTES OAKLEY",
-    "qty": 32,
+    "description": "LENTES OAKLEY HOLBROOK METAL POLARIZADO",
+    "qty": 27,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 32,
+    "stock": 27,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 292
+    "sourceRow": 275
   },
   {
-    "id": "inv-293",
-    "date": "2026-08-24",
+    "id": "inv-new-276",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "SUT00",
     "description": "LENTES OAKLEY SUTRO",
-    "qty": 47,
+    "qty": 51,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 47,
+    "stock": 51,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 293
+    "sourceRow": 276
   },
   {
-    "id": "inv-294",
-    "date": "2026-08-24",
+    "id": "inv-new-277",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "BXTR00",
     "description": "LENTES OAKLEY BXTR",
@@ -4392,104 +4137,14 @@
     "stock": 38,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 294
+    "sourceRow": 277
   },
   {
-    "id": "inv-295",
-    "date": "2026-08-24",
+    "id": "inv-new-278",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "RAD00",
-    "description": "LENTES OAKLEY RADAR",
-    "qty": 5,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 5,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 295
-  },
-  {
-    "id": "inv-296",
-    "date": "2026-08-24",
-    "category": "Lentes de sol",
-    "code": "PLAT00",
-    "description": "LENTES OAKLEY PLANTARIS",
-    "qty": 3,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 3,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 296
-  },
-  {
-    "id": "inv-297",
-    "date": "2026-08-24",
-    "category": "Lentes de sol",
-    "code": "ENC00",
-    "description": "LENTES OAKLEY ENCODER",
-    "qty": 42,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 42,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 297
-  },
-  {
-    "id": "inv-298",
-    "date": "2026-08-24",
-    "category": "Lentes de sol",
-    "code": "KAT00",
-    "description": "LENTES OAKLEY KATO",
-    "qty": 19,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 19,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 298
-  },
-  {
-    "id": "inv-299",
-    "date": "2026-08-24",
-    "category": "Lentes de sol",
-    "code": "RAD01",
-    "description": "LENTES OAKLEY RADAR BASICO",
-    "qty": 32,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 32,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 299
-  },
-  {
-    "id": "inv-300",
-    "date": "2026-08-24",
-    "category": "Lentes de sol",
-    "code": "FLAK00",
-    "description": "LENTES OAKLEY FLAK 2.0",
-    "qty": 75,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 75,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 300
-  },
-  {
-    "id": "inv-301",
-    "date": "2026-08-24",
-    "category": "Lentes de sol",
-    "code": "RPC1003C",
-    "description": "LENTES DE SOL",
+    "description": "LENTES OAKLEY RADAR + VISORES",
     "qty": 8,
     "cost": 0,
     "costTotal": 0,
@@ -4497,14 +4152,104 @@
     "stock": 8,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 301
+    "sourceRow": 278
   },
   {
-    "id": "inv-302",
-    "date": "2026-08-24",
+    "id": "inv-new-279",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "PLANT00",
+    "description": "LENTES OAKLEY PLANTARIS",
+    "qty": 23,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 23,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 279
+  },
+  {
+    "id": "inv-new-280",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "ENC00",
+    "description": "LENTES OAKLEY ENCODER",
+    "qty": 51,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 51,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 280
+  },
+  {
+    "id": "inv-new-281",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "KAT00",
+    "description": "LENTES OAKLEY KATO",
+    "qty": 39,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 39,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 281
+  },
+  {
+    "id": "inv-new-282",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "RAD01",
+    "description": "LENTES OAKLEY RADAR BASICO",
+    "qty": 37,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 37,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 282
+  },
+  {
+    "id": "inv-new-283",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "FLAK00",
+    "description": "LENTES OAKLEY FLAK 2.0 (AA)",
+    "qty": 61,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 61,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 283
+  },
+  {
+    "id": "inv-new-284",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "RPC1003C",
+    "description": "LENTES DE SOL / CRISTAL CLARO",
+    "qty": 8,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 8,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 284
+  },
+  {
+    "id": "inv-new-285",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "RPC1002C",
-    "description": "LENTES DE SOL",
+    "description": "LENTES DE SOL / CRISTAL CLARO",
     "qty": 9,
     "cost": 0,
     "costTotal": 0,
@@ -4512,14 +4257,14 @@
     "stock": 9,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 302
+    "sourceRow": 285
   },
   {
-    "id": "inv-303",
-    "date": "2026-08-24",
+    "id": "inv-new-286",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "RPC1009C",
-    "description": "LENTES DE SOL",
+    "description": "LENTES DE SOL / CRISTAL CLARO",
     "qty": 7,
     "cost": 0,
     "costTotal": 0,
@@ -4527,14 +4272,14 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 303
+    "sourceRow": 286
   },
   {
-    "id": "inv-304",
-    "date": "2026-08-24",
+    "id": "inv-new-287",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "NTP8809",
-    "description": "LENTES DE SOL",
+    "description": "LENTES DE SOL / CRISTAL CLARO",
     "qty": 4,
     "cost": 0,
     "costTotal": 0,
@@ -4542,14 +4287,14 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 304
+    "sourceRow": 287
   },
   {
-    "id": "inv-305",
-    "date": "2026-08-24",
+    "id": "inv-new-288",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "RET4174",
-    "description": "LENTES DE SOL",
+    "description": "LENTES DE SOL / CRISTAL CLARO",
     "qty": 7,
     "cost": 0,
     "costTotal": 0,
@@ -4557,14 +4302,14 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 305
+    "sourceRow": 288
   },
   {
-    "id": "inv-306",
-    "date": "2026-08-24",
+    "id": "inv-new-289",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "NTP8811",
-    "description": "LENTES DE SOL",
+    "description": "LENTES DE SOL / CRISTAL CLARO",
     "qty": 1,
     "cost": 0,
     "costTotal": 0,
@@ -4572,14 +4317,14 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 306
+    "sourceRow": 289
   },
   {
-    "id": "inv-307",
-    "date": "2026-08-24",
+    "id": "inv-new-290",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "NTP8810",
-    "description": "LENTES DE SOL",
+    "description": "LENTES DE SOL / CRISTAL CLARO",
     "qty": 2,
     "cost": 0,
     "costTotal": 0,
@@ -4587,11 +4332,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 307
+    "sourceRow": 290
   },
   {
-    "id": "inv-308",
-    "date": "2026-08-24",
+    "id": "inv-new-291",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "NHEL303",
     "description": "LENTES DE SOL",
@@ -4602,11 +4347,11 @@
     "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 308
+    "sourceRow": 291
   },
   {
-    "id": "inv-309",
-    "date": "2026-08-24",
+    "id": "inv-new-292",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "GSP-2001",
     "description": "POLARIZADO SIN MARCA",
@@ -4617,11 +4362,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 309
+    "sourceRow": 292
   },
   {
-    "id": "inv-310",
-    "date": "2026-08-24",
+    "id": "inv-new-293",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "GSP-2000",
     "description": "POLARIZADO SIN MARCA",
@@ -4632,11 +4377,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 310
+    "sourceRow": 293
   },
   {
-    "id": "inv-311",
-    "date": "2026-08-24",
+    "id": "inv-new-294",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "RBV006",
     "description": "LENTES RAYBAN DE SOL",
@@ -4647,11 +4392,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 311
+    "sourceRow": 294
   },
   {
-    "id": "inv-312",
-    "date": "2026-08-24",
+    "id": "inv-new-295",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "LC9506",
     "description": "LENTES RAYBAN DE SOL",
@@ -4662,11 +4407,11 @@
     "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 312
+    "sourceRow": 295
   },
   {
-    "id": "inv-313",
-    "date": "2026-08-24",
+    "id": "inv-new-296",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "TON-31",
     "description": "LENTES RAYBAN DE SOL",
@@ -4677,11 +4422,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 313
+    "sourceRow": 296
   },
   {
-    "id": "inv-314",
-    "date": "2026-08-24",
+    "id": "inv-new-297",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "TON-41",
     "description": "LENTES RAYBAN DE SOL",
@@ -4692,26 +4437,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 314
+    "sourceRow": 297
   },
   {
-    "id": "inv-315",
-    "date": "2026-08-24",
+    "id": "inv-new-298",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "6504",
-    "description": "LENTES RAYBAN DE SOL",
-    "qty": 1,
+    "description": "LENTES RAYBAN AVIADOR",
+    "qty": 11,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 11,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 315
+    "sourceRow": 298
   },
   {
-    "id": "inv-316",
-    "date": "2026-08-24",
+    "id": "inv-new-299",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "HPZ994",
     "description": "LENTES RAYBAN DE SOL",
@@ -4722,11 +4467,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 316
+    "sourceRow": 299
   },
   {
-    "id": "inv-317",
-    "date": "2026-08-24",
+    "id": "inv-new-300",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "RBV002",
     "description": "LENTES RAYBAN DE SOL",
@@ -4737,11 +4482,11 @@
     "stock": 7,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 317
+    "sourceRow": 300
   },
   {
-    "id": "inv-318",
-    "date": "2026-08-24",
+    "id": "inv-new-301",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "RB7003",
     "description": "LENTES RAYBAN DE SOL",
@@ -4752,14 +4497,14 @@
     "stock": 8,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 318
+    "sourceRow": 301
   },
   {
-    "id": "inv-319",
-    "date": "2026-08-24",
+    "id": "inv-new-302",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "J1207",
-    "description": "LENTES RAYBAN DE SOL",
+    "description": "LENTES RAYBAN FERRARI (PILOTO)",
     "qty": 6,
     "cost": 0,
     "costTotal": 0,
@@ -4767,11 +4512,11 @@
     "stock": 6,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 319
+    "sourceRow": 302
   },
   {
-    "id": "inv-320",
-    "date": "2026-08-24",
+    "id": "inv-new-303",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "WY2707",
     "description": "LENTES CHRISTIAN DIOR",
@@ -4782,11 +4527,11 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 320
+    "sourceRow": 303
   },
   {
-    "id": "inv-321",
-    "date": "2026-08-24",
+    "id": "inv-new-304",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "WY2711",
     "description": "LENTES DE SOL LACOSTE",
@@ -4797,26 +4542,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 321
+    "sourceRow": 304
   },
   {
-    "id": "inv-322",
-    "date": "2026-08-24",
+    "id": "inv-new-305",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "LA5101",
     "description": "LENTES DE SOL LACOSTE",
-    "qty": 1,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 322
+    "sourceRow": 305
   },
   {
-    "id": "inv-323",
-    "date": "2026-08-24",
+    "id": "inv-new-306",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "008.",
     "description": "LENTES DE SOL LACOSTE",
@@ -4827,26 +4572,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 323
+    "sourceRow": 306
   },
   {
-    "id": "inv-324",
-    "date": "2026-08-24",
-    "category": "Lentes de sol",
-    "code": "P9616P",
-    "description": "LENTES DE SOL LACOSTE",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 324
-  },
-  {
-    "id": "inv-325",
-    "date": "2026-08-24",
+    "id": "inv-new-307",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "8186-1",
     "description": "LENTES DE SOL ADIDAS",
@@ -4857,11 +4587,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 325
+    "sourceRow": 307
   },
   {
-    "id": "inv-326",
-    "date": "2026-08-24",
+    "id": "inv-new-308",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "ML21016",
     "description": "LENTES DE SOL GUCCI",
@@ -4872,13 +4602,13 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 326
+    "sourceRow": 308
   },
   {
-    "id": "inv-327",
-    "date": "2026-08-24",
+    "id": "inv-new-309",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
-    "code": "SPA10WP",
+    "code": "SPS10WP",
     "description": "LENTES DE SOL PRADA",
     "qty": 2,
     "cost": 0,
@@ -4887,13 +4617,13 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 327
+    "sourceRow": 309
   },
   {
-    "id": "inv-328",
-    "date": "2026-08-24",
+    "id": "inv-new-310",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
-    "code": "2A38",
+    "code": "2A338",
     "description": "LENTES DE SOL CARTIER",
     "qty": 4,
     "cost": 0,
@@ -4902,11 +4632,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 328
+    "sourceRow": 310
   },
   {
-    "id": "inv-329",
-    "date": "2026-08-24",
+    "id": "inv-new-311",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "50970",
     "description": "LENTES DE SOL CARTIER",
@@ -4917,11 +4647,11 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 329
+    "sourceRow": 311
   },
   {
-    "id": "inv-330",
-    "date": "2026-08-24",
+    "id": "inv-new-312",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "31368654",
     "description": "LENTES DE SOL CARTIER",
@@ -4932,11 +4662,11 @@
     "stock": 4,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 330
+    "sourceRow": 312
   },
   {
-    "id": "inv-331",
-    "date": "2026-08-24",
+    "id": "inv-new-313",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "31368655",
     "description": "LENTES DE SOL CARTIER",
@@ -4947,26 +4677,26 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 331
+    "sourceRow": 313
   },
   {
-    "id": "inv-332",
-    "date": "2026-08-24",
+    "id": "inv-new-314",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "165590",
     "description": "LENTES DE SOL CARTIER",
-    "qty": 3,
+    "qty": 12,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 3,
+    "stock": 12,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 332
+    "sourceRow": 314
   },
   {
-    "id": "inv-333",
-    "date": "2026-08-24",
+    "id": "inv-new-315",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "5326",
     "description": "LENTES DE SOL CARTIER",
@@ -4977,11 +4707,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 333
+    "sourceRow": 315
   },
   {
-    "id": "inv-334",
-    "date": "2026-08-24",
+    "id": "inv-new-316",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "67081",
     "description": "LENTES DE SOL FENDI",
@@ -4992,11 +4722,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 334
+    "sourceRow": 316
   },
   {
-    "id": "inv-335",
-    "date": "2026-08-24",
+    "id": "inv-new-317",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "1063",
     "description": "LENTES DE SOL DOLCE GABANA",
@@ -5007,131 +4737,26 @@
     "stock": 8,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 335
+    "sourceRow": 317
   },
   {
-    "id": "inv-336",
-    "date": "2026-08-24",
+    "id": "inv-new-318",
+    "date": "2026-08-28",
     "category": "Lentes de sol",
     "code": "MSP-1001",
     "description": "LENTES DE SOL SPY",
-    "qty": 14,
+    "qty": 20,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 14,
+    "stock": 20,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 336
+    "sourceRow": 318
   },
   {
-    "id": "inv-337",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "EM2107",
-    "description": "LENTES KEIKO ACETADO",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 337
-  },
-  {
-    "id": "inv-338",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "RH-5014",
-    "description": "LENTES KEIKO ACETADO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 338
-  },
-  {
-    "id": "inv-339",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "MQ5562A",
-    "description": "LENTES KEIKO ACETADO",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 339
-  },
-  {
-    "id": "inv-340",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "G9102",
-    "description": "LENTES KEIKO ACETADO",
-    "qty": 2,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 2,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 340
-  },
-  {
-    "id": "inv-341",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "RB-8041",
-    "description": "LENTES KEIKO ACETADO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 341
-  },
-  {
-    "id": "inv-342",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "G9211",
-    "description": "LENTES KEIKO ACETADO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 342
-  },
-  {
-    "id": "inv-343",
-    "date": "2026-08-24",
-    "category": "Estuches",
-    "code": "ESTU00",
-    "description": "ESTUCHES OAKLEY",
-    "qty": 60,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 60,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 343
-  },
-  {
-    "id": "inv-344",
-    "date": "2026-08-24",
+    "id": "inv-new-319",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "ESTU00",
     "description": "ESTUCHES MONT BLANC",
@@ -5142,14 +4767,14 @@
     "stock": 3,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 344
+    "sourceRow": 319
   },
   {
-    "id": "inv-345",
-    "date": "2026-08-24",
+    "id": "inv-new-320",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "OX8170",
-    "description": "MONTURA OX8170",
+    "description": "MONTURA OAKLEY TENSILE",
     "qty": 9,
     "cost": 0,
     "costTotal": 0,
@@ -5157,29 +4782,14 @@
     "stock": 9,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 345
+    "sourceRow": 320
   },
   {
-    "id": "inv-346",
-    "date": "2026-08-24",
+    "id": "inv-new-321",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "ESTU00",
-    "description": "ESTUCHES CARTIER",
-    "qty": 5,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 5,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 346
-  },
-  {
-    "id": "inv-381",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "G9211 (C6)",
-    "description": "LENTES KEIKO CABALLERO",
+    "code": "SVT8013",
+    "description": "MONTURA VERTICAL SOBRELENTE",
     "qty": 1,
     "cost": 0,
     "costTotal": 0,
@@ -5187,13 +4797,298 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 381
+    "sourceRow": 321
   },
   {
-    "id": "inv-382",
-    "date": "2026-08-24",
+    "id": "inv-new-322",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "G9112 (C6)",
+    "code": "91561",
+    "description": "MONTURA VERTICAL SOBRELENTE",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 322
+  },
+  {
+    "id": "inv-new-323",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "SVT-8000",
+    "description": "MONTURA VERTICAL SOBRELENTE",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 323
+  },
+  {
+    "id": "inv-new-324",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "SVT-8009",
+    "description": "MONTURA VERTICAL SOBRELENTE",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 324
+  },
+  {
+    "id": "inv-new-325",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "SVT-8015",
+    "description": "MONTURA VERTICAL SOBRELENTE",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 325
+  },
+  {
+    "id": "inv-new-326",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "SVT-8014",
+    "description": "MONTURA VERTICAL SOBRELENTE",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 326
+  },
+  {
+    "id": "inv-new-327",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST00",
+    "description": "ESTUCHE RAYBAN",
+    "qty": 6,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 6,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 327
+  },
+  {
+    "id": "inv-new-328",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST01",
+    "description": "ESTUCHE ADIDAS",
+    "qty": 3,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 3,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 328
+  },
+  {
+    "id": "inv-new-329",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST02",
+    "description": "ESTUCHE TOMMY HILFIGER",
+    "qty": 14,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 14,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 329
+  },
+  {
+    "id": "inv-new-330",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST03",
+    "description": "ESTUCHE LACOSTE",
+    "qty": 6,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 6,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 330
+  },
+  {
+    "id": "inv-new-331",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST04",
+    "description": "ESTUCHE MONT BLACK",
+    "qty": 9,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 9,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 331
+  },
+  {
+    "id": "inv-new-332",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST05",
+    "description": "ESTUCHE DIOR",
+    "qty": 5,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 5,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 332
+  },
+  {
+    "id": "inv-new-333",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST06",
+    "description": "ESTUCHE OAKLEY GRANDE",
+    "qty": 7,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 7,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 333
+  },
+  {
+    "id": "inv-new-334",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST07",
+    "description": "ESTUCHE OAKLEY PEQUEÑO",
+    "qty": 10,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 10,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 334
+  },
+  {
+    "id": "inv-new-335",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST08",
+    "description": "ESTUCHE HEXAGONAL",
+    "qty": 8,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 8,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 335
+  },
+  {
+    "id": "inv-new-336",
+    "date": "2026-08-28",
+    "category": "Estuches",
+    "code": "EST09",
+    "description": "ESTUCHE LONGONI",
+    "qty": 6,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 6,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 336
+  },
+  {
+    "id": "inv-new-337",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OX5152",
+    "description": "MONTURA OAKLEY WIRETAP COMPLETA",
+    "qty": 58,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 58,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 337
+  },
+  {
+    "id": "inv-new-338",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OY8007",
+    "description": "MONTURA OAKLEY FIEL DAY",
+    "qty": 33,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 33,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 338
+  },
+  {
+    "id": "inv-new-339",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OX1041",
+    "description": "MONTURA OAKLEY FAT CAT",
+    "qty": 38,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 38,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 339
+  },
+  {
+    "id": "inv-new-340",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "OX5152",
+    "description": "MONTURA OAKLEY WIRETAP SEMI AL AIRE",
+    "qty": 20,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 20,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 340
+  },
+  {
+    "id": "inv-new-341",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "G9098",
     "description": "LENTES KEIKO DAMA",
     "qty": 2,
     "cost": 0,
@@ -5202,58 +5097,13 @@
     "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 382
+    "sourceRow": 341
   },
   {
-    "id": "inv-383",
-    "date": "2026-08-24",
+    "id": "inv-new-342",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "G9112 (C1)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 383
-  },
-  {
-    "id": "inv-384",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "G9098 (C3)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 384
-  },
-  {
-    "id": "inv-385",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "G9098 (C2)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 385
-  },
-  {
-    "id": "inv-386",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "G9102 (C1)",
+    "code": "G9108",
     "description": "LENTES KEIKO CABALLERO",
     "qty": 1,
     "cost": 0,
@@ -5262,43 +5112,43 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 386
+    "sourceRow": 342
   },
   {
-    "id": "inv-387",
-    "date": "2026-08-24",
+    "id": "inv-new-343",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "G9102 (C6)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
+    "code": "MH3501",
+    "description": "LENTES KEIKO DAMA",
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 387
+    "sourceRow": 343
   },
   {
-    "id": "inv-388",
-    "date": "2026-08-24",
+    "id": "inv-new-344",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "G9108 (C2)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
+    "code": "YG78152",
+    "description": "LENTES KEIKO DAMA",
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 388
+    "sourceRow": 344
   },
   {
-    "id": "inv-389",
-    "date": "2026-08-24",
+    "id": "inv-new-345",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "MH3501 (C1)",
+    "code": "YG78154",
     "description": "LENTES KEIKO DAMA",
     "qty": 1,
     "cost": 0,
@@ -5307,146 +5157,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 389
+    "sourceRow": 345
   },
   {
-    "id": "inv-390",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "MH3501 (C7)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 390
-  },
-  {
-    "id": "inv-391",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "FP2129 (C1)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 391
-  },
-  {
-    "id": "inv-392",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "FP2129 (C3)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 392
-  },
-  {
-    "id": "inv-393",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG60024 (C2)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 393
-  },
-  {
-    "id": "inv-394",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG60024 (C4)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 394
-  },
-  {
-    "id": "inv-395",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG21086 (C4)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 395
-  },
-  {
-    "id": "inv-396",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG78152 (C5)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 396
-  },
-  {
-    "id": "inv-397",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG78154 (C5)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 397
-  },
-  {
-    "id": "inv-398",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG78152 (C6)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 398
-  },
-  {
-    "id": "inv-399",
-    "date": "2026-08-24",
+    "id": "inv-new-346",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "YG78155 (C5)",
     "description": "LENTES KEIKO DAMA",
@@ -5457,13 +5172,13 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 399
+    "sourceRow": 346
   },
   {
-    "id": "inv-400",
-    "date": "2026-08-24",
+    "id": "inv-new-347",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "YG78160 (C6)",
+    "code": "YG78160",
     "description": "LENTES KEIKO DAMA",
     "qty": 1,
     "cost": 0,
@@ -5472,11 +5187,11 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 400
+    "sourceRow": 347
   },
   {
-    "id": "inv-401",
-    "date": "2026-08-24",
+    "id": "inv-new-348",
+    "date": "2026-08-28",
     "category": "Montura",
     "code": "F2888 (C7)",
     "description": "LENTES KEIKO DAMA",
@@ -5487,13 +5202,88 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 401
+    "sourceRow": 348
   },
   {
-    "id": "inv-402",
-    "date": "2026-08-24",
+    "id": "inv-new-349",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "RTA5203 (C1)",
+    "code": "RTA5203",
+    "description": "LENTES KEIKO DAMA",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 349
+  },
+  {
+    "id": "inv-new-350",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "MQ5553A",
+    "description": "LENTES KEIKO DAMA",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 350
+  },
+  {
+    "id": "inv-new-351",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "yg70004 (C1)",
+    "description": "LENTES KEIKO DAMA",
+    "qty": 3,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 3,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 351
+  },
+  {
+    "id": "inv-new-352",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "yg70005 (C2)",
+    "description": "LENTES KEIKO DAMA",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 352
+  },
+  {
+    "id": "inv-new-353",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "YG11076",
+    "description": "LENTES KEIKO DAMA",
+    "qty": 2,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 2,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 353
+  },
+  {
+    "id": "inv-new-354",
+    "date": "2026-08-28",
+    "category": "Montura",
+    "code": "JO01114",
     "description": "LENTES KEIKO DAMA",
     "qty": 1,
     "cost": 0,
@@ -5502,381 +5292,81 @@
     "stock": 1,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 402
+    "sourceRow": 354
   },
   {
-    "id": "inv-403",
-    "date": "2026-08-24",
+    "id": "inv-new-355",
+    "date": "2026-08-28",
     "category": "Montura",
-    "code": "RTA5203 (C2)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 403
-  },
-  {
-    "id": "inv-404",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "EM2107 (C3)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 404
-  },
-  {
-    "id": "inv-405",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "EM2107 (C4)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 405
-  },
-  {
-    "id": "inv-406",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "MQ5562A (C1)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 406
-  },
-  {
-    "id": "inv-407",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "MQ5562A (C3)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 407
-  },
-  {
-    "id": "inv-408",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "RH5014 (C3)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 408
-  },
-  {
-    "id": "inv-409",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "RB8041 (C2)",
-    "description": "LENTES KEIKO CABALLERO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 409
-  },
-  {
-    "id": "inv-410",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "MQ5553A (C5)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 410
-  },
-  {
-    "id": "inv-411",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "MQ5553A (C4)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 411
-  },
-  {
-    "id": "inv-412",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG70004 (C1)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 412
-  },
-  {
-    "id": "inv-413",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG70004 (C2)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 413
-  },
-  {
-    "id": "inv-414",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG70004 (C3)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 414
-  },
-  {
-    "id": "inv-415",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG70005 (C2)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 415
-  },
-  {
-    "id": "inv-416",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG70005 (C3)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 416
-  },
-  {
-    "id": "inv-417",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG11076 (C4)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 417
-  },
-  {
-    "id": "inv-418",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YG11076 (C1)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 418
-  },
-  {
-    "id": "inv-419",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "JO01117 (C1)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 419
-  },
-  {
-    "id": "inv-420",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "JO01117 (C4)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 420
-  },
-  {
-    "id": "inv-421",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "JO01114 (C4)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 421
-  },
-  {
-    "id": "inv-422",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "JO01114 (C3)",
-    "description": "LENTES KEIKO DAMA",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 422
-  },
-  {
-    "id": "inv-423",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YD2659 (C27)",
+    "code": "YD2659",
     "description": "LENTES KEIKO NIÑO",
-    "qty": 1,
+    "qty": 2,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 1,
+    "stock": 2,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 423
+    "sourceRow": 355
   },
   {
-    "id": "inv-424",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YD2659 (C25)",
-    "description": "LENTES KEIKO NIÑO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 424
-  },
-  {
-    "id": "inv-425",
-    "date": "2026-08-24",
-    "category": "Montura",
-    "code": "YD2659 (C23)",
-    "description": "LENTES KEIKO NIÑO",
-    "qty": 1,
-    "cost": 0,
-    "costTotal": 0,
-    "price": 0,
-    "stock": 1,
-    "minStock": 1,
-    "pricePending": true,
-    "sourceRow": 425
-  },
-  {
-    "id": "inv-426",
-    "date": "2026-08-24",
+    "id": "inv-new-356",
+    "date": "2026-08-28",
     "category": "Accesorios",
     "code": "SUJ00",
     "description": "SUJETADOR OAKLEY",
-    "qty": 0,
+    "qty": 50,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 0,
+    "stock": 50,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 426
+    "sourceRow": 356
   },
   {
-    "id": "inv-427",
-    "date": "2026-08-24",
+    "id": "inv-new-357",
+    "date": "2026-08-28",
     "category": "Accesorios",
     "code": "GOM00",
     "description": "PLAQUETICAS DE LA NARIZ",
-    "qty": 0,
+    "qty": 100,
     "cost": 0,
     "costTotal": 0,
     "price": 0,
-    "stock": 0,
+    "stock": 100,
     "minStock": 1,
     "pricePending": true,
-    "sourceRow": 427
+    "sourceRow": 357
+  },
+  {
+    "id": "inv-new-358",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "OO9271",
+    "description": "LENTES OAKLEY FLAK 2.0 (AAA)",
+    "qty": 19,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 19,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 358
+  },
+  {
+    "id": "inv-new-359",
+    "date": "2026-08-28",
+    "category": "Lentes de sol",
+    "code": "S326",
+    "description": "LENTES DE SOL CARTIER",
+    "qty": 1,
+    "cost": 0,
+    "costTotal": 0,
+    "price": 0,
+    "stock": 1,
+    "minStock": 1,
+    "pricePending": true,
+    "sourceRow": 359
   }
 ]
