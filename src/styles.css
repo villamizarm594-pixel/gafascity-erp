@@ -80,19 +80,5 @@ html,body,#root{max-width:100%;overflow-x:hidden}.app main{min-width:0}.sidebar{
 /* Listas descriptivas flexibles, sin alterar catálogos ni reportes */
 .flexibleFinder{display:grid;gap:8px;align-content:start}.manualOptionButton{background:#334155;color:#bae6fd;font-size:12px;justify-self:start;padding:8px 10px}.manualCrystalForm{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:10px;margin-top:12px;padding:14px;background:#071b2f;border:1px solid #0ea5e9;border-radius:16px}.manualOptionNotice{grid-column:1/-1;color:#bae6fd;font-size:12px;line-height:1.45}@media(max-width:1100px){.manualCrystalForm{grid-template-columns:repeat(2,minmax(150px,1fr))}}@media(max-width:650px){.manualCrystalForm{grid-template-columns:1fr}.manualOptionButton{width:100%}}
 
-
-/* Cuadro fijo para trabajos: solo se desplazan los registros */
-.syncedTable{height:58vh;min-height:360px;max-height:680px;display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #263244;border-radius:14px;background:#0b1220}
-.tableTopScroll{display:block;flex:0 0 20px;height:20px;overflow-x:scroll;overflow-y:hidden;background:#0f172a;border-bottom:1px solid #334155;scrollbar-color:#64748b #0f172a}
-.tableTopScroll>div{height:1px}
-.tableBodyScroll{flex:1 1 auto;min-height:0;overflow:auto;scrollbar-gutter:stable;-webkit-overflow-scrolling:touch}
-.tableBodyScroll .tableWrap{overflow:visible!important;max-width:none}
-.tableBodyScroll table{min-width:max-content;border-collapse:separate;border-spacing:0}
-.tableBodyScroll thead th{position:sticky;top:0;z-index:30;background:#111827;box-shadow:0 2px 0 #334155;white-space:nowrap}
-.labWorkScroll th,.labWorkScroll td{padding:9px 10px;font-size:12px}
-.labWorkScroll td{max-width:175px;overflow-wrap:anywhere}
-.labWorkScroll td input,.labWorkScroll td select{min-width:112px;padding:7px;font-size:12px}
-.labWorkScroll th:first-child,.labWorkScroll td:first-child{position:sticky;left:0;background:#111827;z-index:20}
-.labWorkScroll thead th:first-child{z-index:40}
-.salesHistoryScroll{height:55vh}
-@media(max-width:700px){.syncedTable{height:62vh;min-height:330px}.tableTopScroll{flex-basis:24px;height:24px}.labWorkScroll th,.labWorkScroll td{padding:8px;font-size:11px}.labWorkScroll td{max-width:145px}}
+/* Módulos restaurados: comisiones y límite de entrega */
+.commissionScroll,.delayedScroll{height:55vh}.commissionScroll td,.delayedScroll td{white-space:nowrap}.state{white-space:nowrap}
