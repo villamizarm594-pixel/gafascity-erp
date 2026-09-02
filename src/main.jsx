@@ -256,6 +256,25 @@ function SmartFinder({items,value,onSelect,onClear,label,mode='all',placeholder,
   return <div className="smartFinder" ref={wrapRef}><label className="field compactField"><FieldLabel p={label}/><div className="finderInputWrap"><input value={display} placeholder={placeholder||label} onFocus={()=>{setOpen(true);setTerm('')}} onChange={e=>{setTerm(e.target.value);setOpen(true)}}/>{selected&&onClear&&<button type="button" className="clearSelection" onClick={()=>{onClear();setTerm('');setOpen(false)}} title="Limpiar seleccion">x</button>}</div></label>{open&&<div className="finderResults floatingFinder">{list.length?list.map(x=><button type="button" className="finderOption" key={x.id} onClick={()=>{onSelect(x);setOpen(false);setTerm('')}}><b>{x.code||x.crystal}</b><span>{x.description||[x.treatment,x.colors,x.range,money(x.price)].filter(Boolean).join(' . ')}</span>{showMeta&&x.code&&<small>Stock: {Number(x.stock||0)} . {Number(x.price||0)>0?`Precio: ${money(x.price)}`:'Precio pendiente'}</small>}</button>):<div className="noResults">Sin coincidencias</div>}</div>}</div>}
 function Select({v,on,opts,p}){const control=<select value={v??''} onChange={e=>on(e.target.value)}>{opts.map(([val,label])=><option key={val} value={val}>{label}</option>)}</select>; if(!p)return control; return <label className="field compactField"><FieldLabel p={p}/>{control}</label>}
 function Table({rows,columns,empty='Sin registros'}){if(!rows.length)return <p className="muted">{empty}</p>;return <div className="tableWrap"><table><thead><tr>{columns.map(c=><th key={c[0]}>{c[1]}</th>)}</tr></thead><tbody>{rows.map((r,idx)=><tr key={r.id||idx}>{columns.map(([key,,fmt])=><td key={key}>{fmt?fmt(r[key],r):r[key]}</td>)}</tr>)}</tbody></table></div>}
+function SyncedScroll({children,className=''}){
+  const topRef=useRef(null);
+  const bodyRef=useRef(null);
+  const spacerRef=useRef(null);
+  useEffect(()=>{
+    const top=topRef.current,body=bodyRef.current,spacer=spacerRef.current;
+    if(!top||!body||!spacer)return;
+    const updateWidth=()=>{const table=body.querySelector('.tableWrap');spacer.style.width=`${Math.max(table?.scrollWidth||body.scrollWidth,body.clientWidth)}px`;};
+    const fromTop=()=>{body.scrollLeft=top.scrollLeft};
+    const fromBody=()=>{top.scrollLeft=body.scrollLeft};
+    top.addEventListener('scroll',fromTop,{passive:true});
+    body.addEventListener('scroll',fromBody,{passive:true});
+    updateWidth();
+    window.addEventListener('resize',updateWidth);
+    const timer=setTimeout(updateWidth,0);
+    return()=>{clearTimeout(timer);top.removeEventListener('scroll',fromTop);body.removeEventListener('scroll',fromBody);window.removeEventListener('resize',updateWidth)};
+  },[children]);
+  return <div className={`syncedTable ${className}`.trim()}><div className="tableTopScroll" ref={topRef}><div ref={spacerRef}/></div><div className="tableBodyScroll" ref={bodyRef}>{children}</div></div>;
+}
 function Login({settings={}}){
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
