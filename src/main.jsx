@@ -10,7 +10,7 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const CLOUD_STATE_ID = 'gafascity-main';
 const ADMIN_EMAILS = ['admin@gafascity.com'];
-const EMPLOYEE_EMAILS = ['rhoy@gafascity.com','ely@gafascity.com','anyi@gafascity.com','empleado1@gafascity.com','empleado2@gafascity.com','empleado3@gafascity.com','empleado4@gafascity.com'];
+const EMPLOYEE_EMAILS = ['rhoy@gafascity.com','ely@gafascity.com','anyi@gafascity.com','leidy@gafascity.com','empleado1@gafascity.com','empleado2@gafascity.com','empleado3@gafascity.com','empleado4@gafascity.com','empleado5@gafascity.com'];
 const STAFF_NAMES = {
   'admin@gafascity.com': 'Administrador',
   'rhoy@gafascity.com': 'Rhoy',
@@ -18,11 +18,12 @@ const STAFF_NAMES = {
   'anyi@gafascity.com': 'Anyi',
   'yngrid@gafascity.com': 'Yngrid',
   'geiker@gafascity.com': 'Geiker',
+  'leidy@gafascity.com': 'Leidy',
   'empleado1@gafascity.com': 'Rhoy',
   'empleado2@gafascity.com': 'Ely',
   'empleado3@gafascity.com': 'Anyi',
   'empleado4@gafascity.com': 'Yngrid',
-  'empleado5@gafascity.com': 'Geiker'
+  'empleado5@gafascity.com': 'Leidy'
 };
 const SUPERVISOR_CODE = '2468';
 const SALE_COMMISSION = 0.50;
