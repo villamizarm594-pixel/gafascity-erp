@@ -166,3 +166,9 @@ button:disabled{opacity:.55;cursor:not-allowed}
 .purchaseGrid .spanAll{grid-column:1/-1}
 @media(max-width:1000px){.dualCurrencyTotals{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.dualCurrencyTotals{grid-template-columns:1fr}}
+
+/* Ajustes compactos de Compras y estado inicial de Seguimiento */
+.moduleNotice{display:flex;align-items:center;gap:8px;padding:9px 12px;margin-bottom:10px}
+.moduleNotice b{flex:0 0 auto;font-size:13px}
+.moduleNotice span{font-size:12px;line-height:1.3}
+@media(max-width:700px){.moduleNotice{display:grid;gap:3px;padding:9px 10px}.moduleNotice span{font-size:11.5px}}
