@@ -160,3 +160,9 @@ html,body,#root{width:100%;max-width:100%;overflow-x:hidden}.app,.app main,.card
 button:disabled{opacity:.55;cursor:not-allowed}
 @media(max-width:1100px){.saleProductTop{grid-template-columns:1fr 1fr}.saleProductTop>.smartFinder:last-of-type{grid-column:auto}}
 @media(max-width:700px){.saleProductTop{grid-template-columns:1fr}}
+
+/* Operación multimoneda manual y compras flexibles */
+.dualCurrencyTotals{grid-template-columns:repeat(4,minmax(0,1fr))}
+.purchaseGrid .spanAll{grid-column:1/-1}
+@media(max-width:1000px){.dualCurrencyTotals{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.dualCurrencyTotals{grid-template-columns:1fr}}
