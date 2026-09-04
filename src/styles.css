@@ -154,3 +154,9 @@ html,body,#root{width:100%;max-width:100%;overflow-x:hidden}.app,.app main,.card
 .topActions .logoutButton{background:#475569;border-color:#64748b;color:#f8fafc}
 .topActions .resetLocalButton{background:#b45309;border-color:#f59e0b;color:#fff7ed}
 @media(max-width:1000px){.sidebar nav .navItem:hover{transform:none}.sidebar nav .navItem.active{box-shadow:inset 0 -3px 0 var(--module-color)}}
+
+/* Consolidado septiembre 2026: color de venta y guardado óptico seguro */
+.saleProductTop{grid-template-columns:minmax(150px,.75fr) minmax(170px,.85fr) minmax(300px,1.8fr) minmax(150px,.7fr)}
+button:disabled{opacity:.55;cursor:not-allowed}
+@media(max-width:1100px){.saleProductTop{grid-template-columns:1fr 1fr}.saleProductTop>.smartFinder:last-of-type{grid-column:auto}}
+@media(max-width:700px){.saleProductTop{grid-template-columns:1fr}}
