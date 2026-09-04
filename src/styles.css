@@ -178,3 +178,8 @@ button:disabled{opacity:.55;cursor:not-allowed}
 
 /* Compras: selección de artículo existente o alta manual */
 .purchaseSelection{display:grid;gap:4px;margin:12px 0;padding:11px 13px;border:1px solid #334155;border-radius:12px;background:#0b1729}.purchaseSelection span{color:#bae6fd}.purchaseSelection small{color:#94a3b8}
+
+/* Compras: alta nueva primero y catálogo completo visible */
+.purchaseCatalog{display:grid;gap:10px;margin:14px 0;padding:12px;border:1px solid #334155;border-radius:14px;background:#0b1729}.purchaseNewButton{justify-self:start;background:#0ea5e9}.purchaseNewButton.active{outline:2px solid #bae6fd}.purchaseCatalogHead{display:grid;grid-template-columns:minmax(260px,1.5fr) minmax(220px,.8fr);gap:12px;align-items:end}.purchaseCatalogHead>div{display:grid;gap:3px}.purchaseCatalogHead span{color:#94a3b8;font-size:12px}.purchaseItemGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;max-height:360px;overflow:auto;padding-right:4px}.purchaseItemGrid button{display:grid;gap:4px;text-align:left;background:#111827;border:1px solid #334155}.purchaseItemGrid button.selected{border-color:#38bdf8;background:#082f49}.purchaseItemGrid span,.purchaseItemGrid small{color:#cbd5e1}.purchaseEmpty{grid-column:1/-1;padding:14px;color:#94a3b8;text-align:center}.purchaseManualBox{display:grid;gap:10px;margin:12px 0;padding:12px;border:1px solid #38bdf8;border-radius:14px;background:#082f49}
+@media(max-width:1000px){.purchaseItemGrid{grid-template-columns:1fr 1fr}.purchaseCatalogHead{grid-template-columns:1fr}}
+@media(max-width:600px){.purchaseItemGrid{grid-template-columns:1fr}.purchaseNewButton{width:100%}}
