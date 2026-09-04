@@ -124,3 +124,33 @@ html,body,#root{max-width:100%;overflow-x:hidden}.app main{min-width:0}.sidebar{
 html,body,#root{width:100%;max-width:100%;overflow-x:hidden}.app,.app main,.card,.grid,.formGrid{min-width:0;max-width:100%}.card{overflow:hidden}.tableBodyScroll{overscroll-behavior:contain}.tableBodyScroll input,.tableBodyScroll select{min-width:110px}.salesHeader{grid-template-columns:150px minmax(220px,2fr) minmax(145px,1fr) minmax(145px,1fr)}
 @media(max-width:1000px){.app{display:block}.app main,.sidebarCollapsed main{width:100%;padding:15px}.sidebar,.sidebarCollapsed .sidebar{width:100%;position:sticky;top:0;z-index:100}.sidebar nav{display:flex;overflow-x:auto;gap:6px}.sidebar nav button{flex:0 0 auto}.topbar{flex-wrap:wrap}.topActions{width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.topActions .badge{grid-column:1/-1}.salesHeader{grid-template-columns:1fr 1fr}.formGrid>*{min-width:0}}
 @media(max-width:600px){.app main,.sidebarCollapsed main{padding:10px}.card{padding:12px}.salesHeader,.formGrid{grid-template-columns:1fr!important}.topActions button{width:100%;min-width:0}.kpi b{font-size:24px}.tableTopScroll{height:25px;flex-basis:25px}.tableBodyScroll{max-width:100%;overflow:auto}.rxGrid{overflow-x:auto}.actions{display:grid;grid-template-columns:1fr}.actions button{width:100%}}
+
+
+/* Identidad visual por modulo y acciones principales */
+.sidebar nav .navItem{--module-color:#64748b;--module-soft:rgba(100,116,139,.16);position:relative;border:1px solid transparent;transition:background .18s,border-color .18s,color .18s,transform .18s}
+.sidebar nav .navItem svg{color:var(--module-color);stroke-width:2.2;transition:color .18s,filter .18s}
+.sidebar nav .navItem:hover{background:var(--module-soft);border-color:color-mix(in srgb,var(--module-color) 40%,transparent);transform:translateX(2px)}
+.sidebar nav .navItem.active{background:var(--module-soft);border-color:color-mix(in srgb,var(--module-color) 55%,transparent);box-shadow:inset 4px 0 0 var(--module-color),0 8px 18px rgba(0,0,0,.16)}
+.sidebar nav .navItem.active svg{color:var(--module-color);filter:drop-shadow(0 0 7px color-mix(in srgb,var(--module-color) 55%,transparent))}
+.sidebar nav .nav-dashboard{--module-color:#38bdf8;--module-soft:rgba(56,189,248,.15)}
+.sidebar nav .nav-sales{--module-color:#22c55e;--module-soft:rgba(34,197,94,.15)}
+.sidebar nav .nav-payments,.sidebar nav .nav-cash{--module-color:#10b981;--module-soft:rgba(16,185,129,.15)}
+.sidebar nav .nav-clinical{--module-color:#c084fc;--module-soft:rgba(192,132,252,.15)}
+.sidebar nav .nav-orders{--module-color:#60a5fa;--module-soft:rgba(96,165,250,.15)}
+.sidebar nav .nav-labs{--module-color:#2dd4bf;--module-soft:rgba(45,212,191,.15)}
+.sidebar nav .nav-inventory,.sidebar nav .nav-inventoryAdd{--module-color:#f59e0b;--module-soft:rgba(245,158,11,.15)}
+.sidebar nav .nav-crystals{--module-color:#06b6d4;--module-soft:rgba(6,182,212,.15)}
+.sidebar nav .nav-customers{--module-color:#f472b6;--module-soft:rgba(244,114,182,.15)}
+.sidebar nav .nav-purchases{--module-color:#fb923c;--module-soft:rgba(251,146,60,.15)}
+.sidebar nav .nav-expenses{--module-color:#f87171;--module-soft:rgba(248,113,113,.15)}
+.sidebar nav .nav-commissions{--module-color:#facc15;--module-soft:rgba(250,204,21,.14)}
+.sidebar nav .nav-tracking{--module-color:#a78bfa;--module-soft:rgba(167,139,250,.15)}
+.sidebar nav .nav-reports{--module-color:#818cf8;--module-soft:rgba(129,140,248,.15)}
+.sidebar nav .nav-config{--module-color:#94a3b8;--module-soft:rgba(148,163,184,.14)}
+.topActions .topAction{border:1px solid transparent;box-shadow:0 8px 18px rgba(0,0,0,.16);transition:transform .18s,filter .18s,box-shadow .18s}
+.topActions .topAction:hover{transform:translateY(-1px);filter:brightness(1.08);box-shadow:0 11px 24px rgba(0,0,0,.22)}
+.topActions .updateDataButton{background:#0e7490;border-color:#22d3ee;color:#ecfeff}
+.topActions .saveCloudButton{background:#15803d;border-color:#4ade80;color:#f0fdf4}
+.topActions .logoutButton{background:#475569;border-color:#64748b;color:#f8fafc}
+.topActions .resetLocalButton{background:#b45309;border-color:#f59e0b;color:#fff7ed}
+@media(max-width:1000px){.sidebar nav .navItem:hover{transform:none}.sidebar nav .navItem.active{box-shadow:inset 0 -3px 0 var(--module-color)}}
