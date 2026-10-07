@@ -172,6 +172,7 @@ function App(){
   const [query,setQuery] = useState('');
   const [session,setSession] = useState(null);
   const [cloudStatus,setCloudStatus] = useState('Sin sincronizar');
+  const cloudSyncRef=useRef({writing:0,ignoreRemoteUntil:0,lastCloudUpdatedAt:''});
   const [sidebarCollapsed,setSidebarCollapsed]=useState(()=>localStorage.getItem('gc-sidebar-collapsed')==='1');
   const toggleSidebar=()=>setSidebarCollapsed(v=>{localStorage.setItem('gc-sidebar-collapsed',v?'0':'1');return !v});
   useEffect(()=>{
@@ -184,7 +185,13 @@ function App(){
     if(!session?.user?.id)return;
     const channel=supabase.channel('gafascity-state-live')
       .on('postgres_changes',{event:'UPDATE',schema:'public',table:'app_state',filter:`id=eq.${CLOUD_STATE_ID}`},payload=>{
-        if(payload.new?.data){setStore(normalizeStore(payload.new.data));setCloudStatus('Actualizado en tiempo real');}
+        const incomingAt=String(payload.new?.updated_at||'');
+        const sync=cloudSyncRef.current;
+        if(!payload.new?.data||sync.writing>0||Date.now()<sync.ignoreRemoteUntil)return;
+        if(incomingAt&&sync.lastCloudUpdatedAt&&incomingAt<=sync.lastCloudUpdatedAt)return;
+        if(incomingAt)sync.lastCloudUpdatedAt=incomingAt;
+        setStore(current=>{const incoming=normalizeStore(payload.new.data);return JSON.stringify(current)===JSON.stringify(incoming)?current:incoming});
+        setCloudStatus('Actualizado en tiempo real');
       })
       .subscribe(status=>{if(status==='SUBSCRIBED')setCloudStatus('Sincronización automática activa')});
     return()=>{supabase.removeChannel(channel)};
@@ -192,25 +199,25 @@ function App(){
   useEffect(()=>{
     if(!session?.user?.id)return;
     let active=true;
-    const sync=async(showStatus=false)=>{if(showStatus)setCloudStatus('Sincronizando...');const {data,error}=await supabase.from('app_state').select('data,updated_at').eq('id',CLOUD_STATE_ID).maybeSingle();if(!active)return;if(error){if(showStatus)setCloudStatus('Sin conexión - datos locales');return;}if(data?.data){setStore(current=>{const incoming=normalizeStore(data.data);return JSON.stringify(current)===JSON.stringify(incoming)?current:incoming});if(showStatus)setCloudStatus('Sincronizado');}else if(showStatus)setCloudStatus('Sin respaldo en nube');};
+    const sync=async(showStatus=false)=>{const guard=cloudSyncRef.current;if(guard.writing>0||Date.now()<guard.ignoreRemoteUntil)return;if(showStatus)setCloudStatus('Sincronizando...');const {data,error}=await supabase.from('app_state').select('data,updated_at').eq('id',CLOUD_STATE_ID).maybeSingle();if(!active)return;if(error){if(showStatus)setCloudStatus('Sin conexión - datos locales');return;}const incomingAt=String(data?.updated_at||'');if(data?.data&&(!guard.lastCloudUpdatedAt||!incomingAt||incomingAt>guard.lastCloudUpdatedAt)){if(incomingAt)guard.lastCloudUpdatedAt=incomingAt;setStore(current=>{const incoming=normalizeStore(data.data);return JSON.stringify(current)===JSON.stringify(incoming)?current:incoming});}if(showStatus)setCloudStatus(data?.data?'Sincronizado':'Sin respaldo en nube');};
     sync(true);
-    const timer=setInterval(()=>sync(false),3000);
+    const timer=setInterval(()=>sync(false),10000);
     return()=>{active=false;clearInterval(timer)};
   },[session?.user?.id]);
   const setList = (key, updater) => setStore(prev => ({...prev, [key]: typeof updater === 'function' ? updater(prev[key]) : updater}));
   const saveCloud = async () => {
-    setCloudStatus('Guardando en Supabase...');
-    const { error } = await supabase.from('app_state').upsert({ id: CLOUD_STATE_ID, data: store, updated_at: new Date().toISOString() });
-    if(error){ setCloudStatus('Error guardando'); alert(error.message); return; }
-    setCloudStatus('Guardado en nube');
+    const stamp=new Date().toISOString(),guard=cloudSyncRef.current;guard.writing+=1;guard.ignoreRemoteUntil=Date.now()+5000;setCloudStatus('Guardando en Supabase...');
+    const { error } = await supabase.from('app_state').upsert({ id: CLOUD_STATE_ID, data: store, updated_at: stamp });
+    guard.writing=Math.max(0,guard.writing-1);if(error){ setCloudStatus('Error guardando'); alert(error.message); return; }
+    guard.lastCloudUpdatedAt=stamp;setCloudStatus('Guardado en nube');
   };
   const updateStoreAndCloud = (updater, message='Guardado automatico') => {
     setStore(prev => {
       const next = normalizeStore(typeof updater === 'function' ? updater(normalizeStore(prev)) : updater);
       localStorage.setItem('gafascity-store-v2', JSON.stringify(next));
-      setCloudStatus('Guardando automatico...');
-      supabase.from('app_state').upsert({ id: CLOUD_STATE_ID, data: next, updated_at: new Date().toISOString() })
-        .then(({ error }) => setCloudStatus(error ? 'Error guardando' : message));
+      const stamp=new Date().toISOString(),guard=cloudSyncRef.current;guard.writing+=1;guard.ignoreRemoteUntil=Date.now()+5000;setCloudStatus('Guardando automatico...');
+      supabase.from('app_state').upsert({ id: CLOUD_STATE_ID, data: next, updated_at: stamp })
+        .then(({ error }) => {guard.writing=Math.max(0,guard.writing-1);if(!error)guard.lastCloudUpdatedAt=stamp;setCloudStatus(error ? 'Error guardando' : message)});
       return next;
     });
   };
@@ -342,7 +349,7 @@ function EmployeeTracking({store,setStore,canEdit,isAdmin}){
   const parseDate=v=>{if(!v)return null;const d=new Date(`${v}T12:00:00`);return Number.isNaN(d.getTime())?null:d};
   const todayDate=parseDate(today());
   const workRows=orders.flatMap(o=>(Array.isArray(o.works)&&o.works.length?o.works:[{}]).map((w,index)=>{const workLab=w.lab||o.lab||'Sin laboratorio',status=(w.workStatus||o.status||'En proceso')==='Proceso'?'En proceso':(w.workStatus||o.status||'En proceso'),sent=w.workSentDate||o.sentDate||'',arrival=w.workStoreArrivalDate||o.storeArrivalDate||'',notified=w.workNotifiedClient||o.notifiedClient||'No',limit=Math.max(1,Number(w.workLimitDays||labs.find(x=>x.name===workLab)?.deliveryLimitDays||7)),sentDate=parseDate(sent),elapsed=sentDate&&todayDate?Math.max(0,Math.floor((todayDate-sentDate)/86400000)):0,remaining=limit-elapsed,done=status==='Entregado',deadline=done?'Completado':!sent?'Sin fecha de envío':remaining<0?'Vencido':remaining<=2?'Próximo al límite':'En tiempo';return {id:`${o.id}-${w.id||index}`,orderId:o.id,workId:w.id,number:o.number||'',workNumber:index+1,date:o.date||'',customer:o.customer||'',idCard:o.idCard||'',phone:o.phone||'',lab:workLab,formulaTitle:w.formulaTitle||'Fórmula original',frameOrigin:w.frameOrigin==='La trajo'?'Traída por el cliente':'Comprada aquí',frame:w.frame?.description||w.externalFrameDescription||'-',frameColor:w.frameColor||w.externalFrameColor||w.frame?.color||'',crystal:w.crystal?.crystal||w.manualCrystalName||'-',crystalColor:w.crystalColor||w.crystal?.operationColor||w.manualColors||w.crystal?.colors||'',treatment:w.crystal?.treatment||w.manualTreatment||'',range:w.crystal?.range||w.manualRange||'',labPayment:w.workLabPayment||o.labPayment||'No pagado',labAmount:w.workLabAmount||o.labAmount||'',status,sentDate:sent,storeArrivalDate:arrival,notifiedClient:notified,limitDays:limit,elapsedDays:elapsed,remainingDays:done?'-':remaining,deadline,responsible:o.responsible||getStaffName(o.responsibleEmail),responsibleEmail:o.responsibleEmail||'',notes:w.trackingNotes||''}}));
-  const updateWork=(row,patch)=>{if(!canEdit)return;setStore(prev=>({...prev,orders:(prev.orders||[]).map(o=>o.id!==row.orderId?o:{...o,works:(o.works||[]).map((w,index)=>(w.id||index)!==(row.workId||row.workNumber-1)?w:{...w,...patch})})}),'Seguimiento actualizado')};
+  const updateWork=(row,patch)=>{if(!canEdit)return;setStore(prev=>({...prev,orders:(prev.orders||[]).map(o=>{if(o.id!==row.orderId)return o;const existing=Array.isArray(o.works)&&o.works.length?o.works:[{id:row.workId||uid(),lab:o.lab||row.lab||'',workStatus:o.status||row.status||'En proceso',workSentDate:o.sentDate||'',workStoreArrivalDate:o.storeArrivalDate||'',workNotifiedClient:o.notifiedClient||'No'}];const targetIndex=Math.max(0,Number(row.workNumber||1)-1);return {...o,works:existing.map((w,index)=>index!==targetIndex&&String(w.id||'')!==String(row.workId||'')?w:{...w,...patch}),trackingUpdatedAt:new Date().toISOString()}})}),'Seguimiento actualizado')};
   const workStatuses=['Todos','Pendientes','En proceso','En la tienda','Enviado','Recibido en tienda','Entregado','Notificados','Sin fecha de envío','En tiempo','Próximo al límite','Vencido'];
   const matchesStatus=r=>statusFilter==='Todos'||(statusFilter==='Pendientes'&&r.status!=='Entregado')||(statusFilter==='Notificados'&&r.notifiedClient==='Si')||(['Sin fecha de envío','En tiempo','Próximo al límite','Vencido'].includes(statusFilter)&&r.deadline===statusFilter)||r.status===statusFilter;
   const workFiltered=workRows.filter(r=>(lab==='Todos'||r.lab===lab)&&(selectedPerson==='Todos'||r.responsible===selectedPerson)&&matchesStatus(r)&&containsText(r,q));
